@@ -1,3 +1,7 @@
+html
+{
+    font-size:100%;
+}
 body
 {
     background: #D7D3C8;
@@ -5,4 +9,11 @@ body
 #outer-wrapper
 {
     border-top: 2px solid #FFF;
+    position:relative;
+}
+#masthead
+{
+    background: #C13832 none repeat scroll 0% 0%;
+    display:block;
+    position:relative;
 }
