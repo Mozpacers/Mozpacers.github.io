@@ -2,7 +2,6 @@ var ctr = 0;
 function validate_form() {
   var reEmail = /^\S+@\S+\.\S+$/ ;
   var reName = /^[a-zA-Z ]+$/ ;
-  var reDigits = /^[0-9]*$/ ;
   if ( $('#name').val().length < 1 ) {
     $('#error_name').text('Please enter your name');
     $('#name').css('border-color','#FF0000');
@@ -11,16 +10,6 @@ function validate_form() {
   if ( $('#email').val().length < 1 ) {
     $('#error_email').text('Please enter your email');
     $('#email').css('border-color','#FF0000');
-    ctr++;
-  }
-  if ( $('#subject').val().length < 1 ) {
-    $('#error_subject').text('Please enter the subject');
-    $('#subject').css('border-color','#FF0000');
-    ctr++;
-  }
-  if ( $('#contact_number').val().length < 1 ) {
-    $('#error_number').text('Please enter your contact number');
-    $('#contact_number').css('border-color','#FF0000');
     ctr++;
   }
   if ( $('#message').val().length < 1 ) {
@@ -42,12 +31,7 @@ function validate_form() {
     $("#send").removeClass("disabled");
     return;
   }
-  if(!reDigits.test($('#contact_number').val())) {
-    $('#error_number').text('Please enter correct contact number');
-    $("#send").removeClass("disabled");
-    return;
-  }
-  var m = {'name':$('#name').val(),'email':$('#email').val(),'subject':$('#subject').val(),'contact':$('#contact_number').val(),'message':$('#message').val()};
+  var m = {'name':$('#name').val(),'email':$('#email').val(),'message':$('#message').val()};
   console.log(m);
   $.ajax({
     type: "POST",
@@ -57,7 +41,7 @@ function validate_form() {
     success: function(data) {
       console.log(data.error);
       $("#send").removeClass("disabled");
-      $('#name,#message,#email,#contact_number,#subject').val('');
+      $('#name,#message,#email').val('');
       $('#success').text('We have received your message. We will contact you as soon as possible.');
     },
     error: function(err) {
@@ -68,15 +52,14 @@ function validate_form() {
   });
 }
 
-
 $(document).ready(function() {
   $('#send').click(function() {
     if($("#send").hasClass("disabled")){
       return;
     }
     $("#send").addClass("disabled");
-    $('#error_name,#error_message,#error_email,#error_number,#error_subject').text('');
-    $('#name,#message,#email,#contact_number,#subject').css('border-color','#484848');
+    $('#error_name,#error_message,#error_email').text('');
+    $('#name,#message,#email').css('border-color','#484848');
     ctr = 0;
     validate_form();
   }); 
