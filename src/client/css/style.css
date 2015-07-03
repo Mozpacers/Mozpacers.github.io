@@ -17,3 +17,60 @@ body
     display:block;
     position:relative;
 }
+/*About Section*/
+section#About{
+  background-color: #FF9500;
+  color: #fff;
+  text-align: center;
+  font-size: .875rem;
+  line-height: 1.5;
+  font-family: 'Open Sans',X-LocaleSpecific,sans-serif;
+}
+#coreContributers img{
+  padding: 20px;
+}
+/*----End---*/
+
+/*About(Community) Section*/
+section#community{
+  padding:20px 0 20px 0;
+  background-color: #c0413c;
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  line-height: 1.5;
+  list-style: none;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-variant: normal;
+}
+/*-----End----*/
+
+/* Media Queries */
+@media(max-width: 991px){
+  /*-----About(Community) Section----*/
+  section#community{
+    font-size: 22px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  section#community .col-md-4{
+    padding: 20px 0 20px 0;
+  }
+  /*-----End----*/
+}
+@media(min-width: 622px){
+  /*---About Section---*/
+  #coreContributers .smallImages{
+  display: none;
+  }
+  /*---End*---*/
+}
+@media(max-width: 622px){
+  /*---About Section----*/
+  #coreContributers .bigImages{
+    display: none;
+  }
+  /*---End---*/
+}
