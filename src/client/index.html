@@ -7,6 +7,8 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Mozilla Delhi | MozPacers</title>
     <!-- Please add proper comments to everything that you add. It makes easier for others to read your code. -->
+    <!-- Import Font Face -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <!-- Custom Stylesheet -->
@@ -107,7 +109,31 @@
         </div>
       </section>
       <!-- Contact Form goes here -->
-
+      <section id="contact_form">
+        <div class="container">
+          <div class="row form-group">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1 style="color:white;">Contact Us</h1></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group">
+              <input class="form-control" type="text" name="name" id="name" placeholder="Name" />
+              <span class="error" id="error_name"></span>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group">
+              <input class="form-control" type="email" name="email" id="email" placeholder="Email Address" />
+              <span class="error" id="error_email"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-group">
+              <textarea class="form-control" name="message" rows="4" cols="60" id="message" placeholder="Message"></textarea>
+              <span class="error" id="error_message"></span>
+            </div>
+          </div>
+          <span id="success" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group" style="color:white;"></span>
+          <input type="submit" name="send" id="send" value="Send" class="btn btn-info pull-right">
+        </div>
+      </section>
       <!-- Footer goes here -->
 
       <!--
