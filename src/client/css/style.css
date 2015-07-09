@@ -45,36 +45,11 @@ section#community{
   font-style: normal;
   font-variant: normal;
 }
+section#community .col-md-4{
+  padding-bottom: 20px;
+}
 /*-----End----*/
 
-/* Media Queries */
-@media(max-width: 991px){
-  /*-----About(Community) Section----*/
-  section#community{
-    font-size: 22px;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-  }
-  section#community .col-md-4{
-    padding: 20px 0 20px 0;
-  }
-  /*-----End----*/
-}
-@media(min-width: 622px){
-  /*---About Section---*/
-  #coreContributers .smallImages{
-  display: none;
-  }
-  /*---End*---*/
-}
-@media(max-width: 622px){
-  /*---About Section----*/
-  #coreContributers .bigImages{
-    display: none;
-  }
-  /*---End---*/
-}
 /* Contact form CSS */
 #contact_form{
     background-color: #484848;
