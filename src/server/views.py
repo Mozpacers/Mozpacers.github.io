@@ -2,12 +2,15 @@ from server import app, db
 from flask import (render_template, jsonify, request, redirect, url_for, 
                    Response, make_response)
 from models import Event
+from flask.ext.security import login_required
 import json
+from datetime import datetime
 
 result = [] # Global result list to return result as JSON
 e = Event() # Global Instance of Event
 
 @app.route('/api/event/addevents/', methods=['GET', 'POST'])
+@login_required
 def add_event():
     '''
     adds events with POST request
@@ -18,6 +21,7 @@ def add_event():
                     content_type="application/json")
 
 @app.route('/api/event/getevents/')
+@login_required
 def get_events():
     '''
     returns all the events with GET request
@@ -30,6 +34,7 @@ def get_events():
 
 @app.route('/api/event/updateevents/<int:event_id>/', methods=['PUT',
                                                             'DELETE'])
+@login_required
 def update_or_delete_event(event_id):
     '''
     Depending on the request,
@@ -65,6 +70,12 @@ class PythonJSONEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, Event):
             return obj.get_dict()
+        elif isinstance(obj, datetime):
+            return repr(obj.isoformat())
+        elif isinstance(obj, datetime.date):
+            return repr(obj.isoformat())
+        elif isinstance(obj, datetime.time):
+            return repr(obj.isoformat())
         else:
         	return repr(obj)
         return super(PythonJSONEncoder, self).default(obj)
@@ -81,7 +92,7 @@ def create_dict(allEvents):
         d = {} # To make a dictionary for JSON Response
         d['eid'] = item.eid
         d['title'] = item.title
-        #d['event_date'] = item.event_date
+        d['event_date'] = item.event_date
         d['link'] = item.link
         d['description'] = item.description
         d['venue'] = item.venue
@@ -95,7 +106,7 @@ def request_json(**kwargs):
         for k, v in kwargs.iteritems():
             e.eid = v # Now automatically updated
         e.title = request.json['title']
-        #e.event_date = request.json['event_date']
+        e.event_date = request.json['event_date']
         e.link = str(request.json['link'])
         e.description = request.json['description']
         e.venue = request.json['venue']
