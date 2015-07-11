@@ -20,7 +20,7 @@ body{
 }
 /*About Section*/
 section#About{
-  background-color: #FF9500;
+  background-color: #E3AD40;
   color: #fff;
   text-align: center;
   font-size: .875rem;
@@ -29,6 +29,7 @@ section#About{
 }
 #coreContributers img{
   padding: 20px;
+  display: inline-block;
 }
 /*----End---*/
 
@@ -47,6 +48,32 @@ section#community{
 }
 section#community .col-md-4{
   padding-bottom: 20px;
+}
+section#community .contribute-btn{
+  display: inline-block;
+  margin: 0 auto 40px auto;
+  padding: 20px 60px;
+  line-height: 1.3;
+  text-align: center;
+  font-size: 18px;
+  font-size: 1.125rem;
+  background: #0095dd;
+  border-radius: 10px;
+  text-transform: uppercase;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  text-decoration: none;
+}
+section#community .contribute-btn:visited {
+  color: #fff;
+}
+section#community .contribute-btn:hover{
+  color: #0095dd;
+  background: #fff;
+}
+.fa{
+  color: #dfa09d;
+  font-size: 1.5em !important;
 }
 /*-----End----*/
 
