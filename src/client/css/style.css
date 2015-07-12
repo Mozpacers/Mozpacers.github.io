@@ -214,7 +214,22 @@ section#community{
   padding: 20px 0 20px 0;
   }
   /*-----End----*/
+  /*---Download Section---*/
+  #ff-download-message-h{
+    font-size:2em;
+  }
+  /*---End---*/
 }
+@media(min-width:991px) {
+  /*---Download Section---*/
+  #ff-download-message-h{
+    font-size:2.25em;
+  }
+  /*---End---*/
+}
+
+
+
 @media(min-width: 622px){
   /*---About Section---*/
   #coreContributers .smallImages{
@@ -261,6 +276,7 @@ section#community{
 #ff-download-btn {
   float:none;
 }
+
 /*---End---*/
 
 /* Sandstone CSS : Gumdrop Buttons */
