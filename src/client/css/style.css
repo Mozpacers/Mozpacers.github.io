@@ -244,6 +244,25 @@ section#community{
   color: #FF0000;
   font-size: 10px;
 }
+/*---Download Section CSS---*/
+#download-section {
+  background-color:#565A5C;
+}
+#ff-download-message-h {
+  color:white;
+}
+#ff-download-btn, #ff-download-btn:hover, #ff-download-btn:visited, #ff-download-btn:active {
+  text-decoration: none !important;
+  color:white;
+}
+#ff-download-img {
+  margin:auto;
+}
+#ff-download-btn {
+  float:none;
+}
+/*---End---*/
+
 /* Sandstone CSS : Gumdrop Buttons */
 .button {
   float: left;
@@ -314,3 +333,4 @@ section#community{
   transition-duration: 0.25s;
   transition-delay: 0s;
 }
+/*---End---*/
