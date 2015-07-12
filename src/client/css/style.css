@@ -243,6 +243,11 @@ section#community{
   display: none;
   }
   /*---End---*/
+  /*---Download Section---*/
+  #ff-download-message-h{
+    display:none;
+  }
+  /*---End---*/
 }
 /* Contact form CSS */
 #contact_form{
@@ -276,7 +281,6 @@ section#community{
 #ff-download-btn {
   float:none;
 }
-
 /*---End---*/
 
 /* Sandstone CSS : Gumdrop Buttons */
