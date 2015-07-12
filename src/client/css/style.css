@@ -225,7 +225,15 @@ section#community .contribute-btn:hover{
   color: #0095dd;
   background: #fff;
 }
-.fa{
+section#community .fa .fa-heart{
+  color: #dfa09d;
+  font-size: 1.5em !important;
+}
+section#community .fa .fa-globe{
+  color: #dfa09d;
+  font-size: 1.5em !important;
+}
+section#community .fa .fa-users{
   color: #dfa09d;
   font-size: 1.5em !important;
 }
