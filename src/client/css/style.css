@@ -96,6 +96,10 @@ section#community{
     font-size: 10px;
 }
 
+.send-button{
+  margin-bottom: 30px;
+}
+
 /* Footer part CSS */ 
 
 .footer {
