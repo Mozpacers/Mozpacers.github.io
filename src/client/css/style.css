@@ -221,6 +221,8 @@ section#community .contribute-btn{
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   text-decoration: none;
+  color:white;
+  font-weight: bold;
 }
 section#community .contribute-btn:visited {
   color: #fff;
