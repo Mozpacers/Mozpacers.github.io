@@ -214,22 +214,7 @@ section#community{
   padding: 20px 0 20px 0;
   }
   /*-----End----*/
-  /*---Download Section---*/
-  #ff-download-message-h{
-    font-size:2em;
-  }
-  /*---End---*/
 }
-@media(min-width:991px) {
-  /*---Download Section---*/
-  #ff-download-message-h{
-    font-size:2.25em;
-  }
-  /*---End---*/
-}
-
-
-
 @media(min-width: 622px){
   /*---About Section---*/
   #coreContributers .smallImages{
@@ -241,11 +226,6 @@ section#community{
   /*---About Section----*/
   #coreContributers .bigImages{
   display: none;
-  }
-  /*---End---*/
-  /*---Download Section---*/
-  #ff-download-message-h{
-    display:none;
   }
   /*---End---*/
 }
@@ -272,7 +252,7 @@ section#community{
   color:white;
 }
 #ff-download-btn, #ff-download-btn:hover, #ff-download-btn:visited, #ff-download-btn:active {
-  text-decoration: none !important;
+  text-decoration: none; 
   color:white;
 }
 #ff-download-img {
