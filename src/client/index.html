@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Tabzilla stylesheet -->
     <link rel="stylesheet" href="https://mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" />
+    <!-- Icons in About(Community) section -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -51,25 +53,18 @@
       <section id="About">
         <div class="container">
           <div class="row">
-            <div id="AboutUs" class="col-md-12">
+            <div id="AboutUs" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
               <h1>About us</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eget dui eget elit semper aliquet. Fusce nec mi sapien. Nulla consectetur lorem in libero pellentesque, eget consectetur mi lobortis. Integer efficitur, dui at molestie consectetur, nibh nisl feugiat ex, eu condimentum nisi lorem at felis. Integer in mollis diam. Praesent eget malesuada lacus, id rutrum lacus. Donec eget euismod libero. </p>
             </div>
-            <div id="coreContributers" class="col-md-12">
-            <span class="bigImages">
-              <img src="http://placehold.it/150x150" alt="contributer1">
-              <img src="http://placehold.it/150x150" alt="contributer2">
-              <img src="http://placehold.it/150x150" alt="contributer3">
-              <img src="http://placehold.it/150x150" alt="contributer4">
-              <img src="http://placehold.it/150x150" alt="contributer5">
-              </span>
-              <span class="smallImages">
-              <img src="http://placehold.it/100x100" alt="contributer1">
-              <img src="http://placehold.it/100x100" alt="contributer2">
-              <img src="http://placehold.it/100x100" alt="contributer3">
-              <img src="http://placehold.it/100x100" alt="contributer4">
-              <img src="http://placehold.it/100x100" alt="contributer5">
-              </span>
+            <div id="coreContributers" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <span class="ContributerImages">
+              <img src="http://placehold.it/150x150" alt="contributer1" class="img-circle">
+              <img src="http://placehold.it/150x150" alt="contributer2" class="img-circle">
+              <img src="http://placehold.it/150x150" alt="contributer3" class="img-circle">
+              <img src="http://placehold.it/150x150" alt="contributer4" class="img-circle">
+              <img src="http://placehold.it/150x150" alt="contributer5" class="img-circle">
+            </span>
             </div>
           </div>
         </div>
@@ -78,41 +73,45 @@
       <section id="community">
         <div class="container">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-sm-4 col-md-4 col-lg-4">
               <span class="spanContributer">
-                <span class="glyphicon glyphicon-user"></span>
+                <i class="fa fa-users fa-lg"></i>
                  10,554
               </span>
               <br>
-              <span>
+              <span class='content'>
                 active Mozillians
                  <br>
                 worldwide
               </span>
             </div>
-            <div class="col-md-4">
+            <div class="col-sm-4 col-md-4 col-lg-4">
               <span class="spanOrganiser">
-                <span class="glyphicon glyphicon-heart"></span>
+                <i class="fa fa-heart fa-lg"></i>
                  121
               </span>
               <br>
-              <span>
+              <span class='content'>
                 upcoming events
                 <br>
                 around the globe
               </span>
             </div>
-            <div class="col-md-4">
+            <div class="col-sm-4 col-md-4 col-lg-4">
               <span class="statCountries">
-                <span class="glyphicon glyphicon-globe"></span>
+                <i class="fa fa-globe fa-lg"></i>
                  87
               </span>
               <br>
-              <span>
+              <span class='content'>
                 languages and counting,
                 <br>
                 on every continent
               </span>
+            </div>
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <a class="contribute-btn" href="https://www.mozilla.org/en-US/contribute/" data-element-location="button-click" data-link-type="Get Involved with Mozilla today">Get Involved with Mozilla today</a>
+              </div>
             </div>
           </div>
         </div>

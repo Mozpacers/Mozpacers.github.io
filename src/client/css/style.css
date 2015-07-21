@@ -174,7 +174,7 @@ ul {
 }
 /*About Section*/
 section#About{
-  background-color: #FF9500;
+  background-color: #E3AD40;
   color: #fff;
   text-align: center;
   font-size: .875rem;
@@ -183,52 +183,68 @@ section#About{
 }
 #coreContributers img{
   padding: 20px;
+  display: inline-block;
 }
 /*----End---*/
 
 /*About(Community) Section*/
 section#community{
-  padding:20px 0 20px 0;
+  padding:40px 0 20px 0;
   background-color: #c0413c;
   color: #fff;
   text-align: center;
-  font-size: 25px;
-  line-height: 1.5;
+  font-size: 35px;
+  line-height: 0.9;
   list-style: none;
-  font-family: 'Open Sans';
   font-style: normal;
   font-variant: normal;
 }
+section#community .content{
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 600;
+}
+section#community .col-md-4{
+  padding-bottom: 40px;
+}
+section#community .contribute-btn{
+  display: inline-block;
+  margin: 0 auto 20px auto;
+  padding: 20px 60px;
+  line-height: 1.3;
+  text-align: center;
+  font-size: 18px;
+  font-size: 1.125rem;
+  background: #0095dd;
+  border-radius: 10px;
+  text-transform: uppercase;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+}
+section#community .contribute-btn:visited {
+  color: #fff;
+}
+section#community .contribute-btn:hover{
+  color: #0095dd;
+  background: #fff;
+}
+section#community .fa-heart{
+  color: #dfa09d;
+  padding-bottom: 5px;
+}
+section#community .fa-users{
+  color: #dfa09d;
+  padding-bottom: 5px;
+}
+section#community .fa-globe{
+  color: #dfa09d;
+  padding-bottom: 5px;
+}
 /*-----End----*/
 
-/* Media Queries */
-@media(max-width: 991px){
-  /*-----About(Community) Section----*/
-  section#community{
-  font-size: 22px;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  }
-  section#community .col-md-4{
-  padding: 20px 0 20px 0;
-  }
-  /*-----End----*/
-}
-@media(min-width: 622px){
-  /*---About Section---*/
-  #coreContributers .smallImages{
-  display: none;
-  }
-  /*---End*---*/
-}
-@media(max-width: 622px){
-  /*---About Section----*/
-  #coreContributers .bigImages{
-  display: none;
-  }
-  /*---End---*/
-}
 /* Contact form CSS */
 #contact_form{
   background-color: #484848;
