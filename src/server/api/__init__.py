@@ -3,6 +3,7 @@ from flask.ext.admin import Admin
 from flask.ext.mongoengine import MongoEngine
 from pymongo import read_preferences
 from flask.ext.security import MongoEngineUserDatastore, Security
+from os import environ
 
 app = Flask(__name__, instance_relative_config=True)
 app.config.from_object('config')
@@ -11,13 +12,9 @@ db = MongoEngine()
 admin = Admin(name="MozillaDelhi API")
 app.secret_key = 'super secret key'
 
-app.config['MONGODB_SETTINGS'] = {'DB':'mozilladelhi', 'HOST':'mongodb://test:test@ds057862.mongolab.com:57862/mozilladelhi'}
-# connect(
-#     'mozilladelhi',
-#     username='test',
-#     password='test',
-#     port='57862',
-#     host='mongodb://test:test@ds057862.mongolab.com:57862/mozilladelhi')
+# app.config['MONGODB_SETTINGS'] = {'DB':'mozilladelhi', 'HOST':'mongodb://test:test@ds057862.mongolab.com:57862/mozilladelhi'}
+# app.config.from_object = 'settings.dbconfig'
+app.config['MONGODB_SETTINGS'] = {'DB': environ['DB'], 'HOST': environ['HOST']}
 
 db.init_app(app)
 admin.init_app(app)
@@ -33,4 +30,4 @@ security = Security(app, user_datastore)
 # Create a user to test with
 @app.before_first_request
 def create_user():
-    user_datastore.create_user(email='sanyam@zopper.com', password='password')
+    user_datastore.create_user(email='sanyam.khurana@thegeekyway.com', password='password')
