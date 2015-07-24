@@ -11,14 +11,13 @@ db = MongoEngine()
 admin = Admin(name="MozillaDelhi API")
 app.secret_key = 'super secret key'
 
-app.config['MONGODB_SETTINGS'] = {
-	'db': 'MozillaDelhi',
-	'host': 'localhost',
-	'port': 27017,
-	'read_preference': read_preferences.ReadPreference.PRIMARY
-	#'username': '2j3mnmsfl',
-	#'password': 'slkjf23ns'
-}
+app.config['MONGODB_SETTINGS'] = {'DB':'mozilladelhi', 'HOST':'mongodb://test:test@ds057862.mongolab.com:57862/mozilladelhi'}
+# connect(
+#     'mozilladelhi',
+#     username='test',
+#     password='test',
+#     port='57862',
+#     host='mongodb://test:test@ds057862.mongolab.com:57862/mozilladelhi')
 
 db.init_app(app)
 admin.init_app(app)
