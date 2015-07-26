@@ -174,7 +174,7 @@ ul {
 }
 /*About Section*/
 section#About{
-  background-color: #FF9500;
+  background-color: #E3AD40;
   color: #fff;
   text-align: center;
   font-size: .875rem;
@@ -183,52 +183,68 @@ section#About{
 }
 #coreContributers img{
   padding: 20px;
+  display: inline-block;
 }
 /*----End---*/
 
 /*About(Community) Section*/
 section#community{
-  padding:20px 0 20px 0;
+  padding:40px 0 20px 0;
   background-color: #c0413c;
   color: #fff;
   text-align: center;
-  font-size: 25px;
-  line-height: 1.5;
+  font-size: 35px;
+  line-height: 0.9;
   list-style: none;
-  font-family: 'Open Sans';
   font-style: normal;
   font-variant: normal;
 }
+section#community .content{
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 600;
+}
+section#community .col-md-4{
+  padding-bottom: 40px;
+}
+section#community .contribute-btn{
+  display: inline-block;
+  margin: 0 auto 20px auto;
+  padding: 20px 60px;
+  line-height: 1.3;
+  text-align: center;
+  font-size: 18px;
+  font-size: 1.125rem;
+  background: #0095dd;
+  border-radius: 10px;
+  text-transform: uppercase;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  text-decoration: none;
+  color:white;
+  font-weight: bold;
+}
+section#community .contribute-btn:visited {
+  color: #fff;
+}
+section#community .contribute-btn:hover{
+  color: #0095dd;
+  background: #fff;
+}
+section#community .fa-heart{
+  color: #dfa09d;
+  padding-bottom: 5px;
+}
+section#community .fa-users{
+  color: #dfa09d;
+  padding-bottom: 5px;
+}
+section#community .fa-globe{
+  color: #dfa09d;
+  padding-bottom: 5px;
+}
 /*-----End----*/
 
-/* Media Queries */
-@media(max-width: 991px){
-  /*-----About(Community) Section----*/
-  section#community{
-  font-size: 22px;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  }
-  section#community .col-md-4{
-  padding: 20px 0 20px 0;
-  }
-  /*-----End----*/
-}
-@media(min-width: 622px){
-  /*---About Section---*/
-  #coreContributers .smallImages{
-  display: none;
-  }
-  /*---End*---*/
-}
-@media(max-width: 622px){
-  /*---About Section----*/
-  #coreContributers .bigImages{
-  display: none;
-  }
-  /*---End---*/
-}
 /* Contact form CSS */
 #contact_form{
   background-color: #484848;
@@ -247,7 +263,98 @@ section#community{
 /*Slider*/
 .pillars.accordion.panel-title.panel-inner.panel-content
 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
+
+/*---Download Section CSS---*/
+#download-section {
+  background-color:#565A5C;
+}
+#ff-download-message-h {
+  color:white;
+}
+#ff-download-btn, #ff-download-btn:hover, #ff-download-btn:visited, #ff-download-btn:active {
+  text-decoration: none;
+  color:white;
+}
+#ff-download-img {
+  margin:auto;
+}
+#ff-download-btn {
+  float:none;
+}
+/*---End---*/
+
+/* Sandstone CSS : Gumdrop Buttons */
+.button {
+  float: left;
+  display: block;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+  font: 14px/48px 'OpenSans-Reg', "Lucida Sans", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  letter-spacing: -0.25px;
+  height: 48px;
+  width: 252px;
+  background-color: #81BC2E;
+  text-align: center;
+  color: white;
+  border-bottom: none;
+  -webkit-border-radius: 0.25em;
+  -moz-border-radius: 0.25em;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.1);
+  /* IE10 */
+  background-image: -ms-linear-gradient(top, #81bc2e 0%, #659c28 100%);
+  /* Mozilla Firefox */
+  background-image: -moz-linear-gradient(top, #81bc2e 0%, #659c28 100%);
+  /* Opera */
+  background-image: -o-linear-gradient(top, #81bc2e 0%, #659c28 100%);
+  /* Webkit (Safari/Chrome 10) */
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #81bc2e), color-stop(1, #659c28));
+  /* Webkit (Chrome 11+) */
+  background-image: -webkit-linear-gradient(top, #81bc2e 0%, #659c28 100%);
+  /* Proposed W3C Markup */
+  background-image: linear-gradient(top, #81bc2e 0%, #659c28 100%);
+  -webkit-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;
+  -webkit-transition-duration: 0.25s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;
+  -moz-transition-duration: 0.25s;
+  -moz-transition-delay: 0s;
+  transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;
+  transition-duration: 0.25s;
+  transition-delay: 0s;
+}
+.button:hover {
+  -webkit-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12 px 24px 2px #7cd31e;
+  -moz-box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 2px #7cd31e;
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1), inset 0px -2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 2px #7cd31e;
+  -webkit-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;
+  -webkit-transition-duration: 0.25s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;
+  -moz-transition-duration: 0.25s;
+  -moz-transition-delay: 0s;
+  transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;
+  transition-duration: 0.25s;
+  transition-delay: 0s;
+}
+.button:active {
+  -webkit-box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 6px rgba(0, 0, 0, 0.2), inset 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 6px rgba(0, 0, 0, 0.2), inset 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 2px 0px 0px rgba(0, 0, 0, 0.2), inset 0px 12px 24px 6px rgba(0, 0, 0, 0.2), inset 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;
+  -webkit-transition-duration: 0.25s;
+  -webkit-transition-delay: 0s;
+  -moz-transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;
+  -moz-transition-duration: 0.25s;
+  -moz-transition-delay: 0s;
+  transition-property: -moz-box-shadow, -webkit-box-shadow, box-shadow;
+  transition-duration: 0.25s;
+  transition-delay: 0s;
+}
+/*---End---*/
