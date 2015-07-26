@@ -10,7 +10,7 @@ app.config.from_object('config')
 
 db = MongoEngine()
 admin = Admin(name="MozillaDelhi API")
-app.secret_key = 'super secret key'
+app.secret_key = environ['SECRET_KEY']
 
 # app.config['MONGODB_SETTINGS'] = {'DB':'mozilladelhi', 'HOST':'mongodb://test:test@ds057862.mongolab.com:57862/mozilladelhi'}
 # app.config.from_object = 'settings.dbconfig'
