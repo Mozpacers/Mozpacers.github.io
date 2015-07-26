@@ -244,3 +244,10 @@ section#community{
   color: #FF0000;
   font-size: 10px;
 }
+/*Slider*/
+.pillars.accordion.panel-title.panel-inner.panel-content
+{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
