@@ -1,0 +1,20 @@
+Code Contributors
+=================
+
+Sanyam Khurana (gh: CuriousLearner / @ErSanyamKhurana)*
+Nikhil Handa (gh: slayslot)*
+Vikram Jaswal (gh: vikramj74)
+Manraj Singh (gh: ManrajGrover)
+Abhijeet Chauhan (gh: supernoobabhi)
+Prateek (gh: askprateek)
+
+* Possesses commit rights
+
+Special Thanks
+==============
+
+The following haven't provided code directly, but have provided guidance and advice.
+
+Anup Kumar Mishra (gh: anupkumarmishra)
+Ajay Kumar (gh: ajaysinghi)
+Bhuvnesh Dogra (gh: bhuvneshdogra)
