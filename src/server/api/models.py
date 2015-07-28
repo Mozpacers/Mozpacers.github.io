@@ -1,12 +1,16 @@
 from api import db
-from flask_security import Security, UserMixin, RoleMixin, login_required, current_user
+from flask_security import Security, UserMixin, \
+    RoleMixin, login_required, current_user
+from datetime import datetime
+from flask.ext.security.utils import encrypt_password
+
 
 class Event(db.Document):
     eid = db.IntField(unique=True)
-    title = db.StringField()
+    title = db.StringField(max_length=100)
     event_date = db.DateTimeField()
     link = db.StringField()
-    description = db.StringField()
+    description = db.StringField(max_length=500)
     venue = db.StringField()
 
     def __unicode__(self):
@@ -38,29 +42,13 @@ class Role(db.Document, RoleMixin):
 
 class User(db.Document, UserMixin):
     email = db.StringField(max_length=255)
-    password = db.StringField(max_length=255)
+    password = db.StringField(max_length=500)
     active = db.BooleanField(default=True)
     confirmed_at = db.DateTimeField()
     roles = db.ListField(db.ReferenceField(Role), default=[])
 
-# class User(db.Document):
-#     login = db.StringField(max_length=80, unique=True)
-#     email = db.StringField(max_length=120)
-#     password = db.StringField(max_length=64)
+    def save(self, *args, **kwargs):
+        self.password = encrypt_password(self.password)
+        self.confirmed_at = datetime.now()
 
-#     # Flask-Login integration
-#     def is_authenticated(self):
-#         return True
-
-#     def is_active(self):
-#         return True
-
-#     def is_anonymous(self):
-#         return False
-
-#     def get_id(self):
-#         return str(self.id)
-
-#     # Required for administrative interface
-#     def __unicode__(self):
-#         return self.login
+        super(User, self).save(*args, **kwargs)
