@@ -40,6 +40,12 @@ class Role(db.Document, RoleMixin):
     name = db.StringField(max_length=80, unique=True)
     description = db.StringField(max_length=255)
 
+    def __unicode__(self):
+        return self.name
+
+    def __repr__(self):
+        return self.name
+
 class User(db.Document, UserMixin):
     email = db.StringField(max_length=255)
     password = db.StringField(max_length=500)
