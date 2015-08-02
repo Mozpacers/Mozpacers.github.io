@@ -565,6 +565,11 @@ $(document).ready(NavMain.init);
 
 })();
 
+$(document).ready(function(){
+    $("#events").click(function(){
+        $("#Eventsinfo").toggle();
+    });
+});
 /*
 nav-main.js
 */
