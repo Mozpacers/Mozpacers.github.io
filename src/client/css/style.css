@@ -175,6 +175,7 @@ ul {
 /*Hero Image Section */
 .animated {
   -webkit-animation-duration: 2s;
+  -ms-animation-duration: 2s;
   -o-animation-duration: 2s;
   -moz-animation-duration: 2s;
   animation-duration: 2s;
@@ -188,6 +189,7 @@ ul {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
     -moz-transform: translate3d(0, -100%, 0);
     -o-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
@@ -199,6 +201,7 @@ ul {
     -moz-transform: none;
     -o-webkit-transform: none;
     transform: none;
+    -ms-transform: none;
   }
 }
 
@@ -209,6 +212,7 @@ ul {
     -moz-transform: translate3d(0, -100%, 0);
     -o-transform: translate3d(0, -100%, 0);
     transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
   }
 
   100% {
@@ -217,6 +221,7 @@ ul {
     -moz-transform: none;
     -o-transform: none;
     transform: none;
+    -ms-transform: none;
   }
 }
 
@@ -224,6 +229,7 @@ ul {
   -webkit-animation-name: fadeInDown;
   -moz-animation-name: fadeInDown;
   -o-animation-name: fadeInDown;
+  -ms-animation-name: fadeInDown;
   animation-name: fadeInDown;
 }
 
