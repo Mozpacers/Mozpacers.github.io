@@ -5,9 +5,12 @@ from pymongo import read_preferences
 from flask.ext.security import MongoEngineUserDatastore, Security
 from os import environ
 from flask.ext.security.utils import encrypt_password
+from flask.ext.cors import CORS
 
 app = Flask(__name__, instance_relative_config=True)
 app.config.from_object('config')
+
+cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 db = MongoEngine()
 admin = Admin(name="MozillaDelhi API")
