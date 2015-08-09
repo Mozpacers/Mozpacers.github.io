@@ -6,13 +6,14 @@ import api
 from wtforms.validators import required, ValidationError
 from datetime import datetime
 
+
 class EView(ModelView):
     can_create = True
     can_delete = True
     can_edit = True
     column_list = ('eid', 'title', 'event_date', 'link', 'description')
     decorators = [login_required]
-    form_widget_args = {'eid':{'disabled':True}}
+    form_widget_args = {'eid': {'disabled': True}}
 
     def future_events(form, field):
         if field.data < datetime.now():
@@ -22,12 +23,15 @@ class EView(ModelView):
         title=dict(label='Title', validators=[required()]),
         link=dict(label='Link', validators=[required()]),
         event_date=dict(label='Date', validators=[required(), future_events]),
-        registration_form_link=dict(label='Registeration Form Link', validators=[required()]),
-        event_image_link=dict(label='Event Featured Image Link', validators=[required()])
+        registration_form_link=dict(
+            label='Registeration Form Link', validators=[required()]),
+        event_image_link=dict(
+            label='Event Featured Image Link', validators=[required()])
     )
 
     def is_accessible(self):
         return current_user.has_role("admin") or current_user.has_role("super_admin")
+
 
 class UView(ModelView):
     can_create = True

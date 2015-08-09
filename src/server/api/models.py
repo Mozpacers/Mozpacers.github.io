@@ -19,15 +19,14 @@ class Event(db.Document):
         return str(self.eid)
 
     def get_dict(self):
-        return { 'eid': self.eid,
-                 'title': self.title,
-                 'event_date': self.event_date,
-                 'link': self.link,
-                 'description': self.description}
+        return {'eid': self.eid,
+                'title': self.title,
+                'event_date': self.event_date,
+                'link': self.link,
+                'description': self.description}
 
     def __repr__(self):
         return 'eid ' + str(self.eid)
-
 
     def save(self, *args, **kwargs):
         if self.eid == None:
@@ -38,6 +37,7 @@ class Event(db.Document):
 
         super(Event, self).save(*args, **kwargs)
 
+
 class Role(db.Document, RoleMixin):
     name = db.StringField(max_length=80, unique=True)
     description = db.StringField(max_length=255)
@@ -47,6 +47,7 @@ class Role(db.Document, RoleMixin):
 
     def __repr__(self):
         return self.name
+
 
 class User(db.Document, UserMixin):
     email = db.StringField(max_length=255)
