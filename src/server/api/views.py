@@ -60,5 +60,7 @@ def create_dict(allEvents):
         d['link'] = item.link
         d['description'] = item.description
         d['venue'] = item.venue
+        d['registeration_form_link'] = item.registeration_form_link
+        d['event_image_link'] = item.event_image_link
         result.append(d)
     return result
