@@ -16,7 +16,13 @@ def get_events():
     returns all the events with GET request
     '''
     global result
-    allEvents = Event.objects.all()
+    time = request.args.get('time')
+    if time == "past":
+        allEvents = Event.objects.filter(event_date__lte=datetime.now())
+    elif time == "future":
+        allEvents = Event.objects.filter(event_date__gt=datetime.now())
+    else:
+        allEvents = Event.objects.all()
     create_dict(allEvents)
     return Response(json.dumps(result, cls=PythonJSONEncoder), status=200, 
                     content_type="application/json")
