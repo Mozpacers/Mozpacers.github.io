@@ -21,7 +21,8 @@ class EView(ModelView):
     form_args = dict(
         title=dict(label='Title', validators=[required()]),
         link=dict(label='Link', validators=[required()]),
-        event_date=dict(label='Date', validators=[required(), future_events])
+        event_date=dict(label='Date', validators=[required(), future_events]),
+        registeration_form_link=dict(label='Registeration Form Link', validators=[required()])
     )
 
     def is_accessible(self):

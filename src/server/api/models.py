@@ -9,9 +9,11 @@ class Event(db.Document):
     eid = db.IntField(unique=True)
     title = db.StringField(max_length=100)
     event_date = db.DateTimeField()
-    link = db.StringField()
+    link = db.URLField(verify_exists=True)
     description = db.StringField(max_length=500)
     venue = db.StringField()
+    registeration_form_link = db.URLField(verify_exists=True)
+
 
     def __unicode__(self):
         return str(self.eid)

@@ -13,7 +13,10 @@ db = MongoEngine()
 admin = Admin(name="MozillaDelhi API")
 app.secret_key = environ['SECRET_KEY']
 
+# Configurations for MongoDB
 app.config['MONGODB_SETTINGS'] = {'DB': environ['DB'], 'HOST': environ['HOST']}
+
+# Configurations for storing password hashes
 app.config['SECURITY_PASSWORD_HASH'] = environ['SECURITY_PASSWORD_HASH']
 app.config['SECURITY_PASSWORD_SALT'] = environ['SECURITY_PASSWORD_SALT']
 
