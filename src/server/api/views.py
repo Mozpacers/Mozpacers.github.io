@@ -11,7 +11,6 @@ e = Event()  # Global Instance of Event
 
 
 @app.route('/api/event/getevents/')
-@login_required
 def get_events():
     '''
     returns all the events with GET request
