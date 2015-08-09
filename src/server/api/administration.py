@@ -22,7 +22,7 @@ class EView(ModelView):
         title=dict(label='Title', validators=[required()]),
         link=dict(label='Link', validators=[required()]),
         event_date=dict(label='Date', validators=[required(), future_events]),
-        registeration_form_link=dict(label='Registeration Form Link', validators=[required()]),
+        registration_form_link=dict(label='Registeration Form Link', validators=[required()]),
         event_image_link=dict(label='Event Featured Image Link', validators=[required()])
     )
 

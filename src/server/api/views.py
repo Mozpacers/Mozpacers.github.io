@@ -17,12 +17,22 @@ def get_events():
     '''
     global result
     time = request.args.get('time')
+    limit = request.args.get('limit')
+    if not limit:
+        # Default limit 3 for HomePage
+        limit = 3
+    if limit:
+        try:
+            limit = int(limit)
+        except:
+            return make_response(jsonify({"Message": 
+                "Limit should be an integer"}), 400)
     if time == "past":
-        allEvents = Event.objects.filter(event_date__lte=datetime.now())
+        allEvents = Event.objects.filter(event_date__lte=datetime.now()).limit(limit)
     elif time == "future":
-        allEvents = Event.objects.filter(event_date__gt=datetime.now())
+        allEvents = Event.objects.filter(event_date__gt=datetime.now()).limit(limit)
     else:
-        allEvents = Event.objects.all()
+        allEvents = Event.objects.all().limit(limit)
     create_dict(allEvents)
     return Response(json.dumps(result, cls=PythonJSONEncoder), status=200, 
                     content_type="application/json")
@@ -66,7 +76,7 @@ def create_dict(allEvents):
         d['link'] = item.link
         d['description'] = item.description
         d['venue'] = item.venue
-        d['registeration_form_link'] = item.registeration_form_link
+        d['registration_form_link'] = item.registration_form_link
         d['event_image_link'] = item.event_image_link
         result.append(d)
     return result

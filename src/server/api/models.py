@@ -12,7 +12,7 @@ class Event(db.Document):
     link = db.URLField(verify_exists=True)
     description = db.StringField(max_length=500)
     venue = db.StringField()
-    registeration_form_link = db.URLField(verify_exists=True)
+    registration_form_link = db.URLField(verify_exists=True)
     event_image_link = db.URLField(verify_exists=True)
 
     def __unicode__(self):
