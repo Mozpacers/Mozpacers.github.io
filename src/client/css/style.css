@@ -173,6 +173,19 @@ ul {
   }
 }
 /*Hero Image Section */
+#hero_col{
+  position: relative;
+}
+#hero_main{
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width:100%;
+}
+#hero_logo{
+  position: absolute;
+  bottom:5px;
+}
 .animated {
   -webkit-animation-duration: 2s;
   -ms-animation-duration: 2s;
