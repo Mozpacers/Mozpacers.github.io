@@ -1,7 +1,8 @@
+
 /* CSS for all */
 *{
-    font-family: 'Open Sans Light', sans-serif;
-    transition: all linear .1s;
+  font-family: 'Open Sans Light', sans-serif;
+  transition: all linear .1s;
 }
 html{
   font-size:100%;
@@ -14,7 +15,8 @@ body{
   /* Margin bottom by footer height */
   margin-bottom: 150px;
 }
-#outer-wrapper{
+#outer-wrapper
+{
   border-top: 2px solid #FFF;
   position:relative;
   min-width:320px;
@@ -176,6 +178,81 @@ ul {
     width: auto;
   }
 }
+/*Hero Image Section */
+#hero_col{
+  position: relative;
+}
+#hero_main{
+  position: relative;
+  top: 0;
+  left: 0;
+  max-width:100%;
+}
+#hero_logo{
+  position: absolute;
+  bottom:5px;
+}
+.animated {
+  -webkit-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    -moz-transform: translate3d(0, -100%, 0);
+    -o-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-webkit-transform: none;
+    transform: none;
+    -ms-transform: none;
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    -moz-transform: translate3d(0, -100%, 0);
+    -o-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    transform: none;
+    -ms-transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  -ms-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+/* Hero Image ends*/
 /*About Section*/
 section#About{
   background-color: #E3AD40;
@@ -198,7 +275,7 @@ section#community{
   color: #fff;
   text-align: center;
   font-size: 35px;
-  line-height: 1.5;
+  line-height: 0.9;
   list-style: none;
   font-family: 'Open Sans';
   font-style: normal;
@@ -209,12 +286,8 @@ section#community .content{
   font-size: 20px;
   font-weight: 600;
 }
-@media(min-width: 622px){
-  /*---About Section---*/
-  #coreContributers .smallImages{
-  display: none;
-  }
-  /*---End*---*/
+section#community .col-md-4{
+  padding-bottom: 40px;
 }
 section#community .contribute-btn{
   display: inline-block;
@@ -256,18 +329,18 @@ section#community .fa-globe{
 
 /* Contact form CSS */
 #contact_form{
-    background-color: #484848;
+  background-color: #484848;
 }
 #contact_form input{
-    border-color: #484848;
+  border-color: #484848;
 }
 #contact_form input:focus, #contact_form textarea:focus{
-    border-color: #0000FF;
-    color: #000000;
+  border-color: #0000FF;
+  color: #000000;
 }
 .error{
-    color: #FF0000;
-    font-size: 10px;
+  color: #FF0000;
+  font-size: 10px;
 }
 /*---Download Section CSS---*/
 #download-section {
@@ -277,7 +350,7 @@ section#community .fa-globe{
   color:white;
 }
 #ff-download-btn, #ff-download-btn:hover, #ff-download-btn:visited, #ff-download-btn:active {
-  text-decoration: none; 
+  text-decoration: none;
   color:white;
 }
 <<<<<<< HEAD
