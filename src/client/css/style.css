@@ -373,23 +373,22 @@ footer {
     background-color: #D7D3C8 ;
 }
 
- .footer-logo{
+ /*.footer-logo{
   margin-bottom: 50px;
   margin-top: -20px
- }
- .footer-logo h3{
-    width:145px;
-    height:56px
- }
+ }*/
+ 
  /*#wrap{
   padding-left: 120px;
  } */
  .footercolumn{
     display:inline-block;
     line-height: 25px;
+  /*  width: 287px; */
  }
  .socialinks{
-    margin-top: -14px;
+    margin-top: -24px;
+ /*   width: 303px;*/
  }
  .footercolumn ul{
   list-style-type:none;
@@ -397,6 +396,12 @@ footer {
  .foo_icon {
     margin: 5px;
 }
+#connect{
+  font-weight: normal;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
 #ff-download-btn, #ff-download-btn:hover, #ff-download-btn:visited, #ff-download-btn:active {
   text-decoration: none; 
   color:white;
