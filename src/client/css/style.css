@@ -383,6 +383,9 @@ footer {
     display:inline-block;
     line-height: 25px;
  }
+ .footercolumn ul{
+  list-style-type:none;
+ }
  .foo_icon {
     margin: 5px;
 }
