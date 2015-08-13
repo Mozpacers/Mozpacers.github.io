@@ -379,6 +379,10 @@ footer {
  #wrap{
   padding-left: 120px;
  }
+ .footercolumn{
+    display:inline-block;
+    line-height: 25px;
+ }
  .foo_icon {
     margin: 5px;
 }
