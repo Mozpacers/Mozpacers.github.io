@@ -375,6 +375,11 @@ footer {
 
  .footer-logo{
   margin-bottom: 50px;
+  margin-top: -20px
+ }
+ .footer-logo h3{
+    width:145px;
+    height:56px
  }
  /*#wrap{
   padding-left: 120px;
@@ -382,6 +387,9 @@ footer {
  .footercolumn{
     display:inline-block;
     line-height: 25px;
+ }
+ .socialinks{
+    margin-top: -14px;
  }
  .footercolumn ul{
   list-style-type:none;
