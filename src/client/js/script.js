@@ -62,7 +62,7 @@ $(document).ready(function() {
     $('#name,#message,#email').css('border-color','#484848');
     ctr = 0;
     validate_form();
-  });
+  }); 
 });
 /*
 nav-main-resp.js
