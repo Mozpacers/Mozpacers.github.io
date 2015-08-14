@@ -648,7 +648,6 @@ section#community .fa-globe{
   background: -o-linear-gradient(bottom, rgba(229, 131, 34, 0.95) 50%, rgba(229, 131, 34, 0.8) 65%, rgba(229, 131, 34, 0) 100%);
   background: linear-gradient(bottom, rgba(229, 131, 34, 0.95) 50%, rgba(229, 131, 34, 0.8) 65%, rgba(229, 131, 34, 0) 100%);
 }
-
 #panel-lightbeam {
     background: #424f5a url("http://mozilla-tunisia.org/static/home/img/logo-lightbeam.png") -80px 20px no-repeat;
     background: url("http://mozilla-tunisia.org/static/home/img/logo-lightbeam.png") -80px 20px no-repeat, #424f5a url("http://mozilla-tunisia.org/static/home/img/bg-lightbeam.jpg") 0 0 no-repeat;
