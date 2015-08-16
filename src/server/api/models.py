@@ -8,7 +8,8 @@ from flask.ext.security.utils import encrypt_password
 class Event(db.Document):
     eid = db.IntField(unique=True)
     title = db.StringField(max_length=100)
-    event_date = db.DateTimeField()
+    event_start_date = db.DateTimeField()
+    event_end_date = db.DateTimeField()
     link = db.URLField(verify_exists=True)
     description = db.StringField(max_length=500)
     venue = db.StringField()
@@ -21,9 +22,13 @@ class Event(db.Document):
     def get_dict(self):
         return {'eid': self.eid,
                 'title': self.title,
-                'event_date': self.event_date,
+                'event_start_date': self.event_start_date,
+                'event_end_date': self.event_end_date,
                 'link': self.link,
-                'description': self.description}
+                'description': self.description,
+                'venue': self.venue,
+                'registration_form_link': self.registration_form_link,
+                'event_image_link': self.event_image_link}
 
     def __repr__(self):
         return 'eid ' + str(self.eid)

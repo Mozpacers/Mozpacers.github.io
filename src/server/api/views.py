@@ -29,10 +29,10 @@ def get_events():
                                           "Limit should be an integer"}), 400)
     if time == "past":
         allEvents = Event.objects.filter(
-            event_date__lte=datetime.now()).limit(limit)
+            event_start_date__lte=datetime.now()).limit(limit)
     elif time == "future":
         allEvents = Event.objects.filter(
-            event_date__gt=datetime.now()).limit(limit)
+            event_start_date__gt=datetime.now()).limit(limit)
     else:
         allEvents = Event.objects.all().limit(limit)
     create_dict(allEvents)
@@ -79,7 +79,8 @@ def create_dict(allEvents):
         d = {}  # To make a dictionary for JSON Response
         d['eid'] = item.eid
         d['title'] = item.title
-        d['event_date'] = item.event_date
+        d['event_start_date'] = item.event_start_date
+        d['event_end_date'] = item.event_end_date
         d['link'] = item.link
         d['description'] = item.description
         d['venue'] = item.venue
