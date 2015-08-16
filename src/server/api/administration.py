@@ -11,7 +11,9 @@ class EView(ModelView):
     can_create = True
     can_delete = True
     can_edit = True
-    column_list = ('eid', 'title', 'event_date', 'link', 'description')
+    column_list = ('eid', 'title', 'event_start_date', 'event_end_date', 
+                    'link', 'description', 'venue', 'event_image_link', 
+                    'registration_form_link')
     decorators = [login_required]
     form_widget_args = {'eid': {'disabled': True}}
 
@@ -22,7 +24,8 @@ class EView(ModelView):
     form_args = dict(
         title=dict(label='Title', validators=[required()]),
         link=dict(label='Link', validators=[required()]),
-        event_date=dict(label='Date', validators=[required(), future_events]),
+        event_start_date=dict(label='Date', validators=[required(), future_events]),
+        event_end_date=dict(label='Date', validators=[required(), future_events]),
         registration_form_link=dict(
             label='Registeration Form Link', validators=[required()]),
         event_image_link=dict(
