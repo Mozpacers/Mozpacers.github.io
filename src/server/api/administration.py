@@ -21,10 +21,14 @@ class EView(ModelView):
         if field.data < datetime.now():
             raise ValidationError("Event must only be on some future date")
 
+    def start_end_date_validation(form, field):
+        if field.data > form.event_end_date.data:
+            raise ValidationError("Start Date should be earlier than End Date")
+
     form_args = dict(
         title=dict(label='Title', validators=[required()]),
         link=dict(label='Link', validators=[required()]),
-        event_start_date=dict(label='Start Date', validators=[required(), future_events]),
+        event_start_date=dict(label='Start Date', validators=[required(), future_events, start_end_date_validation]),
         event_end_date=dict(label='End Date', validators=[required(), future_events]),
         registration_form_link=dict(
             label='Registration Form Link', validators=[required()]),
