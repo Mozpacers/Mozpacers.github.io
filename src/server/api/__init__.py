@@ -23,6 +23,8 @@ app.config['MONGODB_SETTINGS'] = {'DB': environ['DB'], 'HOST': environ['HOST']}
 app.config['SECURITY_PASSWORD_HASH'] = environ['SECURITY_PASSWORD_HASH']
 app.config['SECURITY_PASSWORD_SALT'] = environ['SECURITY_PASSWORD_SALT']
 
+app.config['SECURITY_POST_LOGIN_VIEW'] = environ['SECURITY_POST_LOGIN_VIEW']
+
 db.init_app(app)
 admin.init_app(app)
 
