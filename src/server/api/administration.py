@@ -24,10 +24,10 @@ class EView(ModelView):
     form_args = dict(
         title=dict(label='Title', validators=[required()]),
         link=dict(label='Link', validators=[required()]),
-        event_start_date=dict(label='Date', validators=[required(), future_events]),
-        event_end_date=dict(label='Date', validators=[required(), future_events]),
+        event_start_date=dict(label='Start Date', validators=[required(), future_events]),
+        event_end_date=dict(label='End Date', validators=[required(), future_events]),
         registration_form_link=dict(
-            label='Registeration Form Link', validators=[required()]),
+            label='Registration Form Link', validators=[required()]),
         event_image_link=dict(
             label='Event Featured Image Link', validators=[required()])
     )
