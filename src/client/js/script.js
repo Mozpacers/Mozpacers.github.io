@@ -1,4 +1,22 @@
 var ctr = 0;
+
+count=0;
+function cod()
+{
+  count++;
+  if(count%2==0)
+  {
+  document.getElementById("nav").style.display = "block";
+  document.getElementById("nam").style.display="block";
+  document.getElementById("name").style.display="none";
+  }
+  else {
+    document.getElementById("nav").style.display = "none";
+    document.getElementById("nam").style.display="none";
+    document.getElementById("name").style.display="block";
+  }
+
+}
 function validate_form() {
   var reEmail = /^\S+@\S+\.\S+$/ ;
   var reName = /^[a-zA-Z ]+$/ ;
@@ -62,7 +80,7 @@ $(document).ready(function() {
     $('#name,#message,#email').css('border-color','#484848');
     ctr = 0;
     validate_form();
-  }); 
+  });
 });
 /*
 nav-main-resp.js
