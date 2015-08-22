@@ -1,3 +1,17 @@
+function cardclose(){
+  $("#masthead").show();
+  $("#Hero_Image").show();
+  $("#download-section").show();
+  $("#events").show();
+  $("#About").show();
+  $("#community").show();
+  $("#contact_form").show();
+  $(".testing").hide();
+}
+$(".back").click(function(){
+  cardclose();
+  history.pushState("", document.title, window.location.pathname+ window.location.search);
+});
 var ctr = 0;
 function validate_form() {
   var reEmail = /^\S+@\S+\.\S+$/ ;
@@ -62,7 +76,7 @@ $(document).ready(function() {
     $('#name,#message,#email').css('border-color','#484848');
     ctr = 0;
     validate_form();
-  }); 
+  });
 });
 /*
 nav-main-resp.js
@@ -641,4 +655,1139 @@ $(document).ready(function() {
     });
   });
 
+});
+/*Events Section*/
+$(document).ready(function() {
+  $(".testing").hide();
+  var hash = window.location.hash.substring(1);
+  // console.log(hash);
+  if(hash.length>0){
+  cardopen(hash);
+  }
+  function cardopen(idused){
+    $(".event-view").empty();
+    $(".single-event").empty();
+    if(hash.length==0){
+      console.log("HI");
+      window.location.hash=idused;
+    }
+    $("#masthead").hide();
+    $("#Hero_Image").hide();
+    $("#download-section").hide();
+    $("#events").hide();
+    $("#About").hide();
+    $("#community").hide();
+    $("#contact_form").hide();
+    $(".testing").show();
+    if(idused=="future-more"){
+      requestF();
+    }
+    else if(idused=="past-more"){
+      requestP();
+    }
+    else if(idused.indexOf("event")> -1){
+      alert("works");
+      idused = idused.replace(/[^0-9\.]+/g, "");
+      alert(idused);
+      requestS(idused);
+    }
+  }
+  function requestF()
+  {
+    var requestfuture = $.ajax({
+                url: "http://stormy-gorge-8134.herokuapp.com/api/events/?time=future&limit=10",
+                method: "GET",
+                dataType: "json"
+            });
+
+            requestfuture.done(function(msg) {
+                noFetched=msg.length;
+                var template=$("#card-template").html();
+                $.each(msg, function(i, e){
+                    var eventvenue=msg[i].venue;
+                    var eventimage=msg[i].event_image_link;
+                    var eventregistration=msg[i].registration_form_link;
+                    var eventstart= new Date(msg[i].event_start_date);
+                    var startminutes= eventstart.getMinutes();
+                    console.log(startminutes);
+                    var starthours= eventstart.getHours();
+                    console.log(starthours);
+                    var startdate= eventstart.getDate();
+                    var startmonth= eventstart.getMonth();
+                    switch(startminutes){
+                      case 0:
+                      startminutes= "00";
+                      break;
+                      case 1:
+                      startminutes= "01";
+                      break;
+                      case 2:
+                      startminutes= "02";
+                      break;
+                      case 3:
+                      startminutes= "03";
+                      break;
+                      case 4:
+                      startminutes= "04";
+                      break;
+                      case 5:
+                      startminutes= "05";
+                      break;
+                      case 6:
+                      startminutes= "06";
+                      break;
+                      case 7:
+                      startminutes= "07";
+                      break;
+                      case 8:
+                      startminutes= "08";
+                      break;
+                      case 9:
+                      startminutes= "09";
+                      break;
+                    }
+                    switch(starthours){
+                      case 0:
+                      startminutes= "00";
+                      break;
+                      case 1:
+                      startminutes= "01";
+                      break;
+                      case 2:
+                      startminutes= "02";
+                      break;
+                      case 3:
+                      startminutes= "03";
+                      break;
+                      case 4:
+                      startminutes= "04";
+                      break;
+                      case 5:
+                      startminutes= "05";
+                      break;
+                      case 6:
+                      startminutes= "06";
+                      break;
+                      case 7:
+                      startminutes= "07";
+                      break;
+                      case 8:
+                      startminutes= "08";
+                      break;
+                      case 9:
+                      starthours= "09";
+                      break;
+                    }
+                    switch(startmonth){
+                      case 0:
+                      startmonth= "Jan";
+                      break;
+                      case 1:
+                      startmonth= "Feb";
+                      break;
+                      case 2:
+                      startmonth= "Mar";
+                      break;
+                      case 3:
+                      startmonth= "Apr";
+                      break;
+                      case 4:
+                      startmonth= "May";
+                      break;
+                      case 5:
+                      startmonth= "June";
+                      break;
+                      case 6:
+                      startmonth= "July";
+                      break;
+                      case 7:
+                      startmonth= "Aug";
+                      break;
+                      case 8:
+                      startmonth= "Sep";
+                      break;
+                      case 9:
+                      startmonth= "Oct";
+                      break;
+                      case 10:
+                      startmonth= "Nov";
+                      break;
+                      case 11:
+                      startmonth= "Dec";
+                      break;
+                    }
+                    var startyear= eventstart.getFullYear();
+                    var eventend=new Date(msg[i].event_end_date);
+                    var endminutes= eventend.getMinutes();
+                    var endhours= eventend.getHours();
+                    var enddate= eventend.getDate();
+                    var endmonth= eventend.getMonth();
+                    switch(endmonth){
+                      case 0:
+                      endmonth= "Jan";
+                      break;
+                      case 1:
+                      endmonth= "Feb";
+                      break;
+                      case 2:
+                      endmonth= "Mar";
+                      break;
+                      case 3:
+                      endmonth= "Apr";
+                      break;
+                      case 4:
+                      endmonth= "May";
+                      break;
+                      case 5:
+                      endmonth= "June";
+                      break;
+                      case 6:
+                      endmonth= "July";
+                      break;
+                      case 7:
+                      endmonth= "Aug";
+                      break;
+                      case 8:
+                      endmonth= "Sep";
+                      break;
+                      case 9:
+                      endmonth= "Oct";
+                      break;
+                      case 10:
+                      endmonth= "Nov";
+                      break;
+                      case 11:
+                      endmonth= "Dec";
+                      break;
+                    }
+                    var endyear= eventend.getFullYear();
+                    var eventtitle=msg[i].title;
+                    var eventdescription=msg[i].description;
+                    var eventid=msg[i].eid;
+                    var eventurl=msg[i].link;
+                    var newname=template.replace('alt=""','alt="'+eventtitle+'"');
+                    var newurl= newname.replace('src=""','src="'+eventimage+'"');
+                    var newvenue= newurl.replace('<span></span>','<span>'+eventvenue+'</span>');
+                    var newregistration= newvenue.replace('class="register" href=""','class="register" href="'+eventregistration+'"');
+                    var newtitle= newregistration.replace('<h3></h3>','<h3>'+eventtitle+'</h3>');
+                    var newdate= newtitle.replace('<h4 class="pull-right"></h4>','<h4 class="pull-right">'+startdate+' '+startmonth+' '+startyear+' | '+starthours+':'+startminutes+'</h4>');
+                    var newdescription= newdate.replace('<p></p>','<p>'+eventdescription+'</p>');
+                    var neweventid= newdescription.replace('a id=""','a id="event'+eventid+'"');
+                    var neweventurl= neweventid.replace('class="more click" href=""','class="more" href="'+eventurl+'"');
+                    if(i==2)
+                    {
+                      var responsivethirdcard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-0 col-lg-offset-0 col-sm-6 col-md-4 col-lg-4"');
+                      $(responsivethirdcard).appendTo(".event-view");
+                    }else if(noFetched==1){
+                      var singlecard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-sm-6 col-md-4 col-lg-4"');
+                      $(singlecard).appendTo(".event-view");
+                    }else if(noFetched==2 && i==0){
+                      var twocard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-md-offset-2 col-lg-offset-2 col-sm-6 col-md-4 col-lg-4"');
+                      $(twocard).appendTo(".event-view");
+                    }else{
+                      $(neweventurl).appendTo(".event-view");
+                    }
+                });
+            });
+
+            requestfuture.fail(function(jqXHR, textStatus) {
+                alert("Request failed: " + textStatus);
+            });
+  }
+  function requestP()
+  {
+    var requestp = $.ajax({
+                url: "http://stormy-gorge-8134.herokuapp.com/api/events/?time=past&limit=10",
+                method: "GET",
+                dataType: "json"
+            });
+
+            requestp.done(function(msg) {
+                noFetched=msg.length;
+                var template=$("#card-template").html();
+                $.each(msg, function(i, e){
+                    var eventvenue=msg[i].venue;
+                    var eventimage=msg[i].event_image_link;
+                    var eventregistration=msg[i].registration_form_link;
+                    var eventstart= new Date(msg[i].event_start_date);
+                    var startminutes= eventstart.getMinutes();
+                    console.log(startminutes);
+                    var starthours= eventstart.getHours();
+                    console.log(starthours);
+                    var startdate= eventstart.getDate();
+                    var startmonth= eventstart.getMonth();
+                    switch(startminutes){
+                      case 0:
+                      startminutes= "00";
+                      break;
+                      case 1:
+                      startminutes= "01";
+                      break;
+                      case 2:
+                      startminutes= "02";
+                      break;
+                      case 3:
+                      startminutes= "03";
+                      break;
+                      case 4:
+                      startminutes= "04";
+                      break;
+                      case 5:
+                      startminutes= "05";
+                      break;
+                      case 6:
+                      startminutes= "06";
+                      break;
+                      case 7:
+                      startminutes= "07";
+                      break;
+                      case 8:
+                      startminutes= "08";
+                      break;
+                      case 9:
+                      startminutes= "09";
+                      break;
+                    }
+                    switch(starthours){
+                      case 0:
+                      startminutes= "00";
+                      break;
+                      case 1:
+                      startminutes= "01";
+                      break;
+                      case 2:
+                      startminutes= "02";
+                      break;
+                      case 3:
+                      startminutes= "03";
+                      break;
+                      case 4:
+                      startminutes= "04";
+                      break;
+                      case 5:
+                      startminutes= "05";
+                      break;
+                      case 6:
+                      startminutes= "06";
+                      break;
+                      case 7:
+                      startminutes= "07";
+                      break;
+                      case 8:
+                      startminutes= "08";
+                      break;
+                      case 9:
+                      starthours= "09";
+                      break;
+                    }
+                    switch(startmonth){
+                      case 0:
+                      startmonth= "Jan";
+                      break;
+                      case 1:
+                      startmonth= "Feb";
+                      break;
+                      case 2:
+                      startmonth= "Mar";
+                      break;
+                      case 3:
+                      startmonth= "Apr";
+                      break;
+                      case 4:
+                      startmonth= "May";
+                      break;
+                      case 5:
+                      startmonth= "June";
+                      break;
+                      case 6:
+                      startmonth= "July";
+                      break;
+                      case 7:
+                      startmonth= "Aug";
+                      break;
+                      case 8:
+                      startmonth= "Sep";
+                      break;
+                      case 9:
+                      startmonth= "Oct";
+                      break;
+                      case 10:
+                      startmonth= "Nov";
+                      break;
+                      case 11:
+                      startmonth= "Dec";
+                      break;
+                    }
+                    var startyear= eventstart.getFullYear();
+                    var eventend=new Date(msg[i].event_end_date);
+                    var endminutes= eventend.getMinutes();
+                    var endhours= eventend.getHours();
+                    var enddate= eventend.getDate();
+                    var endmonth= eventend.getMonth();
+                    switch(endmonth){
+                      case 0:
+                      endmonth= "Jan";
+                      break;
+                      case 1:
+                      endmonth= "Feb";
+                      break;
+                      case 2:
+                      endmonth= "Mar";
+                      break;
+                      case 3:
+                      endmonth= "Apr";
+                      break;
+                      case 4:
+                      endmonth= "May";
+                      break;
+                      case 5:
+                      endmonth= "June";
+                      break;
+                      case 6:
+                      endmonth= "July";
+                      break;
+                      case 7:
+                      endmonth= "Aug";
+                      break;
+                      case 8:
+                      endmonth= "Sep";
+                      break;
+                      case 9:
+                      endmonth= "Oct";
+                      break;
+                      case 10:
+                      endmonth= "Nov";
+                      break;
+                      case 11:
+                      endmonth= "Dec";
+                      break;
+                    }
+                    var endyear= eventend.getFullYear();
+                    var eventtitle=msg[i].title;
+                    var eventdescription=msg[i].description;
+                    var eventid=msg[i].eid;
+                    var eventurl=msg[i].link;
+                    var newname=template.replace('alt=""','alt="'+eventtitle+'"');
+                    var newurl= newname.replace('src=""','src="'+eventimage+'"');
+                    var newvenue= newurl.replace('<span></span>','<span>'+eventvenue+'</span>');
+                    var newregistration= newvenue.replace('class="register" href=""','class="register" href="'+eventregistration+'"');
+                    var newtitle= newregistration.replace('<h3></h3>','<h3>'+eventtitle+'</h3>');
+                    var newdate= newtitle.replace('<h4 class="pull-right"></h4>','<h4 class="pull-right">'+startdate+' '+startmonth+' '+startyear+' | '+starthours+':'+startminutes+'</h4>');
+                    var newdescription= newdate.replace('<p></p>','<p>'+eventdescription+'</p>');
+                    var neweventid= newdescription.replace('a id=""','a id="event'+eventid+'"');
+                    var neweventurl= neweventid.replace('class="more click" href=""','class="more" href="'+eventurl+'"');
+                    if(i==2)
+                    {
+                      var responsivethirdcard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-0 col-lg-offset-0 col-sm-6 col-md-4 col-lg-4"');
+                      $(responsivethirdcard).appendTo(".event-view");
+                    }else if(noFetched==1){
+                      var singlecard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-sm-6 col-md-4 col-lg-4"');
+                      $(singlecard).appendTo(".event-view");
+                    }else if(noFetched==2 && i==0){
+                      var twocard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-md-offset-2 col-lg-offset-2 col-sm-6 col-md-4 col-lg-4"');
+                      $(twocard).appendTo(".event-view");
+                    }else{
+                      $(neweventurl).appendTo(".event-view");
+                    }
+                });
+            });
+
+            requestp.fail(function(jqXHR, textStatus) {
+                alert("Request failed: " + textStatus);
+            });
+  }
+  function requestS(apiId)
+  {
+    var requestsingle = $.ajax({
+                url: "http://stormy-gorge-8134.herokuapp.com/api/events/"+apiId,
+                method: "GET",
+                dataType: "json"
+            });
+            requestsingle.done(function(msg) {
+                noFetched=msg.length;
+                var template=$("#single-template").html();
+                console.log(msg.venue);
+                    var eventvenue=msg.venue;
+                    console.log(msg.venue);
+                    var eventimage=msg.event_image_link;
+                    var eventregistration=msg.registration_form_link;
+                    var eventstart= new Date(msg.event_start_date);
+                    var startminutes= eventstart.getMinutes();
+                    console.log(startminutes);
+                    var starthours= eventstart.getHours();
+                    console.log(starthours);
+                    var startdate= eventstart.getDate();
+                    var startmonth= eventstart.getMonth();
+                    switch(startminutes){
+                      case 0:
+                      startminutes= "00";
+                      break;
+                      case 1:
+                      startminutes= "01";
+                      break;
+                      case 2:
+                      startminutes= "02";
+                      break;
+                      case 3:
+                      startminutes= "03";
+                      break;
+                      case 4:
+                      startminutes= "04";
+                      break;
+                      case 5:
+                      startminutes= "05";
+                      break;
+                      case 6:
+                      startminutes= "06";
+                      break;
+                      case 7:
+                      startminutes= "07";
+                      break;
+                      case 8:
+                      startminutes= "08";
+                      break;
+                      case 9:
+                      startminutes= "09";
+                      break;
+                    }
+                    switch(starthours){
+                      case 0:
+                      starthours= "00";
+                      break;
+                      case 1:
+                      starthours= "01";
+                      break;
+                      case 2:
+                      starthours= "02";
+                      break;
+                      case 3:
+                      starthours= "03";
+                      break;
+                      case 4:
+                      starthours= "04";
+                      break;
+                      case 5:
+                      starthours= "05";
+                      break;
+                      case 6:
+                      starthours= "06";
+                      break;
+                      case 7:
+                      starthours= "07";
+                      break;
+                      case 8:
+                      starthours= "08";
+                      break;
+                      case 9:
+                      starthours= "09";
+                      break;
+                    }
+                    switch(startmonth){
+                      case 0:
+                      startmonth= "January";
+                      break;
+                      case 1:
+                      startmonth= "February";
+                      break;
+                      case 2:
+                      startmonth= "March";
+                      break;
+                      case 3:
+                      startmonth= "April";
+                      break;
+                      case 4:
+                      startmonth= "May";
+                      break;
+                      case 5:
+                      startmonth= "June";
+                      break;
+                      case 6:
+                      startmonth= "July";
+                      break;
+                      case 7:
+                      startmonth= "August";
+                      break;
+                      case 8:
+                      startmonth= "September";
+                      break;
+                      case 9:
+                      startmonth= "October";
+                      break;
+                      case 10:
+                      startmonth= "November";
+                      break;
+                      case 11:
+                      startmonth= "December";
+                      break;
+                    }
+                    var startyear= eventstart.getFullYear();
+                    var eventend=new Date(msg.event_end_date);
+                    var endminutes= eventend.getMinutes();
+                    var endhours= eventend.getHours();
+                    var enddate= eventend.getDate();
+                    var endmonth= eventend.getMonth();
+                    switch(endminutes){
+                      case 0:
+                      endminutes= "00";
+                      break;
+                      case 1:
+                      endminutes= "01";
+                      break;
+                      case 2:
+                      endminutes= "02";
+                      break;
+                      case 3:
+                      endminutes= "03";
+                      break;
+                      case 4:
+                      endminutes= "04";
+                      break;
+                      case 5:
+                      endminutes= "05";
+                      break;
+                      case 6:
+                      endminutes= "06";
+                      break;
+                      case 7:
+                      endminutes= "07";
+                      break;
+                      case 8:
+                      endminutes= "08";
+                      break;
+                      case 9:
+                      endminutes= "09";
+                      break;
+                    }
+                    switch(endhours){
+                      case 0:
+                      endhours= "00";
+                      break;
+                      case 1:
+                      endhours= "01";
+                      break;
+                      case 2:
+                      endhours= "02";
+                      break;
+                      case 3:
+                      endhours= "03";
+                      break;
+                      case 4:
+                      endhours= "04";
+                      break;
+                      case 5:
+                      endhours= "05";
+                      break;
+                      case 6:
+                      endhours= "06";
+                      break;
+                      case 7:
+                      endhours= "07";
+                      break;
+                      case 8:
+                      endhours= "08";
+                      break;
+                      case 9:
+                      endhours= "09";
+                      break;
+                    }
+                    switch(endmonth){
+                      case 0:
+                      endmonth= "January";
+                      break;
+                      case 1:
+                      endmonth= "February";
+                      break;
+                      case 2:
+                      endmonth= "March";
+                      break;
+                      case 3:
+                      endmonth= "April";
+                      break;
+                      case 4:
+                      endmonth= "May";
+                      break;
+                      case 5:
+                      endmonth= "June";
+                      break;
+                      case 6:
+                      endmonth= "July";
+                      break;
+                      case 7:
+                      endmonth= "August";
+                      break;
+                      case 8:
+                      endmonth= "September";
+                      break;
+                      case 9:
+                      endmonth= "October";
+                      break;
+                      case 10:
+                      endmonth= "November";
+                      break;
+                      case 11:
+                      endmonth= "December";
+                      break;
+                    }
+                    var endyear= eventend.getFullYear();
+                    var eventtitle=msg.title;
+                    var eventdescription=msg.description;
+                    var eventid=msg.eid;
+                    var eventurl=msg.link;
+                    var newname=template.replace('<h1 class="text-center"></h1>','<h1 class="text-center">'+eventtitle+'</h1>');
+                //     var newurl= newname.replace('src=""','src="'+eventimage+'"');
+                    var newvenue= newname.replace('<h3 class="pull-left"><br></h3>','<h3 class="pull-left"><br>'+eventvenue+'</h3>');
+                    var newregistration= newvenue.replace('<a class="reg" href="">','<a class="reg" href="'+eventregistration+'">');
+                //     var newtitle= newregistration.replace('<h3></h3>','<h3>'+eventtitle+'</h3>'); use for image alt
+                    var newstartdate= newregistration.replace('Start Time:<br>','Start Time:<br>'+startdate+' '+startmonth+' '+startyear+' | '+starthours+':'+startminutes);
+                    var newenddate= newstartdate.replace('<br>End Time:','<br>End Time:'+enddate+' '+endmonth+' '+endyear+' | '+endhours+':'+endminutes);
+                    var newdescription= newenddate.replace('<p></p>','<p>'+eventdescription+'</p>');
+                //     var neweventid= newdescription.replace('a id=""','a id="event'+eventid+'"');
+                    var neweventurl= newdescription.replace('<a class="meetup" href="">','<a class="meetup" href="'+eventurl+'">');
+                    $(neweventurl).appendTo(".single-event");
+                //     if(i==2)
+                //     {
+                //       var responsivethirdcard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-0 col-lg-offset-0 col-sm-6 col-md-4 col-lg-4"');
+                //       $(responsivethirdcard).appendTo(".event-view");
+                //     }else if(noFetched==1){
+                //       var singlecard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-sm-6 col-md-4 col-lg-4"');
+                //       $(singlecard).appendTo(".event-view");
+                //     }else if(noFetched==2 && i==0){
+                //       var twocard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-md-offset-2 col-lg-offset-2 col-sm-6 col-md-4 col-lg-4"');
+                //       $(twocard).appendTo(".event-view");
+                //     }else{
+                //
+                //     }
+            });
+
+            requestsingle.fail(function(jqXHR, textStatus) {
+                alert("Request failed: " + textStatus);
+            });
+  }
+  $(document.body).on('click', '.click',
+      function() {
+        var idused=$(this).attr("id");
+        console.log(idused);
+        cardopen(idused);
+    });
+  $(document.body).on('click', '.more',
+      function() {
+        $('header').hide();
+        $('#Hero_Image').hide();
+        $('#download-section').hide();
+        $('#About').hide();
+        $('#community').hide();
+        $('#contact_form').hide();
+        // $('').hide(); Reserved for footer
+    });
+  $(document.body).on('mouseenter', '.cardfigure',
+      function() {
+        console.log("working");
+        var height = $(this).css( "height" );
+        $(this).find("figcaption").css("height",height);
+        console.log(height);
+    });
+  $(document.body).on('mouseleave', '.cardfigure',
+      function() {
+        $(this).find("figcaption").css("height","100px");
+        console.log("focusout");
+    });
+  var requestupcoming = $.ajax({
+              url: "http://stormy-gorge-8134.herokuapp.com/api/events/?time=future",
+              method: "GET",
+              dataType: "json"
+          });
+
+          requestupcoming.done(function(msg) {
+              noFetched=msg.length;
+              var template=$("#card-template").html();
+              $.each(msg, function(i, e){
+                  var eventvenue=msg[i].venue;
+                  var eventimage=msg[i].event_image_link;
+                  var eventregistration=msg[i].registration_form_link;
+                  var eventstart= new Date(msg[i].event_start_date);
+                  var startminutes= eventstart.getMinutes();
+                  // console.log(startminutes);
+                  var starthours= eventstart.getHours();
+                  // console.log(starthours);
+                  var startdate= eventstart.getDate();
+                  var startmonth= eventstart.getMonth();
+                  switch(startminutes){
+                    case 0:
+                    startminutes= "00";
+                    break;
+                    case 1:
+                    startminutes= "01";
+                    break;
+                    case 2:
+                    startminutes= "02";
+                    break;
+                    case 3:
+                    startminutes= "03";
+                    break;
+                    case 4:
+                    startminutes= "04";
+                    break;
+                    case 5:
+                    startminutes= "05";
+                    break;
+                    case 6:
+                    startminutes= "06";
+                    break;
+                    case 7:
+                    startminutes= "07";
+                    break;
+                    case 8:
+                    startminutes= "08";
+                    break;
+                    case 9:
+                    startminutes= "09";
+                    break;
+                  }
+                  switch(starthours){
+                    case 0:
+                    startminutes= "00";
+                    break;
+                    case 1:
+                    startminutes= "01";
+                    break;
+                    case 2:
+                    startminutes= "02";
+                    break;
+                    case 3:
+                    startminutes= "03";
+                    break;
+                    case 4:
+                    startminutes= "04";
+                    break;
+                    case 5:
+                    startminutes= "05";
+                    break;
+                    case 6:
+                    startminutes= "06";
+                    break;
+                    case 7:
+                    startminutes= "07";
+                    break;
+                    case 8:
+                    startminutes= "08";
+                    break;
+                    case 9:
+                    starthours= "09";
+                    break;
+                  }
+                  switch(startmonth){
+                    case 0:
+                    startmonth= "Jan";
+                    break;
+                    case 1:
+                    startmonth= "Feb";
+                    break;
+                    case 2:
+                    startmonth= "Mar";
+                    break;
+                    case 3:
+                    startmonth= "Apr";
+                    break;
+                    case 4:
+                    startmonth= "May";
+                    break;
+                    case 5:
+                    startmonth= "June";
+                    break;
+                    case 6:
+                    startmonth= "July";
+                    break;
+                    case 7:
+                    startmonth= "Aug";
+                    break;
+                    case 8:
+                    startmonth= "Sep";
+                    break;
+                    case 9:
+                    startmonth= "Oct";
+                    break;
+                    case 10:
+                    startmonth= "Nov";
+                    break;
+                    case 11:
+                    startmonth= "Dec";
+                    break;
+                  }
+                  var startyear= eventstart.getFullYear();
+                  var eventend=new Date(msg[i].event_end_date);
+                  var endminutes= eventend.getMinutes();
+                  var endhours= eventend.getHours();
+                  var enddate= eventend.getDate();
+                  var endmonth= eventend.getMonth();
+                  switch(endmonth){
+                    case 0:
+                    endmonth= "Jan";
+                    break;
+                    case 1:
+                    endmonth= "Feb";
+                    break;
+                    case 2:
+                    endmonth= "Mar";
+                    break;
+                    case 3:
+                    endmonth= "Apr";
+                    break;
+                    case 4:
+                    endmonth= "May";
+                    break;
+                    case 5:
+                    endmonth= "June";
+                    break;
+                    case 6:
+                    endmonth= "July";
+                    break;
+                    case 7:
+                    endmonth= "Aug";
+                    break;
+                    case 8:
+                    endmonth= "Sep";
+                    break;
+                    case 9:
+                    endmonth= "Oct";
+                    break;
+                    case 10:
+                    endmonth= "Nov";
+                    break;
+                    case 11:
+                    endmonth= "Dec";
+                    break;
+                  }
+                  var endyear= eventend.getFullYear();
+                  var eventtitle=msg[i].title;
+                  var eventdescription=msg[i].description;
+                  var eventid=msg[i].eid;
+                  var eventurl=msg[i].link;
+                  var newname=template.replace('alt=""','alt="'+eventtitle+'"');
+                  var newurl= newname.replace('src=""','src="'+eventimage+'"');
+                  var newvenue= newurl.replace('<span></span>','<span>'+eventvenue+'</span>');
+                  var newregistration= newvenue.replace('class="register" href=""','class="register" href="'+eventregistration+'"');
+                  var newtitle= newregistration.replace('<h3></h3>','<h3>'+eventtitle+'</h3>');
+                  var newdate= newtitle.replace('<h4 class="pull-right"></h4>','<h4 class="pull-right">'+startdate+' '+startmonth+' '+startyear+' | '+starthours+':'+startminutes+'</h4>');
+                  var newdescription= newdate.replace('<p></p>','<p>'+eventdescription+'</p>');
+                  var neweventid= newdescription.replace('a id=""','a id="event'+eventid+'"');
+                  var neweventurl= neweventid.replace('class="more click" href=""','class="more" href="'+eventurl+'"');
+                  if(i==2)
+                  {
+                    var responsivethirdcard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-0 col-lg-offset-0 col-sm-6 col-md-4 col-lg-4"');
+                    $(responsivethirdcard).appendTo(".future");
+                  }else if(noFetched==1){
+                    var singlecard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-sm-6 col-md-4 col-lg-4"');
+                    $(singlecard).appendTo(".future");
+                  }else if(noFetched==2 && i==0){
+                    var twocard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-md-offset-2 col-lg-offset-2 col-sm-6 col-md-4 col-lg-4"');
+                    $(twocard).appendTo(".future");
+                  }else{
+                    $(neweventurl).appendTo(".future");
+                  }
+              });
+          });
+
+          requestupcoming.fail(function(jqXHR, textStatus) {
+              alert("Request failed: " + textStatus);
+          });
+          var requestpast = $.ajax({
+                      url: "http://stormy-gorge-8134.herokuapp.com/api/events/?time=past",
+                      method: "GET",
+                      dataType: "json"
+                  });
+
+                  requestpast.done(function(msg) {
+                      noFetched=msg.length;
+                      var template=$("#card-template").html();
+                      $.each(msg, function(i, e){
+                          var eventvenue=msg[i].venue;
+                          var eventimage=msg[i].event_image_link;
+                          var eventregistration=msg[i].registration_form_link;
+                          var eventstart= new Date(msg[i].event_start_date);
+                          var startminutes= eventstart.getMinutes();
+                          console.log(startminutes);
+                          var starthours= eventstart.getHours();
+                          console.log(starthours);
+                          var startdate= eventstart.getDate();
+                          var startmonth= eventstart.getMonth();
+                          switch(startminutes){
+                            case 0:
+                            startminutes= "00";
+                            break;
+                            case 1:
+                            startminutes= "01";
+                            break;
+                            case 2:
+                            startminutes= "02";
+                            break;
+                            case 3:
+                            startminutes= "03";
+                            break;
+                            case 4:
+                            startminutes= "04";
+                            break;
+                            case 5:
+                            startminutes= "05";
+                            break;
+                            case 6:
+                            startminutes= "06";
+                            break;
+                            case 7:
+                            startminutes= "07";
+                            break;
+                            case 8:
+                            startminutes= "08";
+                            break;
+                            case 9:
+                            startminutes= "09";
+                            break;
+                          }
+                          switch(starthours){
+                            case 0:
+                            startminutes= "00";
+                            break;
+                            case 1:
+                            startminutes= "01";
+                            break;
+                            case 2:
+                            startminutes= "02";
+                            break;
+                            case 3:
+                            startminutes= "03";
+                            break;
+                            case 4:
+                            startminutes= "04";
+                            break;
+                            case 5:
+                            startminutes= "05";
+                            break;
+                            case 6:
+                            startminutes= "06";
+                            break;
+                            case 7:
+                            startminutes= "07";
+                            break;
+                            case 8:
+                            startminutes= "08";
+                            break;
+                            case 9:
+                            starthours= "09";
+                            break;
+                          }
+                          switch(startmonth){
+                            case 0:
+                            startmonth= "Jan";
+                            break;
+                            case 1:
+                            startmonth= "Feb";
+                            break;
+                            case 2:
+                            startmonth= "Mar";
+                            break;
+                            case 3:
+                            startmonth= "Apr";
+                            break;
+                            case 4:
+                            startmonth= "May";
+                            break;
+                            case 5:
+                            startmonth= "June";
+                            break;
+                            case 6:
+                            startmonth= "July";
+                            break;
+                            case 7:
+                            startmonth= "Aug";
+                            break;
+                            case 8:
+                            startmonth= "Sep";
+                            break;
+                            case 9:
+                            startmonth= "Oct";
+                            break;
+                            case 10:
+                            startmonth= "Nov";
+                            break;
+                            case 11:
+                            startmonth= "Dec";
+                            break;
+                          }
+                          var startyear= eventstart.getFullYear();
+                          var eventend=new Date(msg[i].event_end_date);
+                          var endminutes= eventend.getMinutes();
+                          var endhours= eventend.getHours();
+                          var enddate= eventend.getDate();
+                          var endmonth= eventend.getMonth();
+                          switch(endmonth){
+                            case 0:
+                            endmonth= "Jan";
+                            break;
+                            case 1:
+                            endmonth= "Feb";
+                            break;
+                            case 2:
+                            endmonth= "Mar";
+                            break;
+                            case 3:
+                            endmonth= "Apr";
+                            break;
+                            case 4:
+                            endmonth= "May";
+                            break;
+                            case 5:
+                            endmonth= "June";
+                            break;
+                            case 6:
+                            endmonth= "July";
+                            break;
+                            case 7:
+                            endmonth= "Aug";
+                            break;
+                            case 8:
+                            endmonth= "Sep";
+                            break;
+                            case 9:
+                            endmonth= "Oct";
+                            break;
+                            case 10:
+                            endmonth= "Nov";
+                            break;
+                            case 11:
+                            endmonth= "Dec";
+                            break;
+                          }
+                          var endyear= eventend.getFullYear();
+                          var eventtitle=msg[i].title;
+                          var eventdescription=msg[i].description;
+                          var eventid=msg[i].eid;
+                          var eventurl=msg[i].link;
+                          var newname=template.replace('alt=""','alt="'+eventtitle+'"');
+                          var newurl= newname.replace('src=""','src="'+eventimage+'"');
+                          var newvenue= newurl.replace('<span></span>','<span>'+eventvenue+'</span>');
+                          var newregistration= newvenue.replace('class="register" href=""','class="register" href="'+eventregistration+'"');
+                          var newtitle= newregistration.replace('<h3></h3>','<h3>'+eventtitle+'</h3>');
+                          var newdate= newtitle.replace('<h4 class="pull-right"></h4>','<h4 class="pull-right">'+startdate+' '+startmonth+' '+startyear+' | '+starthours+':'+startminutes+'</h4>');
+                          var newdescription= newdate.replace('<p></p>','<p>'+eventdescription+'</p>');
+                          var neweventid= newdescription.replace('a id=""','a id="event'+eventid+'"');
+                          var neweventurl= neweventid.replace('class="more click" href=""','class="more" href="'+eventurl+'"');
+                          if(i==2)
+                          {
+                            var responsivethirdcard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-0 col-lg-offset-0 col-sm-6 col-md-4 col-lg-4"');
+                            $(responsivethirdcard).appendTo(".past");
+                          }else if(noFetched==1){
+                            var singlecard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-sm-6 col-md-4 col-lg-4"');
+                            $(singlecard).appendTo(".past");
+                          }else if(noFetched==2 && i==0){
+                            var twocard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-md-offset-2 col-lg-offset-2 col-sm-6 col-md-4 col-lg-4"');
+                            $(twocard).appendTo(".past");
+                          }else{
+                            $(neweventurl).appendTo(".past");
+                          }
+                      });
+                  });
+
+                  requestpast.fail(function(jqXHR, textStatus) {
+                      alert("Request failed: " + textStatus);
+                  });
+                  alert("HELLO");
 });

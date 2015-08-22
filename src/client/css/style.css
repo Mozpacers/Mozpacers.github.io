@@ -425,3 +425,161 @@ section#community .fa-globe{
   transition-delay: 0s;
 }
 /*---End---*/
+/*Events Section*/
+.grid {
+	max-width: 1300px;
+	list-style: none;
+  margin: 0 auto;
+  height: 60px;
+}
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+.grid li {
+	padding: 20px;
+	text-align: left;
+}
+.grid figure {
+	position: relative;
+}
+.grid figure img {
+	max-width: 100%;
+	position: relative;
+	display: block;
+  padding-bottom: 100px;
+  width:100%
+}
+.grid figcaption {
+	padding: 20px;
+	background: #2c3f52;
+	color: #E0E4CC;
+}
+.grid figcaption h3 {
+  transform: scaleY(1);
+	margin: 0;
+	padding: 0;
+	color: #fff;
+}
+.grid figcaption p
+{
+  height:0;
+  opacity:0;
+  visibility:hidden;
+  transition:height 0.1s,opacity 0.1s,visibility 0.1s;
+  padding-top:1em;
+}
+.grid figcaption .more, .grid figcaption .register {
+	text-align: center;
+	padding: 10px 20px;
+	border-radius: 2px;
+	display: inline-block;
+  height:0;
+  opacity:0;
+  visibility:hidden;
+  transition:height 0.1s,opacity 0.1s,visibility 0.1s;
+  -webkit-transition:height 0.1s,opacity 0.1s,visibility 0.1s;
+  -moz-transition:height 0.1s,opacity 0.1s,visibility 0.1s;
+  -ms-transition:height 0.1s,opacity 0.1s,visibility 0.1s;
+  -o-transition:height 0.1s,opacity 0.1s,visibility 0.1s;
+  font-size:14px;
+}
+.grid figcaption .info-box
+{
+  max-height: 75%;
+  position: relative;
+  overflow: hidden;
+}
+.cs-style-3 figcaption {
+	height: 100px;
+	width: 100%;
+  position:absolute;
+	top: auto;
+	bottom: 0;
+	transition: height 0.4s;
+}
+.cs-style-3 figure:hover figcaption {
+	transition: height 0.4s;
+}
+.cs-style-3 figure:hover figcaption p
+{
+  height:60%;
+  opacity:1;
+  visibility:visible;
+  transition:height 0.4s,opacity 0.4s,visibility 0.4s;
+}
+.cs-style-3 figure:hover figcaption .more, .cs-style-3 figure:hover figcaption .register
+{
+  height:initial;
+  opacity:1;
+  visibility:visible;
+  transition:height 0.1s,opacity 0.4s,visibility 0.4s;
+}
+.cs-style-3 figcaption .register {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+.cs-style-3 figcaption .more {
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+}
+.container-back{
+  z-index: 19;
+  background: rgb(80, 81, 79) none repeat scroll 0% 0%;
+  width: 140px;
+  height: 140px;
+  border-radius: 70px;
+  top: -70px;
+  left: -70px;
+  position: relative;
+}
+.back{
+  cursor: pointer;
+  position: absolute;
+  left: 65px;
+  top: 73px;
+}
+.more{
+  cursor:pointer;
+}
+.cardfigure a{
+  background-color: #363636;
+  color: #E0E4CC;
+}
+.cardfigure a:hover{
+  color:#363636;
+  background-color:#E0E4CC;
+  text-decoration: none;
+}
+.cardfigure span{
+  font-weight:bold;
+}
+.cardfigure h4{
+  position: relative;
+  bottom: 1.8em;
+}
+.single-event .info p{
+  clear:both;
+  padding-top:1em;
+  font-size: 16px;
+  text-align: justify;
+}
+.single-event .info .buttons{
+  padding-top:1em;
+}
+@media screen and (max-width: 31.5em) {
+	.grid {
+		padding: 10px 10px 100px 10px;
+	}
+	.grid li {
+		width: 100%;
+		min-width: 300px;
+	}
+}
