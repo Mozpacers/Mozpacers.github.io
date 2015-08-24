@@ -5,6 +5,8 @@ from models import Event
 from flask.ext.security import login_required
 import json
 from datetime import datetime
+from os import environ
+import requests
 
 result = []  # Global result list to return result as JSON
 e = Event()  # Global Instance of Event
@@ -38,6 +40,26 @@ def get_events():
     create_dict(allEvents)
     return Response(json.dumps(result, cls=PythonJSONEncoder), status=200,
                     content_type="application/json")
+
+
+@app.route('/api/send-contact-us-form/', methods=['GET', 'POST'])
+def send_simple_message():
+    if request.method == 'POST':
+        json_response = json.loads(request.data)
+        name = json_response['name']
+        email = json_response['email']
+        message = json_response['message']
+        subject = 'Contact Us | MozPacers : Response from ' + name
+        requests.post(
+            environ["MAIL_ADDRESS"],
+            auth=("api", environ["API_KEY"]),
+            data={"from": environ["MAIL_FROM"],
+                  "to": environ["MAIL_TO"],
+                  "subject": 'Contact Us | MozPacers : Response from ' + name,
+                  "text": name + ' with mail id: ' + email + ' just filled the' + \
+                          ' contact-us form on MozPacers.org with message: ' + message})
+        return Response(json.dumps({"Message": "Email Sent successfully"}), status=200,
+                            content_type="application/json")
 
 
 @app.errorhandler(404)
