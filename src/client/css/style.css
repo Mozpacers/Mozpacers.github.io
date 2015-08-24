@@ -9,14 +9,12 @@ html{
 body{
   background: #D7D3C8;
 }
-#outer-wrapper
-{
+#outer-wrapper{
   border-top: 2px solid #FFF;
   position:relative;
   min-width:320px;
 }
-#masthead
-{
+#masthead{
   background: #C13832 none repeat scroll 0% 0%;
   display: block;
   margin: 0 auto;
@@ -271,6 +269,7 @@ section#community{
   font-size: 35px;
   line-height: 0.9;
   list-style: none;
+  font-family: 'Open Sans';
   font-style: normal;
   font-variant: normal;
 }
@@ -335,11 +334,39 @@ section#community .fa-globe{
   color: #FF0000;
   font-size: 10px;
 }
+#success{
+  color:white;
+}
+#send{
+  margin-bottom:15px; 
+}
+
+/* Footer Start*/
+footer {
+    background-color: #D7D3C8 ;
+    padding:20px 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.footer-logo img{
+  width:183px;
+  height:72px;
+}
+footer ul{
+  list-style-type:none;
+}
+footer h1{
+  margin-top:0;
+}
+/*Footer End*/
 /*---Download Section CSS---*/
 #download-section {
   background-color:#565A5C;
 }
 #ff-download-message-h {
+  color:white;
+}
+#ff-download-btn, #ff-download-btn:hover, #ff-download-btn:visited, #ff-download-btn:active {
+  text-decoration: none;
   color:white;
 }
 #ff-download-btn, #ff-download-btn:hover, #ff-download-btn:visited, #ff-download-btn:active {
@@ -353,7 +380,6 @@ section#community .fa-globe{
   float:none;
 }
 /*---End---*/
-
 /* Sandstone CSS : Gumdrop Buttons */
 .button {
   float: left;
