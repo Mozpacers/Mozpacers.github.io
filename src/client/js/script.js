@@ -62,7 +62,7 @@ $(document).ready(function() {
     $('#name,#message,#email').css('border-color','#484848');
     ctr = 0;
     validate_form();
-  }); 
+  });
 });
 /*
 nav-main-resp.js
@@ -642,3 +642,123 @@ $(document).ready(function() {
   });
 
 });
+
+/* Accordion Slider */
+
+(function(f) {
+    var c = f(window);
+    var d = f("body");
+    var e = false;
+    var j = (typeof matchMedia !== "undefined");
+    if (j) {
+        k();
+        c.on("resize", function() {
+            clearTimeout(this.resizeTimeout);
+            this.resizeTimeout = setTimeout(k, 200)
+        })
+    } else {
+        e = true;
+        d.addClass("wide")
+    }
+
+    function k() {
+        if (window.matchMedia("screen and (min-width: 761px)").matches) {
+            e = true;
+            d.addClass("wide")
+        } else {
+            e = false;
+            d.removeClass("wide")
+        }
+        f(".panel, .panel-content, .panel-title").removeAttr("style");
+        f(".panel-content a").blur()
+    }
+    var g = {
+        expandHorz: function(l) {
+            //console.log("expand horz");
+            f(".panel-title").stop(true, true).fadeOut(200);
+            l.stop().removeClass("compressed").addClass("expanded").animate({
+                width: "63.9%"
+            }, 700);
+            f(".panel-content", l).stop(true, true).delay(400).fadeIn(400);
+            l.siblings(".panel").stop().removeClass("expanded").addClass("compressed").animate({
+                width: "8.8%"
+            }, 700);
+            l.siblings(".panel").find(".panel-content").stop(true, true).fadeOut(400, function() {
+                f(this).delay(500).removeAttr("style")
+            });
+        },
+        contractHorz: function() {
+            //console.log("contract horz");
+            f(".panel").stop().animate({
+                width: "19.7%"
+            }, 700, function() {
+                f(".panel-title").fadeIn(250)
+            }).removeClass("expanded compressed");
+            f(".panel-content").stop(true, true).delay(200).fadeOut(500)
+        },
+        expandVert: function(l) {
+            //console.log("expand vert");
+            f(".panel-title").stop(true, true).fadeOut(200);
+            l.stop().removeClass("compressed").addClass("expanded").animate({
+                height: "22em"
+            }, 700);
+            l.siblings(".panel").stop().removeClass("expanded").addClass("compressed").animate({
+                height: "2em"
+            }, 700);
+            f(".panel-content", l).stop(true, true).delay(400).fadeIn(400);
+            l.siblings(".panel").find(".panel-content").stop(true, true).fadeOut(400, function() {
+                f(this).delay(500).removeAttr("style")
+            });
+            l("open", (f(".panel").index(l) + 1), l.attr("id"))
+        },
+        contractVert: function() {
+            //console.log("contract vert");
+            f(".panel").stop().animate({
+                height: "4.5em"
+            }, 700, function() {
+                f(".panel-title").fadeIn(250)
+            }).removeClass("expanded compressed");
+            f(".panel-content").stop(true, true).fadeOut(500)
+        },
+    };
+    var h = 200;
+    var a;
+    f(".accordion").on("mouseleave", function() {
+        clearTimeout(a);
+        h = 200
+    });
+    f(".panel").hover(function() {
+        var l = f(this);
+        clearTimeout(a);
+        a = setTimeout(function() {
+            if (e) {
+                g.expandHorz(l)
+            } else {
+                g.expandVert(l)
+            }
+            h = 0
+        }, h)
+    }, function() {
+        if (e) {
+            g.contractHorz(f(this))
+        } else {
+            g.contractVert()
+        }
+    });
+    f(".panel").on("click focus", function(l) {
+        if (!f(this).hasClass("expanded")) {
+            if (e) {
+                g.expandHorz(f(this))
+            } else {
+                g.expandVert(f(this))
+            }
+        }
+    });
+    f(".panel > a").on("blur", function() {
+        if (e) {
+            g.contractHorz()
+        } else {
+            g.contractVert()
+        }
+    });
+})(window.jQuery);
