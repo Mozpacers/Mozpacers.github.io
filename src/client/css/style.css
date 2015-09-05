@@ -472,7 +472,7 @@ section#community .fa-globe{
     font-weight: bold;
     letter-spacing: -0.025em;
 }
-.panel-content>span {
+.panel-content>a {
     position: absolute;
     top: 0;
     right: 0;
@@ -500,7 +500,7 @@ section#community .fa-globe{
     top: 0;
     left: 0;
 }
-.wide .panel-content>span {
+.wide .panel-content>a {
     padding: 40px 40px 40px 300px;
 }
 .js .panel-content {
@@ -580,7 +580,8 @@ section#community .fa-globe{
     width: 100%;
     height: 100%}
 .panel-content>a {
-    padding: 20px 20px 20px 40%}
+    padding: 65px 40px 40px 300px;
+}
 .panel-content .panel-logo {
     position: static;
     display: block;
