@@ -498,7 +498,7 @@ section#community .fa-globe{
     padding: 40px 40px 40px 300px;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 100px;
 }
 .wide .panel-content>a {
     padding: 40px 40px 40px 300px;
@@ -520,7 +520,7 @@ section#community .fa-globe{
     font-size: 16px;
     height: 280px;
     width: 250px;
-    padding: 80px 20px 20px 200px;
+    left:50px;
 }
 .wide .panel-content .panel-logo {
     left: 200px;
@@ -578,7 +578,8 @@ section#community .fa-globe{
     font-size: 16px;
     line-height: 1.2;
     width: 100%;
-    height: 100%}
+    height: 100%;
+}
 .panel-content>a {
     padding: 65px 40px 40px 300px;
 }
@@ -603,8 +604,14 @@ section#community .fa-globe{
 }
 /*add panel-webmaker style*/
 #panel-webmaker {
-  background: #D4DDE4 url("../img/bg/webmaker.png") 49px 34px no-repeat;
-  background: url("../img/bg/webmaker.png") 49px 34px no-repeat, #D4DDE4 repeat;
+  background: #D4DDE4 url("../img/bg/webmaker.png") 35px 100px no-repeat;
+  background: url("../img/bg/webmaker.png") 35px 100px no-repeat, #D4DDE4 repeat;
+}
+#panel-webmaker.expanded {
+    background-position: 35px 30px;
+}
+#panel-webmaker.compressed {
+    background-position: 0px 100px;
 }
 #panel-webmaker .panel-title i {
   display: block;
@@ -619,14 +626,25 @@ section#community .fa-globe{
 }
 /*add panel-friends and panel-FSA style*/
 #panel-friends{
-  background: #404c58 url("../img/bg/friends.png") 44px 27px no-repeat;
-  background: url("../img/bg/friends.png") 44px 27px no-repeat, #333 repeat scroll 0% 0%;;
+  background: #404c58 url("../img/bg/friends.png") 35px 80px no-repeat;
+  background: url("../img/bg/friends.png") 35px 80px no-repeat, #333 repeat scroll 0% 0%;;
 }
-
+#panel-friends.expanded {
+    background-position: 35px 30px;
+}
+#panel-friends.compressed {
+    background-position: 0px 80px;
+}
 #panel-FSA
 {
-  background: #404c58 url("../img/bg/FSA.png") 37px 21px no-repeat;
-  background: url("../img/bg/FSA.png") 37px 21px no-repeat, #404c58 repeat;
+  background: #404c58 url("../img/bg/FSA.png") 20px 75px no-repeat;
+  background: url("../img/bg/FSA.png") 20px 75px no-repeat, #404c58 repeat;
+}
+#panel-FSA.expanded {
+    background-position: 20px 15px;
+}
+#panel-FSA.compressed {
+    background-position: -10px 75px;
 }
 #panel-friends .panel-title i,#panel-FSA .panel-title i {
   display: block;
@@ -736,35 +754,35 @@ section#community .fa-globe{
 /*blog*/
 #panel-friends {
     background-image: url("../img/bg/friends.png");
-    background-position: 5px 45px;
+    background-position: 5px 80px;
 }
 #panel-friends.expanded {
-    background-position: 5px 45px;
+    background-position: 35px 30px;
 }
 #panel-friends.compressed {
-    background-position: -100px 45px;
+    background-position: 0px 80px;
 }
 /*FSA*/
 #panel-FSA {
     background-image: url("../img/bg/friends.png");
-    background-position: 3px 43px;
+    background-position: 3px 82px;
 }
 #panel-FSA.expanded {
-    background-position: 3px 43px;
+    background-position: 20px 15px;
 }
 #panel-FSA.compressed {
-    background-position: -100px 43px;
+    background-position: -10px 75px;
 }
 /*community*/
 #panel-webmaker {
     background-image: url("../img/bg/webmaker.png");
-    background-position: 5px 55px;
+    background-position: 0px 100px;
 }
 #panel-webmaker.expanded {
-    background-position: 0px 55px;
+    background-position: 35px 30px;
 }
 #panel-webmaker.compressed {
-    background-position: -105px 55px;
+    background-position: 0px 100px;
 }
 #panel-reps {
     background-position: -50px 20px;
@@ -787,6 +805,21 @@ section#community .fa-globe{
     font-size: 16px;
 }
 }
+@media only screen and (max-width:480px){
+.panel-content {
+    font-size: 16px;
+    line-height: 1.2;
+    width: 100%;
+    height: 100%;
+    left: -150px;
+    top: 0px;
+    padding: 0px 80px;
+}
+.panel:hover .panel-content
+{
+  top:-20px;    
+}
+}
 @media only screen and (min-width:760px) and (max-width:1000px) and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-width:760px) and (max-width:1000px) and (min-resolution:1.5dppx), only screen and (min-width:760px) and (max-width:1000px) and (min-resolution:144dpi) {
 #panel-fxos {
     background-image: url("http://mozilla-tunisia.org/static/home/img/firefoxos-fox-md-hires.png");
@@ -806,26 +839,36 @@ section#community .fa-globe{
 }
 /*kernel*/
 #panel-webmaker {
-    background-image: url("../img/bg/webmaker.png");
-    background-position: -121px -75px;
+    background-image: url("../img/bg/webmaker-sm.png");
+    background-position: 0px -5px;
 }
 #panel-webmaker.expanded {
-    background-position: -121px -75px;
+    background-position: 10px 40px;
 }
 #panel-webmaker.compressed {
-    background-position: -85px -110px;
+    background-position: 10px 0px;
 }
-
+/*FSA*/
+#panel-FSA {
+    background-image: url("../img/bg/FSA-sm.png");
+    background-position: -7px -17px;
+}
+#panel-FSA.expanded {
+    background-position: 0px 40px;
+}
+#panel-FSA.compressed {
+    background-position: 0px 0px;
+}
 /*blog*/
 #panel-friends {
-    background-image: url("../img/bg/friends.png");
-    background-position: -21px -76px;
+    background-image: url("../img/bg/friends-sm.png");
+    background-position: 0px -10px;
 }
 #panel-friends.expanded {
-    background-position: -25px -30px;
+    background-position: 10px 40px;
 }
 #panel-friends.compressed {
-    background-position: -25px -110px;
+    background-position: 10px 0px;
 }
 #panel-reps {
     background-image: url("http://mozilla-tunisia.org/static/home/img/bg-donate-sm.png");
@@ -851,12 +894,9 @@ section#community .fa-globe{
     background-position: -24px -20px;
     background-position: -24px -20px, 0 0;
 }
-#panel-reps .panel-content {
-    padding: 20px 20px 20px 40%;
-    height: auto;
-    width: auto;
+#panel-reps .panel-content { 
     font-size: 16px;
-}
+} 
 #panel-reps .panel-content h3 {
     font-size: 16px;
 }
@@ -892,33 +932,36 @@ section#community .fa-globe{
 }
 /*blog*/
 #panel-friends {
-    background-position: 5px 45px;
+    background-image: url("../img/bg/friends-sm.png");
+    background-position: 20px -5px;
 }
 #panel-friends.expanded {
-    background-position: 5px 45px;
+    background-position: 50px 60px;
 }
 #panel-friends.compressed {
-    background-position: -100px 45px;
+    background-position: 50px 0px;
 }
 /*FSA*/
 #panel-FSA {
-    background-position: 3px 43px;
+    background-image: url("../img/bg/FSA-sm.png");
+    background-position: 10px -15px;
 }
 #panel-FSA.expanded {
-    background-position: 3px 43px;
+    background-position: 40px 50px;
 }
 #panel-FSA.compressed {
-    background-position: -100px 43px;
+    background-position: 40px 0px;
 }
 /*community*/
 #panel-webmaker {
-    background-position: 5px 55px;
+    background-image: url("../img/bg/webmaker-sm.png");
+    background-position: 20px -18px;
 }
 #panel-webmaker.expanded {
-    background-position: 0px 55px;
+    background-position: 45px 65px;
 }
 #panel-webmaker.compressed {
-    background-position: -105px 55px;
+    background-position: 45px 0px;
 }
 }
 @media only screen and (max-width:760px) and (-webkit-min-device-pixel-ratio:1.5), only screen and (max-width:760px) and (min-resolution:1.5dppx), only screen and (max-width:760px) and (min-resolution:144dpi) {
@@ -963,7 +1006,7 @@ section#community .fa-globe{
   color:white;
 }
 #send{
-  margin-bottom:15px; 
+  margin-bottom:15px;
 }
 
 /* Footer Start*/
