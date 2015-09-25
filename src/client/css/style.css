@@ -1011,7 +1011,32 @@ footer .fa{
 footer a:hover, a:focus{
   text-decoration:none;
 }
+footer h4{
+  border: 1px solid #C6BFBF;
+  border-radius: 3px;
+  padding: 3px;
+}
+footer h4:hover{
+  border: 1px solid #C6BFBF;
+  border-radius: 3px;
+  padding: 3px;
+  color:#fff;
+  background: #337AB7 none repeat scroll 0% 0%;
+}
+footer h4:hover a{
+  color:#fff;
+}
 /*Footer End*/
+
+/* Copyright Text */
+section#copyright{
+  border-top: 1px solid #AFAFAF;
+  padding-top: 10px;
+  background: #000;
+  color: #E4E4E4;
+}
+
+/* Copright Text END */
 /*---Download Section CSS---*/
 #download-section {
   background-color:#565A5C;
