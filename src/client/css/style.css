@@ -1,7 +1,17 @@
+/* Add some fonts */
+@font-face
+{
+	font-family: 'fonesia';
+	src: url('Fonesia_Bold.TTF'); 
+}
 /* CSS for all */
 *{
   font-family: 'Open Sans Light', sans-serif;
   transition: all linear .1s;
+}
+html, body {
+  width: auto !important;
+  overflow-x: hidden !important;
 }
 html{
   font-size:100%;
@@ -9,15 +19,20 @@ html{
 body{
   background: #D7D3C8;
 }
-#outer-wrapper
+a{
+  text-decoration:none;
+}
+strong
 {
+	font-family: 'fonesia',serif;
+}
+#outer-wrapper{
   border-top: 2px solid #FFF;
   position:relative;
   min-width:320px;
 }
-#masthead
-{
-  background: #C13832 none repeat scroll 0% 0%;
+#masthead{
+  background: #2A80B9 none repeat scroll 0% 0%;
   display: block;
   margin: 0 auto;
   padding-left: 20px;
@@ -48,12 +63,14 @@ ul {
 #masthead nav li a {
   display: inline-block;
   padding: 12px;
-  font-weight: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Roboto Slab', serif;
 }
 #masthead nav li a,
 #masthead nav li a:link,
 #masthead nav li a:visited {
-  color: #484848;
+  color: #eeeeee;
 }
 #nav-main .toggle {
   display: none;
@@ -181,6 +198,7 @@ ul {
   top: 0;
   left: 0;
   max-width:100%;
+  padding-top: 1.5px;
 }
 #hero_logo{
   position: absolute;
@@ -249,12 +267,20 @@ ul {
 /* Hero Image ends*/
 /*About Section*/
 section#About{
-  background-color: #E3AD40;
-  color: #fff;
-  text-align: center;
-  font-size: .875rem;
-  line-height: 1.5;
+  background-color: #F3F3F8;
+  color: #2F2354;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 2;
+  letter-spacing: 0.7px;
   font-family: 'Open Sans',X-LocaleSpecific,sans-serif;
+}
+#AboutUs h1{
+  text-align: center;
+  font-weight: bold;
+}
+#AboutUs h3{
+  font-weight: bold;
 }
 #coreContributers img{
   padding: 20px;
@@ -265,12 +291,13 @@ section#About{
 /*About(Community) Section*/
 section#community{
   padding:40px 0 20px 0;
-  background-color: #c0413c;
+  background-color: #D5433D;
   color: #fff;
   text-align: center;
   font-size: 35px;
   line-height: 0.9;
   list-style: none;
+  font-family: 'Open Sans';
   font-style: normal;
   font-variant: normal;
 }
@@ -328,7 +355,7 @@ section#community .fa-globe{
     margin: 0 auto;
 }
 .wide .pillars {
-    height: 380px;
+    height: 500px;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
@@ -375,8 +402,8 @@ section#community .fa-globe{
     margin: 0 0 0 -2px;
     padding: 0;
     float: left;
-    width: 25%;
-    height: 380px;
+    width: 19.7%;
+    height: 500px;
     min-height: 0;
     overflow: hidden;
     box-shadow: -6px 0 10px -4px rgba(0, 0, 0, 0.5);
@@ -393,8 +420,9 @@ section#community .fa-globe{
 .panel-title {
     color: #fff;
     font-size: 18px;
-    line-height: 1.2;
+    line-height: 1.5;
     font-weight: bold;
+    font-family: 'Rufina',serif;
     letter-spacing: -0.025em;
     text-align: center;
     text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
@@ -404,7 +432,7 @@ section#community .fa-globe{
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 300px;
+    width: 100%;
     height: 80px;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -412,10 +440,6 @@ section#community .fa-globe{
 }
 .panel-title i {
     font-style: normal;
-}
-.panel-title:after {
-    content: ' Â»';
-    white-space: nowrap;
 }
 .panel-inner {
     background-color: rgba(0, 0, 0, 0.1);
@@ -468,11 +492,8 @@ section#community .fa-globe{
 .panel-content .go {
     font-size: 90%;
     font-weight: bold;
+    font-family: 'Open Sans',serif;
     letter-spacing: -0.025em;
-}
-.panel-content .go:after {
-    content: ' Â»';
-    white-space: nowrap;
 }
 .panel-content>a {
     position: absolute;
@@ -480,7 +501,7 @@ section#community .fa-globe{
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 20px 20px 20px 300px;
+    padding: 65px 20px 20px 300px;
 }
 .panel-content a:link, .panel-content a:visited {
     color: inherit;
@@ -491,16 +512,16 @@ section#community .fa-globe{
     outline: 0;
 }
 .panel-content a:focus .go, .panel-content a:active .go, .panel-content .go:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 .wide .panel-content {
-    height: 300px;
+    height: 500px;
     min-height: 0;
     width: 290px;
     padding: 40px 40px 40px 300px;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 100px;
 }
 .wide .panel-content>a {
     padding: 40px 40px 40px 300px;
@@ -516,12 +537,13 @@ section#community .fa-globe{
 .panel-title {
     font-size: 16px;
     width: 222px;
+    text-align:left;
 }
 .wide .panel-content {
     font-size: 16px;
     height: 280px;
     width: 250px;
-    padding: 80px 20px 20px 200px;
+    left:50px;
 }
 .wide .panel-content .panel-logo {
     left: 200px;
@@ -579,9 +601,11 @@ section#community .fa-globe{
     font-size: 16px;
     line-height: 1.2;
     width: 100%;
-    height: 100%}
+    height: 100%;
+}
 .panel-content>a {
-    padding: 20px 20px 20px 40%}
+    padding: 65px 40px 40px 300px;
+}
 .panel-content .panel-logo {
     position: static;
     display: block;
@@ -601,78 +625,48 @@ section#community .fa-globe{
     width: 100%;
 }
 }
-#panel-mission {
-    background: #b30406 url("http://mozilla-tunisia.org/static/home/img/bg-mission-mosaic.png") -50px -80px no-repeat;
-    background: url("http://mozilla-tunisia.org/static/home/img/bg-mission-mosaic.png") -50px -80px no-repeat, #b30406 url("http://mozilla-tunisia.org/static/home/img/bg-mission-cubes.png") repeat;
+/*add panel-webmaker style*/
+#panel-webmaker {
+  background: #c13832 url("../img/bg/webmaker.png") 35px 100px no-repeat;
+  background: url("../img/bg/webmaker.png") 35px 100px no-repeat, #c13832 -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+  background: url("../img/bg/webmaker.png") 35px 100px no-repeat, #c13832 -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+  background: url("../img/bg/webmaker.png") 35px 100px no-repeat, #c13832 -o-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+  background: url("../img/bg/webmaker.png") 35px 100px no-repeat, #c13832 linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+  
 }
-#panel-mission .panel-title i {
-    display: block;
+#panel-webmaker.expanded {
+    background-position: 85px 30px;
 }
-.wide #panel-mission .panel-title {
-    background: #821117;
-    background: rgba(185, 24, 26, 0.8);
-    background: -webkit-linear-gradient(bottom, rgba(185, 24, 26, 0.8) 65%, rgba(185, 24, 26, 0) 100%);
-    background: -moz-linear-gradient(bottom, rgba(185, 24, 26, 0.8) 65%, rgba(185, 24, 26, 0) 100%);
-    background: -o-linear-gradient(bottom, rgba(185, 24, 26, 0.8) 65%, rgba(185, 24, 26, 0) 100%);
-    background: linear-gradient(bottom, rgba(185, 24, 26, 0.8) 65%, rgba(185, 24, 26, 0) 100%);
+#panel-webmaker.compressed {
+    background-position: 0px 100px;
 }
-/*add panel-kernel style*/
-#panel-kernel {
-  background: #D4DDE4 url("http://mozilla-tunisia.org/static/home/img/bg-kernel-mosaic.png") -50px -80px no-repeat;
-  background: url("http://mozilla-tunisia.org/static/home/img/bg-kernel-mosaic.png") -50px -80px no-repeat, #D4DDE4 repeat;
-}
-#panel-kernel .panel-title i {
+#panel-webmaker .panel-title i {
   display: block;
 }
-.wide #panel-kernel .panel-title {
-  background: #424f5a;
-  background: rgba(66, 79, 90, 0.8);
-  background: -webkit-linear-gradient(bottom, rgba(66, 79, 90, 0.95) 50%, rgba(66, 79, 90, 0.8) 65%, rgba(66, 79, 90, 0) 100%);
-  background: -moz-linear-gradient(bottom, rgba(66, 79, 90, 0.95) 50%, rgba(66, 79, 90, 0.8) 65%, rgba(66, 79, 90, 0) 100%);
-  background: -o-linear-gradient(bottom, rgba(66, 79, 90, 0.95) 50%, rgba(66, 79, 90, 0.8) 65%, rgba(66, 79, 90, 0) 100%);
-  background: linear-gradient(bottom, rgba(66, 79, 90, 0.95) 50%, rgba(66, 79, 90, 0.8) 65%, rgba(66, 79, 90, 0) 100%);
+/*add panel-friends and panel-FSA style*/
+#panel-friends{
+  background: #404c58 url("../img/bg/friends.png") 35px 80px no-repeat;
+  background: url("../img/bg/friends.png") 35px 80px no-repeat, #333 repeat scroll 0% 0%;;
 }
-/*add panel-blog style*/
-#panel-blog {
-  background: #404c58 url("http://mozilla-tunisia.org/static/home/img/bg-logo-moztn-hires.png") -50px -80px no-repeat;
-  background: url("http://mozilla-tunisia.org/static/home/img/bg-logo-moztn-hires.png") -50px -80px no-repeat, #404c58 repeat;
+#panel-friends.expanded {
+    background-position: 80px 30px;
 }
-#panel-blog .panel-title i {
+#panel-friends.compressed {
+    background-position: 0px 80px;
+}
+#panel-FSA
+{
+  background: #404c58 url("../img/bg/FSA.png") 20px 75px no-repeat;
+  background: url("../img/bg/FSA.png") 20px 75px no-repeat, #404c58 repeat;
+}
+#panel-FSA.expanded {
+    background-position: 80px 15px;
+}
+#panel-FSA.compressed {
+    background-position: -10px 75px;
+}
+#panel-friends .panel-title i,#panel-FSA .panel-title i {
   display: block;
-}
-.wide #panel-blog .panel-title {
-  background: #404c58;
-  background: rgba(229, 131, 34, 0.8);
-  background: -webkit-linear-gradient(bottom, rgba(229, 131, 34, 0.95) 50%, rgba(229, 131, 34, 0.8) 65%, rgba(229, 131, 34, 0) 100%);
-  background: -moz-linear-gradient(bottom, rgba(229, 131, 34, 0.95) 50%, rgba(229, 131, 34, 0.8) 65%, rgba(229, 131, 34, 0) 100%);
-  background: -o-linear-gradient(bottom, rgba(229, 131, 34, 0.95) 50%, rgba(229, 131, 34, 0.8) 65%, rgba(229, 131, 34, 0) 100%);
-  background: linear-gradient(bottom, rgba(229, 131, 34, 0.95) 50%, rgba(229, 131, 34, 0.8) 65%, rgba(229, 131, 34, 0) 100%);
-}
-#panel-lightbeam {
-    background: #424f5a url("http://mozilla-tunisia.org/static/home/img/logo-lightbeam.png") -80px 20px no-repeat;
-    background: url("http://mozilla-tunisia.org/static/home/img/logo-lightbeam.png") -80px 20px no-repeat, #424f5a url("http://mozilla-tunisia.org/static/home/img/bg-lightbeam.jpg") 0 0 no-repeat;
-}
-#panel-lightbeam .panel-title i {
-    display: block;
-}
-#panel-lightbeam.expanded {
-    background-position: -50px 20px;
-    background-position: -50px 20px, 0 0;
-}
-#panel-lightbeam.compressed {
-    background-position: -120px 20px;
-    background-position: -120px 20px, 0 0;
-}
-#panel-lightbeam .go {
-    color: #0096dd;
-}
-.wide #panel-lightbeam .panel-title {
-    background: #424f5a;
-    background: rgba(66, 79, 90, 0.8);
-    background: -webkit-linear-gradient(bottom, rgba(66, 79, 90, 0.95) 50%, rgba(66, 79, 90, 0.8) 65%, rgba(66, 79, 90, 0) 100%);
-    background: -moz-linear-gradient(bottom, rgba(66, 79, 90, 0.95) 50%, rgba(66, 79, 90, 0.8) 65%, rgba(66, 79, 90, 0) 100%);
-    background: -o-linear-gradient(bottom, rgba(66, 79, 90, 0.95) 50%, rgba(66, 79, 90, 0.8) 65%, rgba(66, 79, 90, 0) 100%);
-    background: linear-gradient(bottom, rgba(66, 79, 90, 0.95) 50%, rgba(66, 79, 90, 0.8) 65%, rgba(66, 79, 90, 0) 100%);
 }
 #panel-fxos {
     background: #0095dd url("http://mozilla-tunisia.org/static/home/img/firefoxos-fox.png") -100px -100px no-repeat;
@@ -683,63 +677,55 @@ section#community .fa-globe{
 #panel-fxos.compressed {
     background-position: -140px -100px;
 }
-.wide #panel-fxos .panel-title {
-    background: #0095dd;
-    background: rgba(0, 84, 160, 0.8);
-    background: -webkit-linear-gradient(bottom, rgba(0, 84, 160, 0.8) 65%, rgba(0, 84, 160, 0) 100%);
-    background: -moz-linear-gradient(bottom, rgba(0, 84, 160, 0.8) 65%, rgba(0, 84, 160, 0) 100%);
-    background: -o-linear-gradient(bottom, rgba(0, 84, 160, 0.8) 65%, rgba(0, 84, 160, 0) 100%);
-    background: linear-gradient(bottom, rgba(0, 84, 160, 0.8) 65%, rgba(0, 84, 160, 0) 100%);
-}
-#panel-donate {
-    background: #c13832 url("http://mozilla-tunisia.org/static/home/img/bg-donate.png");
-    background: url("http://mozilla-tunisia.org/static/home/img/bg-donate.png"), #c13832 -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
-    background: url("http://mozilla-tunisia.org/static/home/img/bg-donate.png"), #c13832 -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
-    background: url("http://mozilla-tunisia.org/static/home/img/bg-donate.png"), #c13832 -o-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
-    background: url("http://mozilla-tunisia.org/static/home/img/bg-donate.png"), #c13832 linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
-    background-position: -50px 20px;
-    background-position: -50px 20px, 0 0;
-    background-repeat: no-repeat;
-    background-repeat: no-repeat, repeat-x;
-}
-#panel-donate .panel-title i {
+  #panel-reps {
+      background: #c13832 url("http://mozilla-tunisia.org/static/home/img/bg-donate.png");
+      background: url("http://mozilla-tunisia.org/static/home/img/bg-donate.png"), #c13832 -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+      background: url("http://mozilla-tunisia.org/static/home/img/bg-donate.png"), #c13832 -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+      background: url("http://mozilla-tunisia.org/static/home/img/bg-donate.png"), #c13832 -o-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+      background: url("http://mozilla-tunisia.org/static/home/img/bg-donate.png"), #c13832 linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+      background-position: -50px 20px;
+      background-position: -50px 20px, 0 0;
+      background-repeat: no-repeat;
+      background-repeat: no-repeat, repeat-x;
+  }
+#panel-reps .panel-title i {
     display: block;
 }
-#panel-donate .panel-content {
+#panel-reps .panel-content {
     color: #fff;
     font-size: 20px;
 }
-#panel-donate .panel-content h3 {
+#panel-reps .panel-content h3 {
     font-size: 24px;
     font-weight: 800;
 }
-#panel-donate .panel-content legend {
+#panel-reps .panel-content legend {
     font-size: 20px;
     color: #fff;
     font-weight: 800;
     text-shadow: none;
 }
-#panel-donate .panel-content label {
+#panel-reps .panel-content label {
     display: inline-block;
     font-size: 18px;
     font-weight: 800;
     margin: 0 10px 10px 0;
 }
-#panel-donate .panel-content .button {
+#panel-reps .panel-content .button {
     display: block;
     padding: 10px 20px;
     font-size: 18px;
     margin-top: 20px;
 }
-#panel-donate.expanded {
+#panel-reps.expanded {
     background-position: -20px 20px;
     background-position: -20px 20px, 0 0;
 }
-#panel-donate.compressed {
+#panel-reps.compressed {
     background-position: -90px 20px;
     background-position: -90px 20px, 0 0;
 }
-.no-js #panel-donate {
+.no-js #panel-reps {
     min-height: 22em;
 }
 @media (-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx), (min-resolution:144dpi) {
@@ -747,7 +733,7 @@ section#community .fa-globe{
     background-image: url("http://mozilla-tunisia.org/static/home/img/firefoxos-fox-hires.png");
     background-size: 335px 468px;
 }
-#panel-donate {
+#panel-reps {
     background-image: url("http://mozilla-tunisia.org/static/home/img/bg-donate-hires.png");
     background-image: url("http://mozilla-tunisia.org/static/home/img/bg-donate-hires.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
     background-image: url("http://mozilla-tunisia.org/static/home/img/bg-donate-hires.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
@@ -769,46 +755,72 @@ section#community .fa-globe{
     background-position: -135px -70px;
 }
 /*blog*/
-#panel-blog {
-    background-image: url("http://mozilla-tunisia.org/static/home/img/bg-logo-moztn-md.png");
-    background-position: -45px -70px;
+#panel-friends {
+    background-image: url("../img/bg/friends.png");
+    background-position: 5px 80px;
 }
-#panel-blog.expanded {
-    background-position: -75px -70px;
+#panel-friends.expanded {
+    background-position: 35px 30px;
 }
-#panel-blog.compressed {
-    background-position: -115px -70px;
+#panel-friends.compressed {
+    background-position: 0px 80px;
+}
+/*FSA*/
+#panel-FSA {
+    background-image: url("../img/bg/friends.png");
+    background-position: 3px 82px;
+}
+#panel-FSA.expanded {
+    background-position: 20px 15px;
+}
+#panel-FSA.compressed {
+    background-position: -10px 75px;
 }
 /*community*/
-#panel-kernel {
-    background-image: url("http://mozilla-tunisia.org/static/home/img/bg-kernel-mosaic-md.png");
-    background-position: -45px 10px;
+#panel-webmaker {
+    background-image: url("../img/bg/webmaker.png");
+    background-position: 0px 100px;
 }
-#panel-kernel.expanded {
-    background-position: -75px 10px;
+#panel-webmaker.expanded {
+    background-position: 35px 30px;
 }
-#panel-kernel.compressed {
-    background-position: -135px 10px;
+#panel-webmaker.compressed {
+    background-position: 0px 100px;
 }
-#panel-donate {
+#panel-reps {
     background-position: -50px 20px;
     background-position: -50px 20px, 0 0;
 }
-#panel-donate.expanded {
+#panel-reps.expanded {
     background-position: -110px 20px;
     background-position: -110px 20px, 0 0;
 }
-#panel-donate .panel-content {
+#panel-reps .panel-content {
     font-size: 16px;
 }
-#panel-donate .panel-content h3 {
+#panel-reps .panel-content h3 {
     font-size: 20px;
 }
-#panel-donate .panel-content label {
+#panel-reps .panel-content label {
     font-size: 16px;
 }
-#panel-donate .panel-content .button {
+#panel-reps .panel-content .button {
     font-size: 16px;
+}
+}
+@media only screen and (max-width:480px){
+.panel-content {
+    font-size: 16px;
+    line-height: 1.2;
+    width: 100%;
+    height: 100%;
+    left: -150px;
+    top: 0px;
+    padding: 0px 80px;
+}
+.panel:hover .panel-content
+{
+  top:-20px;    
 }
 }
 @media only screen and (min-width:760px) and (max-width:1000px) and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-width:760px) and (max-width:1000px) and (min-resolution:1.5dppx), only screen and (min-width:760px) and (max-width:1000px) and (min-resolution:144dpi) {
@@ -828,31 +840,40 @@ section#community .fa-globe{
 #panel-fxos.compressed {
     background-position: -85px -110px;
 }
-
 /*kernel*/
-#panel-kernel {
-    background-image: url("http://mozilla-tunisia.org/static/home/img/bg-kernel-mosaic-sm.png");
-    background-position: -121px -75px;
+#panel-webmaker {
+    background-image: url("../img/bg/webmaker-sm.png");
+    background-position: 0px -5px;
 }
-#panel-kernel.expanded {
-    background-position: -121px -75px;
+#panel-webmaker.expanded {
+    background-position: 10px 40px;
 }
-#panel-kernel.compressed {
-    background-position: -85px -110px;
+#panel-webmaker.compressed {
+    background-position: 10px 0px;
 }
-
+/*FSA*/
+#panel-FSA {
+    background-image: url("../img/bg/FSA-sm.png");
+    background-position: -7px -17px;
+}
+#panel-FSA.expanded {
+    background-position: 0px 40px;
+}
+#panel-FSA.compressed {
+    background-position: 0px 0px;
+}
 /*blog*/
-#panel-blog {
-    background-image: url("http://mozilla-tunisia.org/static/home/img/bg-logo-moztn-sm.png");
-    background-position: -21px -76px;
+#panel-friends {
+    background-image: url("../img/bg/friends-sm.png");
+    background-position: 0px -10px;
 }
-#panel-blog.expanded {
-    background-position: -25px -30px;
+#panel-friends.expanded {
+    background-position: 10px 40px;
 }
-#panel-blog.compressed {
-    background-position: -25px -110px;
+#panel-friends.compressed {
+    background-position: 10px 0px;
 }
-#panel-donate {
+#panel-reps {
     background-image: url("http://mozilla-tunisia.org/static/home/img/bg-donate-sm.png");
     background-image: url("http://mozilla-tunisia.org/static/home/img/bg-donate-sm.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
     background-image: url("http://mozilla-tunisia.org/static/home/img/bg-donate-sm.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
@@ -863,7 +884,7 @@ section#community .fa-globe{
     background-size: 136px 114px;
     background-size: 136px 114px, auto auto;
 }
-#panel-donate.expanded {
+#panel-reps.expanded {
     background-image: url("http://mozilla-tunisia.org/static/home/img/bg-donate-sm.png");
     background-image: url("http://mozilla-tunisia.org/static/home/img/bg-donate-sm.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
     background-image: url("http://mozilla-tunisia.org/static/home/img/bg-donate-sm.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
@@ -872,23 +893,20 @@ section#community .fa-globe{
     background-position: -24px 10px;
     background-position: -24px 10px, 0 0;
 }
-#panel-donate.compressed {
+#panel-reps.compressed {
     background-position: -24px -20px;
     background-position: -24px -20px, 0 0;
 }
-#panel-donate .panel-content {
-    padding: 20px 20px 20px 40%;
-    height: auto;
-    width: auto;
+#panel-reps .panel-content { 
+    font-size: 16px;
+} 
+#panel-reps .panel-content h3 {
     font-size: 16px;
 }
-#panel-donate .panel-content h3 {
-    font-size: 16px;
-}
-#panel-donate .panel-content legend, #panel-donate .panel-content label {
+#panel-reps .panel-content legend, #panel-reps .panel-content label {
     font-size: 14px;
 }
-#panel-donate .panel-content .button {
+#panel-reps .panel-content .button {
     font-size: 14px;
     margin-top: 12px;
 }
@@ -903,17 +921,50 @@ section#community .fa-globe{
 #panel-fxos.compressed {
     background-position: -40px -110px;
 }
-#panel-donate {
+#panel-reps {
     background-position: 0 0;
     background-position: 0 0, 0 0;
 }
-#panel-donate.expanded {
+#panel-reps.expanded {
     background-position: 0 10px;
     background-position: 0 10px, 0 0;
 }
-#panel-donate.compressed {
+#panel-reps.compressed {
     background-position: 0 -20px;
     background-position: 0 -20px, 0 0;
+}
+/*blog*/
+#panel-friends {
+    background-image: url("../img/bg/friends-sm.png");
+    background-position: 20px -5px;
+}
+#panel-friends.expanded {
+    background-position: 50px 60px;
+}
+#panel-friends.compressed {
+    background-position: 50px 0px;
+}
+/*FSA*/
+#panel-FSA {
+    background-image: url("../img/bg/FSA-sm.png");
+    background-position: 10px -15px;
+}
+#panel-FSA.expanded {
+    background-position: 40px 50px;
+}
+#panel-FSA.compressed {
+    background-position: 40px 0px;
+}
+/*community*/
+#panel-webmaker {
+    background-image: url("../img/bg/webmaker-sm.png");
+    background-position: 20px -18px;
+}
+#panel-webmaker.expanded {
+    background-position: 45px 65px;
+}
+#panel-webmaker.compressed {
+    background-position: 45px 0px;
 }
 }
 @media only screen and (max-width:760px) and (-webkit-min-device-pixel-ratio:1.5), only screen and (max-width:760px) and (min-resolution:1.5dppx), only screen and (max-width:760px) and (min-resolution:144dpi) {
@@ -921,7 +972,7 @@ section#community .fa-globe{
     background-image: url("http://mozilla-tunisia.org/static/home/img/firefoxos-fox-sm-hires.png");
     background-size: 190px 246px;
 }
-#panel-donate {
+#panel-reps {
     background-image: url("http://mozilla-tunisia.org/static/home/img/bg-donate.png");
     background-image: url("http://mozilla-tunisia.org/static/home/img/bg-donate.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
     background-image: url("http://mozilla-tunisia.org/static/home/img/bg-donate.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
@@ -930,7 +981,7 @@ section#community .fa-globe{
     background-size: 117px 92px;
     background-size: 117px 92px, auto auto;
 }
-#panel-donate.expanded {
+#panel-reps.expanded {
     background-image: url("http://mozilla-tunisia.org/static/home/img/bg-donate.png");
     background-image: url("http://mozilla-tunisia.org/static/home/img/bg-donate.png"), -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
     background-image: url("http://mozilla-tunisia.org/static/home/img/bg-donate.png"), -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
@@ -954,19 +1005,39 @@ section#community .fa-globe{
   color: #FF0000;
   font-size: 10px;
 }
-/*Slider*/
-.pillars.accordion.panel-title.panel-inner.panel-content
-{
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
+#success{
+  color:white;
+}
+#send{
+  margin-bottom:15px;
 }
 
+/* Footer Start*/
+footer {
+    background-color: #D7D3C8 ;
+    padding:20px 0;
+    font-family: 'Open Sans', sans-serif;
+}
+.footer-logo img{
+  width:183px;
+  height:72px;
+}
+footer ul{
+  list-style-type:none;
+}
+footer h1{
+  margin-top:0;
+}
+/*Footer End*/
 /*---Download Section CSS---*/
 #download-section {
-  background-color:#565A5C;
+  background-color:#2A80B9;
 }
 #ff-download-message-h {
+  color:white;
+}
+#ff-download-btn, #ff-download-btn:hover, #ff-download-btn:visited, #ff-download-btn:active {
+  text-decoration: none;
   color:white;
 }
 #ff-download-btn, #ff-download-btn:hover, #ff-download-btn:visited, #ff-download-btn:active {
@@ -980,7 +1051,6 @@ section#community .fa-globe{
   float:none;
 }
 /*---End---*/
-
 /* Sandstone CSS : Gumdrop Buttons */
 .button {
   float: left;

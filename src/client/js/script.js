@@ -674,34 +674,36 @@ $(document).ready(function() {
     }
     var g = {
         expandHorz: function(l) {
+            //console.log("expand horz");
             f(".panel-title").stop(true, true).fadeOut(200);
             l.stop().removeClass("compressed").addClass("expanded").animate({
-                width: "64%"
+                width: "63.9%"
             }, 700);
             f(".panel-content", l).stop(true, true).delay(400).fadeIn(400);
             l.siblings(".panel").stop().removeClass("expanded").addClass("compressed").animate({
-                width: "12%"
+                width: "8.8%"
             }, 700);
             l.siblings(".panel").find(".panel-content").stop(true, true).fadeOut(400, function() {
                 f(this).delay(500).removeAttr("style")
             });
-            i("open", (f(".panel").index(l) + 1), l.attr("id"))
         },
         contractHorz: function() {
+            //console.log("contract horz");
             f(".panel").stop().animate({
-                width: "25%"
+                width: "19.7%"
             }, 700, function() {
                 f(".panel-title").fadeIn(250)
             }).removeClass("expanded compressed");
             f(".panel-content").stop(true, true).delay(200).fadeOut(500)
         },
         expandVert: function(l) {
+            //console.log("expand vert");
             f(".panel-title").stop(true, true).fadeOut(200);
             l.stop().removeClass("compressed").addClass("expanded").animate({
                 height: "22em"
             }, 700);
             l.siblings(".panel").stop().removeClass("expanded").addClass("compressed").animate({
-                height: "3em"
+                height: "2em"
             }, 700);
             f(".panel-content", l).stop(true, true).delay(400).fadeIn(400);
             l.siblings(".panel").find(".panel-content").stop(true, true).fadeOut(400, function() {
@@ -710,6 +712,7 @@ $(document).ready(function() {
             l("open", (f(".panel").index(l) + 1), l.attr("id"))
         },
         contractVert: function() {
+            //console.log("contract vert");
             f(".panel").stop().animate({
                 height: "4.5em"
             }, 700, function() {
