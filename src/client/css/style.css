@@ -32,7 +32,7 @@ strong
   min-width:320px;
 }
 #masthead{
-  background: #2A80B9 none repeat scroll 0% 0%;
+  background: #484D6D none repeat scroll 0% 0%;
   display: block;
   margin: 0 auto;
   padding-left: 20px;
@@ -267,7 +267,7 @@ ul {
 /* Hero Image ends*/
 /*About Section*/
 section#About{
-  background-color: #F3F3F8;
+  background-color: #fff;
   color: #2F2354;
   text-align: left;
   font-size: 1rem;
@@ -281,6 +281,7 @@ section#About{
 }
 #AboutUs h3{
   font-weight: bold;
+  text-align:justify;
 }
 #coreContributers img{
   padding: 20px;
@@ -291,7 +292,7 @@ section#About{
 /*About(Community) Section*/
 section#community{
   padding:40px 0 20px 0;
-  background-color: #D5433D;
+  background-color: #D7D3C8;
   color: #fff;
   text-align: center;
   font-size: 35px;
@@ -1031,7 +1032,7 @@ footer h1{
 /*Footer End*/
 /*---Download Section CSS---*/
 #download-section {
-  background-color:#2A80B9;
+  background-color:#2D3047;
 }
 #ff-download-message-h {
   color:white;
