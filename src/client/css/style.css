@@ -609,7 +609,7 @@ section#community .fa-globe{
   background: url("../img/bg/webmaker.png") 35px 100px no-repeat, #c13832 -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
   background: url("../img/bg/webmaker.png") 35px 100px no-repeat, #c13832 -o-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
   background: url("../img/bg/webmaker.png") 35px 100px no-repeat, #c13832 linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
-  
+
 }
 #panel-webmaker.expanded {
     background-position: 85px 30px;
@@ -797,7 +797,7 @@ section#community .fa-globe{
 }
 .panel:hover .panel-content
 {
-  top:-20px;    
+  top:-20px;
 }
 }
 @media only screen and (min-width:760px) and (max-width:1000px) and (-webkit-min-device-pixel-ratio:1.5), only screen and (min-width:760px) and (max-width:1000px) and (min-resolution:1.5dppx), only screen and (min-width:760px) and (max-width:1000px) and (min-resolution:144dpi) {
@@ -874,9 +874,9 @@ section#community .fa-globe{
     background-position: -24px -20px;
     background-position: -24px -20px, 0 0;
 }
-#panel-reps .panel-content { 
+#panel-reps .panel-content {
     font-size: 16px;
-} 
+}
 #panel-reps .panel-content h3 {
     font-size: 16px;
 }
@@ -1005,7 +1005,57 @@ footer ul{
 footer h1{
   margin-top:0;
 }
+footer .fa{
+  margin: 3px;
+}
+footer a:hover, a:focus{
+  text-decoration:none;
+}
+/*.v-bar{
+  border-right:1px solid #9E9E9E;
+  margin-right: -15px;
+  padding-right:0px;
+} */
+.links a {
+  color: #337AB7;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: normal;
+  position: relative;
+}
+
+.links a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #337AB7;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.links a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
 /*Footer End*/
+
+/* Copyright Text */
+section#copyright{
+  border-top: 1px solid #AFAFAF;
+  padding-top: 10px;
+  background: #000;
+  color: #E4E4E4;
+}
+
+/* Copright Text END */
 /*---Download Section CSS---*/
 #download-section {
   background-color:#565A5C;
