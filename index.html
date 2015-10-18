@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Mozilla Delhi | MozPacers</title>
+    <!-- Please add proper comments to everything that you add. It makes easier for others to read your code. -->
+    <!-- Import Font Face -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!--Font Awesome Style sheet for Footer Social Icons -->
+    <link rel="stylesheet" href="fonts_awesome/css/font-awesome.min.css">
+    <!-- Tabzilla stylesheet -->
+    <link rel="stylesheet" href="https://mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" />
+    <!-- Icons in About(Community) section -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="src/client/css/style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script id="card-template" type="text/html">
+      <li class="col-sm-6 col-md-4 col-lg-4">
+        <figure class="cardfigure">
+          <img src="" alt="">
+          <figcaption>
+            <div class="info-box">
+              <h3></h3>
+              <h4 class="pull-right"></h4>
+              <p></p>
+            </div>
+            <span></span>
+            <a id="" class="more click" >More info</a>
+            <a class="register" href="">Register</a>
+          </figcaption>
+        </figure>
+      </li>
+    </script>
+    <script id="single-template" type=text/html>
+      <div>
+        <section class="info col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
+          <h1 class="text-center"></h1>
+          <h3 class="pull-left"><br></h3>
+          <h3 class="pull-right">Start Time:<br><br>End Time:</h3>
+          <!-- <h3 class="pull-right"></h3> -->
+          <p></p>
+          <div class="buttons">
+            <a class="reg" href=""><button id="registersingle" type="button" class="btn btn-primary btn-lg pull-left">Register Here</button></a>
+            <a class="meetup" href=""><button id="meetupsingle" type="button" class="btn btn-info btn-lg pull-right">Meetup Page</button></a>
+          </div>
+        </section>
+      </div>
+    </script>
+  </head>
+  <body>
+    <div id="outer-wrapper">
+      <!-- Tabzilla and navbar goes here-->
+      <header id="masthead" class="col-md-12">
+        <div class="container col-md-8 col-md-offset-2">
+          <a href="https://www.mozilla.org/" id="tabzilla">mozilla</a>
+          <nav id="nav-main" role="navigation">
+            <span class="toggle" role="button" aria-controls="nav-main-menu" tabindex="0">Menu</span>
+            <ul id="nav-main-menu">
+              <li><a href="#">Blog</a></li>
+              <li class="first"><a href="#">Events</a></li>
+              <li><a href="#About">About Us</a></li>
+              <li class="last"><a href="#contact_form">Contact Us</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- Sticky Events section goes here -->
+
+      <!-- Hero Image goes here -->
+      <section id="Hero_Image">
+        <div class ="row">
+          <div id ="hero_col" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+            <img id="hero_main" src="src/client/img/hero/back2.jpg" class ="img-responsive animated fadeInDown" />
+            <img id="hero_logo" src="src/client/img/hero/logo2.png" class="img-responsive col-xs-3 col-sm-2 col-md-2 col-lg-2 animated fadeInDown"  />
+          </div>
+        </div>
+      </section>
+      <!-- Hero Image ends Here -->
+
+      <!-- Firefox Download section goes here -->
+      <section id="download-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-12">
+              <div class="row">
+                <h1 class="col-md-4">
+                  <img id="ff-download-img" src="https://mozorg.cdn.mozilla.net/media/img/home/voices/firefox-logo-wordmark-white-high-res.8ba7fd303224.png" class="img-responsive" alt="Firefox Logo" height="190" width="190" />
+                </h1>
+                <h1 id="ff-download-message-h" class="col-md-8 text-center hidden-xs">
+                  Committed to <strong>you, your privacy</strong> and an<strong> open web</strong>
+                </h1>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <div class="row">
+                <h1 id="ff-download-btn-h" class="col-sm-12">
+                  <a id="ff-download-btn" class="center-block button" href="#">FREE DOWNLOAD</a>
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Events section goes here -->
+      <section id="events" class="container-fluid">
+        <div class="row grid">
+          <header>
+            <h1 class="text-center">Upcoming events</h1>
+          </header>
+        </div>
+        <div class="row">
+          <ul class="grid cs-style-3 event future">
+          </ul>
+        </div>
+        <div class="row grid">
+          <button id="future-more" type="button" class="click btn btn-default btn-lg col-xs-offset-4 col-sm-offset-5 col-md-offset-5 col-lg-offset-5">More events</button>
+        </div>
+        <div class="row grid">
+          <header>
+            <h1 class="text-center">Past events</h1>
+          </header>
+        </div>
+        <div class="row">
+          <ul class="grid cs-style-3 event past">
+          </ul>
+        </div>
+        <div class="row grid">
+          <button id="past-more" type="button" class="click btn btn-default btn-lg col-xs-offset-4 col-sm-offset-5 col-md-offset-5 col-lg-offset-5">More events</button>
+        </div>
+      </section>
+      <section id="testcase" class="container-fluid testing">
+        <div class="row grid">
+          <div class="container-back">
+          <a class="back"><i class="fa fa-4x fa-chevron-left"></i></a>
+          </div>
+        </div>
+        <div class="row">
+          <ul class="grid cs-style-3 event-view">
+          </ul>
+          <div class="single-event col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          </div>
+        </div>
+      </section>
+      <!-- Slider goes here -->
+      <section class="pillars">
+        <ul class="accordion">
+          <li id="panel-friends" class="panel" tabindex="0">
+            <h2 class="panel-title">Firefox Friends</h2>
+            <div class="panel-inner">
+              <div class="panel-content">
+                <a href="http://friends.mozilla.org" target="_blank">
+                  <h3>Join The Innovators</h3>
+                  <p>
+                    Firefox Friends is our ever-growing team of social-sharers and word-spreaders. By joining, you’ll be helping us bring an open and innovative Web to people everywhere.
+                  </p>
+                  <p class="go">
+                    Visit Firefox Friends
+                  </p>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li id="panel-webmaker" class="panel" tabindex="0">
+            <h2 class="panel-title"><i>The Web</i> You Want</h2>
+            <div class="panel-inner">
+              <div class="panel-content">
+                <a href="https://www.webmaker.org" hreflang="en-US" target="_blank">
+                  <h3>Make The Web You Want</h3>
+                  <p>
+                    Join us at Mozilla Web Maker and help shape the web you want. Web Maker helps you to create your own web.
+                  </p>
+                  <p class="go">
+                    Mozilla Web Maker
+                  </p>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li id="panel-FSA" class="panel" tabindex="0">
+            <h2 class="panel-title"><i>Firefox Student</i> Ambassador</h2>
+            <div class="panel-inner">
+              <div class="panel-content">
+                <a href="https://www.mozilla.org/en-US/contribute/studentambassadors/" target="_blank">
+                  <h3>Help Change the Web</h3>
+                  <p>
+                    Individuals who are passionate about Mozilla and raise awareness about many benefits of firefox
+                    and other Mozilla products.
+                  </p>
+                  <p class="go">
+                    Become a student ambassador
+                  </p>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li id="panel-fxos" class="panel" tabindex="0">
+            <h2 class="panel-title"><i>Discover </i><br> Firefox OS</h2>
+            <div class="panel-inner">
+              <div class="panel-content">
+                <a href="https://www.mozilla.org/en-US/firefox/os/2.0/" target="_blank">
+                  <h3>Discover Firefox OS</h3>
+                  <p>
+                    Designed to give you what you need, just when you need it. Firefox OS is an open source OS based on web
+                    technologies to bring you the best experience.
+                  </p>
+                  <p class="go">
+                    Get Firefox OS
+                  </p>
+                </a>
+              </div>
+            </div>
+          </li>
+          <li id="panel-reps" class="panel" tabindex="0">
+            <h2 class="panel-title"><i>Mozilla</i> Representatives</h2>
+            <div class="panel-inner">
+              <div class="panel-content">
+                <a href="https://www.mozilla.org/fr/mission/" target="_blank">
+                  <h3>Mozilla Representatives</h3>
+                  <p>
+                    The program aims at those enthusiastic volunteers of Mozilla who want to become official representatives of Mozilla in
+                    their locale/region.
+                  </p>
+                  <p class="go">
+                    Join the Mozilla Mission
+                  </p>
+                </a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- About us goes here -->
+      <section id="About">
+        <div class="container">
+          <div class="row">
+            <div id="AboutUs" class="col-md-12">
+              <h1>Who are Mozpacers?</h1>
+              <p>Mozpacers are the active Mozillians of Mozilla Delhi Community. The seed was sowed in January 2014 by Anup Mishra, Ajay Kumar and Bhuvnesh Dogra and now it is blossoming with the Mozpacers as petals. We believe in building up an open and dynamic community and so are trying to indulge people from diverse backgrounds to better contribute the making of better web, as is mission of Mozilla.</p>
+              <h1>Regions Covered:</h1>
+              <p>The fragrance is not just in Delhi and NCR zone but we also conduct various campaigns and workshops in North India states viz. Haryana, Himachal Pradesh, Punjab etc. This way we get to teach a lot of people about web and Mozilla’s mission and in the same time get potential people in the community.</p>
+              <h1>Structure of the Community:</h1>
+              <p>We are mainly divided into Technical and Non-technical teams. We try that all the members get to take various leadership and managerial roles in various projects and events. We are open to the way of contributions and anybody can contribute in whichever positions he/she are comfortable in. </p>
+            </div>
+            <div id="coreContributers" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <ul class="ContributerImages">
+              <h1>Meet the team</h1>
+              <li>
+            		<div class="ch-item ch-img-1">
+            			<div class="ch-info">
+            				<h3>Ajay Kumar</h3>
+            				<p>Community Mentor<a href="https://reps.mozilla.org/u/ajaysinghi1188/">View on Reps</a></p>
+            			</div>
+            		</div>
+            	</li>
+            	<li>
+            		<div class="ch-item ch-img-2">
+            			<div class="ch-info">
+            				<h3>Anup Mishra</h3>
+            				<p>Community Mentor<a href="https://reps.mozilla.org/u/anupkumarmishra29/">View on Reps</a></p>
+            			</div>
+            		</div>
+            	</li>
+            	<li>
+            		<div class="ch-item ch-img-3">
+            			<div class="ch-info">
+            				<h3>Bhuvnesh Kumar</h3>
+            				<p>Community Mentor<a href="https://mozillians.org/en-US/u/BhuvneshDogra/">View on Mozillians</a></p>
+            			</div>
+            		</div>
+            	</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--  About(Community) goes here  -->
+      <section id="community">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <span class="spanContributer">
+                <i class="fa fa-users fa-lg"></i>
+                 10,554
+              </span>
+              <br>
+              <span class='content'>
+                active Mozillians
+                 <br>
+                worldwide
+              </span>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <span class="spanOrganiser">
+                <i class="fa fa-heart fa-lg"></i>
+                 121
+              </span>
+              <br>
+              <span class='content'>
+                upcoming events
+                <br>
+                around the globe
+              </span>
+            </div>
+            <div class="col-sm-4 col-md-4 col-lg-4">
+              <span class="statCountries">
+                <i class="fa fa-globe fa-lg"></i>
+                 87
+              </span>
+              <br>
+              <span class='content'>
+                languages and counting,
+                <br>
+                on every continent
+              </span>
+            </div>
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <a class="contribute-btn" href="https://www.mozilla.org/en-US/contribute/" data-element-location="button-click" data-link-type="Get Involved with Mozilla today">Get Involved with Mozilla today</a>
+              </div>
+            </div>
+          </div>
+      </section>
+      <!-- Contact Form goes here -->
+      <section id="contact_form">
+        <div class="container">
+          <div class="row form-group">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1 style="color:white;">Contact Us</h1></div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group">
+              <input class="form-control" type="text" name="name" id="name" placeholder="Name" />
+              <span class="error" id="error_name"></span>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group">
+              <input class="form-control" type="email" name="email" id="email" placeholder="Email Address" />
+              <span class="error" id="error_email"></span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-group">
+              <textarea class="form-control" name="message" rows="4" cols="60" id="message" placeholder="Message"></textarea>
+              <span class="error" id="error_message"></span>
+            </div>
+          </div>
+          <span id="success" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group" ></span>
+          <input type="submit" name="send" id="send" value="Send" class="btn btn-info pull-right send-button" >
+        </div>
+      </section>
+    </div>
+
+      <!-- Footer goes here -->
+      <footer class="navbar-static-bottom clearfix" >
+        <div class="container">
+          <div class="row">
+            <div class="text-center col-xs-12 col-sm-12 col-md-3 col-lg-3">
+              <div class="footer-logo" >
+                <a href="http://mozilla.org">
+                  <img src="src/client/img/mozilla-logo-footer/mozilla-logo.jpg" alt="Mozilla" width=183 height=72>
+                </a>
+              </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+              <div class="row">
+                <div class="col-xs-6 text-center thin">
+                <ul class="links">
+                <li>
+                  <a href="#">About Us</a>
+                </li>
+                <li>
+                  <a href="#">Contact Us</a>
+                </li>
+                <li>
+                  <a href="#">Mission</a>
+                </li>
+                <li>
+                  <a href="#">Contributors</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-xs-6 text-center thin" >
+              <ul class="links">
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+                <li>
+                  <a href="#">Any link</a>
+                </li>
+                <li>
+                 <a href="#">Any link</a>
+                </li>
+                <li>
+                  <a href="#">Any link</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          </div>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+              <div class="row" id="social_icons">
+                <div class="col-xs-12 text-center">
+                  <h2> Connect with us </h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 text-center">
+                  <a target="_blank" href="https://github.com/mozpacers">
+                    <i class="fa fa-github fa-3x"></i>
+                  </a>
+                  <a target="_blank" href="https://www.facebook.com/mozpacers">
+                    <i class="fa fa-facebook fa-3x"></i>
+                  </a>
+                  <a target="_blank" href="https://twitter.com/mozpacers">
+                    <i class="fa fa-twitter fa-3x"></i>
+                  </a>
+                  <a target="_blank" href="https://www.youtube.com/channel/UCeT3xFmGkKhvjUMjNCiBLkg">
+                    <i class="fa fa-youtube fa-3x"></i>
+                  </a>
+                  <a target="_blank" href="https://mozpacers.slack.com/">
+                    <i class="fa fa-slack fa-3x"></i>
+                  </a>
+                </div>
+              </div> <!--Social Icon's END -->
+            </div> <!--Connect with us END -->
+          </div>
+        </div>
+      </footer>
+      <section id="copyright">
+        <div class="row">
+          <div class="col-xs-12 text-center">
+          <p><b>©Mozilla Delhi 2015 </b>| Powered by <b>Mozpacers</b></p>
+        </div>
+      </section>
+    </div>
+    <!--
+    ==========================================================================
+    All Scripts go here!
+    ==========================================================================
+    -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- Tabzilla script-->
+    <script src="https://mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
+    <!-- Custom Script -->
+    <script src="src/client/js/script.js"></script>
+  </body>
+</html>
