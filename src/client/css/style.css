@@ -1104,7 +1104,57 @@ footer ul{
 footer h1{
   margin-top:0;
 }
+footer .fa{
+  margin: 3px;
+}
+footer a:hover, a:focus{
+  text-decoration:none;
+}
+/*.v-bar{
+  border-right:1px solid #9E9E9E;
+  margin-right: -15px;
+  padding-right:0px;
+} */
+.links a {
+  color: #337AB7;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: normal;
+  position: relative;
+}
+
+.links a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #337AB7;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.links a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
 /*Footer End*/
+
+/* Copyright Text */
+section#copyright{
+  border-top: 1px solid #AFAFAF;
+  padding-top: 10px;
+  background: #000;
+  color: #E4E4E4;
+}
+
+/* Copright Text END */
 /*---Download Section CSS---*/
 #download-section {
   background-color:#565A5C;
