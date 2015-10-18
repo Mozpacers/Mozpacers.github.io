@@ -661,7 +661,6 @@ $(document).ready(function() {
 $(document).ready(function() {
   $(".testing").hide();
   var hash = window.location.hash.substring(1);
-  // console.log(hash);
   if(hash.length>0){
   cardopen(hash);
   }
@@ -669,7 +668,6 @@ $(document).ready(function() {
     $(".event-view").empty();
     $(".single-event").empty();
     if(hash.length==0){
-      console.log("HI");
       window.location.hash=idused;
     }
     $("#masthead").hide();
@@ -688,9 +686,7 @@ $(document).ready(function() {
       requestP();
     }
     else if(idused.indexOf("event")> -1){
-      alert("works");
       idused = idused.replace(/[^0-9\.]+/g, "");
-      alert(idused);
       requestS(idused);
     }
   }
@@ -711,9 +707,7 @@ $(document).ready(function() {
                     var eventregistration=msg[i].registration_form_link;
                     var eventstart= new Date(msg[i].event_start_date);
                     var startminutes= eventstart.getMinutes();
-                    console.log(startminutes);
                     var starthours= eventstart.getHours();
-                    console.log(starthours);
                     var startdate= eventstart.getDate();
                     var startmonth= eventstart.getMonth();
                     switch(startminutes){
@@ -913,9 +907,7 @@ $(document).ready(function() {
                     var eventregistration=msg[i].registration_form_link;
                     var eventstart= new Date(msg[i].event_start_date);
                     var startminutes= eventstart.getMinutes();
-                    console.log(startminutes);
                     var starthours= eventstart.getHours();
-                    console.log(starthours);
                     var startdate= eventstart.getDate();
                     var startmonth= eventstart.getMonth();
                     switch(startminutes){
@@ -1108,16 +1100,12 @@ $(document).ready(function() {
             requestsingle.done(function(msg) {
                 noFetched=msg.length;
                 var template=$("#single-template").html();
-                console.log(msg.venue);
                     var eventvenue=msg.venue;
-                    console.log(msg.venue);
                     var eventimage=msg.event_image_link;
                     var eventregistration=msg.registration_form_link;
                     var eventstart= new Date(msg.event_start_date);
                     var startminutes= eventstart.getMinutes();
-                    console.log(startminutes);
                     var starthours= eventstart.getHours();
-                    console.log(starthours);
                     var startdate= eventstart.getDate();
                     var startmonth= eventstart.getMonth();
                     switch(startminutes){
@@ -1346,19 +1334,6 @@ $(document).ready(function() {
                 //     var neweventid= newdescription.replace('a id=""','a id="event'+eventid+'"');
                     var neweventurl= newdescription.replace('<a class="meetup" href="">','<a class="meetup" href="'+eventurl+'">');
                     $(neweventurl).appendTo(".single-event");
-                //     if(i==2)
-                //     {
-                //       var responsivethirdcard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-0 col-lg-offset-0 col-sm-6 col-md-4 col-lg-4"');
-                //       $(responsivethirdcard).appendTo(".event-view");
-                //     }else if(noFetched==1){
-                //       var singlecard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-sm-6 col-md-4 col-lg-4"');
-                //       $(singlecard).appendTo(".event-view");
-                //     }else if(noFetched==2 && i==0){
-                //       var twocard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-md-offset-2 col-lg-offset-2 col-sm-6 col-md-4 col-lg-4"');
-                //       $(twocard).appendTo(".event-view");
-                //     }else{
-                //
-                //     }
             });
 
             requestsingle.fail(function(jqXHR, textStatus) {
@@ -1368,7 +1343,6 @@ $(document).ready(function() {
   $(document.body).on('click', '.click',
       function() {
         var idused=$(this).attr("id");
-        console.log(idused);
         cardopen(idused);
     });
   $(document.body).on('click', '.more',
@@ -1379,19 +1353,15 @@ $(document).ready(function() {
         $('#About').hide();
         $('#community').hide();
         $('#contact_form').hide();
-        // $('').hide(); Reserved for footer
     });
   $(document.body).on('mouseenter', '.cardfigure',
       function() {
-        console.log("working");
         var height = $(this).css( "height" );
         $(this).find("figcaption").css("height",height);
-        console.log(height);
     });
   $(document.body).on('mouseleave', '.cardfigure',
       function() {
         $(this).find("figcaption").css("height","100px");
-        console.log("focusout");
     });
   var requestupcoming = $.ajax({
               url: "http://stormy-gorge-8134.herokuapp.com/api/events/?time=future",
@@ -1408,9 +1378,7 @@ $(document).ready(function() {
                   var eventregistration=msg[i].registration_form_link;
                   var eventstart= new Date(msg[i].event_start_date);
                   var startminutes= eventstart.getMinutes();
-                  // console.log(startminutes);
                   var starthours= eventstart.getHours();
-                  // console.log(starthours);
                   var startdate= eventstart.getDate();
                   var startmonth= eventstart.getMonth();
                   switch(startminutes){
@@ -1607,9 +1575,7 @@ $(document).ready(function() {
                           var eventregistration=msg[i].registration_form_link;
                           var eventstart= new Date(msg[i].event_start_date);
                           var startminutes= eventstart.getMinutes();
-                          console.log(startminutes);
                           var starthours= eventstart.getHours();
-                          console.log(starthours);
                           var startdate= eventstart.getDate();
                           var startmonth= eventstart.getMonth();
                           switch(startminutes){
@@ -1791,7 +1757,6 @@ $(document).ready(function() {
                   requestpast.fail(function(jqXHR, textStatus) {
                       alert("Request failed: " + textStatus);
                   });
-                  alert("HELLO");
 });
 /* Accordion Slider */
 
@@ -1824,7 +1789,6 @@ $(document).ready(function() {
     }
     var g = {
         expandHorz: function(l) {
-            //console.log("expand horz");
             f(".panel-title").stop(true, true).fadeOut(200);
             l.stop().removeClass("compressed").addClass("expanded").animate({
                 width: "63.9%"
@@ -1838,7 +1802,6 @@ $(document).ready(function() {
             });
         },
         contractHorz: function() {
-            //console.log("contract horz");
             f(".panel").stop().animate({
                 width: "19.7%"
             }, 700, function() {
@@ -1847,7 +1810,6 @@ $(document).ready(function() {
             f(".panel-content").stop(true, true).delay(200).fadeOut(500)
         },
         expandVert: function(l) {
-            //console.log("expand vert");
             f(".panel-title").stop(true, true).fadeOut(200);
             l.stop().removeClass("compressed").addClass("expanded").animate({
                 height: "22em"
@@ -1862,7 +1824,6 @@ $(document).ready(function() {
             l("open", (f(".panel").index(l) + 1), l.attr("id"))
         },
         contractVert: function() {
-            //console.log("contract vert");
             f(".panel").stop().animate({
                 height: "4.5em"
             }, 700, function() {
