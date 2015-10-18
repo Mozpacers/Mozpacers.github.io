@@ -25,6 +25,38 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script id="card-template" type="text/html">
+      <li class="col-sm-6 col-md-4 col-lg-4">
+        <figure class="cardfigure">
+          <img src="" alt="">
+          <figcaption>
+            <div class="info-box">
+              <h3></h3>
+              <h4 class="pull-right"></h4>
+              <p></p>
+            </div>
+            <span></span>
+            <a id="" class="more click" >More info</a>
+            <a class="register" href="">Register</a>
+          </figcaption>
+        </figure>
+      </li>
+    </script>
+    <script id="single-template" type=text/html>
+      <div>
+        <section class="info col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
+          <h1 class="text-center"></h1>
+          <h3 class="pull-left"><br></h3>
+          <h3 class="pull-right">Start Time:<br><br>End Time:</h3>
+          <!-- <h3 class="pull-right"></h3> -->
+          <p></p>
+          <div class="buttons">
+            <a class="reg" href=""><button id="registersingle" type="button" class="btn btn-primary btn-lg pull-left">Register Here</button></a>
+            <a class="meetup" href=""><button id="meetupsingle" type="button" class="btn btn-info btn-lg pull-right">Meetup Page</button></a>
+          </div>
+        </section>
+      </div>
+    </script>
   </head>
   <body>
     <div id="outer-wrapper">
@@ -81,7 +113,45 @@
         </div>
       </section>
       <!-- Events section goes here -->
-
+      <section id="events" class="container-fluid">
+        <div class="row grid">
+          <header>
+            <h1 class="text-center">Upcoming events</h1>
+          </header>
+        </div>
+        <div class="row">
+          <ul class="grid cs-style-3 event future">
+          </ul>
+        </div>
+        <div class="row grid">
+          <button id="future-more" type="button" class="click btn btn-default btn-lg col-xs-offset-4 col-sm-offset-5 col-md-offset-5 col-lg-offset-5">More events</button>
+        </div>
+        <div class="row grid">
+          <header>
+            <h1 class="text-center">Past events</h1>
+          </header>
+        </div>
+        <div class="row">
+          <ul class="grid cs-style-3 event past">
+          </ul>
+        </div>
+        <div class="row grid">
+          <button id="past-more" type="button" class="click btn btn-default btn-lg col-xs-offset-4 col-sm-offset-5 col-md-offset-5 col-lg-offset-5">More events</button>
+        </div>
+      </section>
+      <section id="testcase" class="container-fluid testing">
+        <div class="row grid">
+          <div class="container-back">
+          <a class="back"><i class="fa fa-4x fa-chevron-left"></i></a>
+          </div>
+        </div>
+        <div class="row">
+          <ul class="grid cs-style-3 event-view">
+          </ul>
+          <div class="single-event col-xs-12 col-sm-12 col-md-12 col-lg-12">
+          </div>
+        </div>
+      </section>
       <!-- Slider goes here -->
       <section class="pillars">
         <ul class="accordion">
@@ -286,7 +356,7 @@
           <input type="submit" name="send" id="send" value="Send" class="btn btn-info pull-right send-button" >
         </div>
       </section>
-
+    </div>
 
       <!-- Footer goes here -->
       <footer class="navbar-static-bottom clearfix" >
@@ -370,8 +440,6 @@
           <p><b>©Mozilla Delhi 2015 </b>| Powered by <b>Mozpacers</b></p>
         </div>
       </section>
-
-
     </div>
     <!--
     ==========================================================================
