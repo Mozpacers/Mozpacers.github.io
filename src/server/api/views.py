@@ -5,12 +5,14 @@ from models import Event
 from flask.ext.security import login_required
 import json
 from datetime import datetime
+from os import environ
+import requests
 
 result = []  # Global result list to return result as JSON
 e = Event()  # Global Instance of Event
 
 
-@app.route('/api/event/getevents/')
+@app.route('/api/events/')
 def get_events():
     '''
     returns all the events with GET request
@@ -33,11 +35,42 @@ def get_events():
     elif time == "future":
         allEvents = Event.objects.filter(
             event_start_date__gt=datetime.now()).limit(limit)
+    elif (time) and not (time == "past" or time == "future"):
+        return make_response(jsonify({"Message":
+                                      "Time should be past or future"}), 400)
     else:
         allEvents = Event.objects.all().limit(limit)
     create_dict(allEvents)
     return Response(json.dumps(result, cls=PythonJSONEncoder), status=200,
                     content_type="application/json")
+
+
+@app.route('/api/events/<int:event_id>')
+def get_single_event(event_id):
+    singleEvent = Event.objects(eid=event_id)
+    result = create_dict(singleEvent)
+    return Response(json.dumps(result, cls=PythonJSONEncoder), status=200,
+                    content_type="application/json")
+
+
+@app.route('/api/send-contact-us-form/', methods=['GET', 'POST'])
+def send_simple_message():
+    if request.method == 'POST':
+        json_response = json.loads(request.data)
+        name = json_response['name']
+        email = json_response['email']
+        message = json_response['message']
+        subject = 'Contact Us | MozPacers : Response from ' + name
+        requests.post(
+            environ["MAIL_ADDRESS"],
+            auth=("api", environ["API_KEY"]),
+            data={"from": environ["MAIL_FROM"],
+                  "to": environ["MAIL_TO"],
+                  "subject": 'Contact Us | MozPacers : Response from ' + name,
+                  "text": name + ' with mail id: ' + email + ' just filled the' + \
+                          ' contact-us form on MozPacers.org with message: ' + message})
+        return Response(json.dumps({"Message": "Email Sent successfully"}), status=200,
+                            content_type="application/json")
 
 
 @app.errorhandler(404)
@@ -56,11 +89,11 @@ class PythonJSONEncoder(json.JSONEncoder):
         if isinstance(obj, Event):
             return obj.get_dict()
         elif isinstance(obj, datetime):
-            return repr(obj.isoformat())
+            return obj.isoformat()
         elif isinstance(obj, datetime.date):
-            return repr(obj.isoformat())
+            return obj.isoformat()
         elif isinstance(obj, datetime.time):
-            return repr(obj.isoformat())
+            return obj.isoformat()
         else:
             return repr(obj)
         return super(PythonJSONEncoder, self).default(obj)
@@ -87,4 +120,9 @@ def create_dict(allEvents):
         d['registration_form_link'] = item.registration_form_link
         d['event_image_link'] = item.event_image_link
         result.append(d)
+    # For single event
+    if len(result) == 1:
+        for item in result:
+            return item
+    # Else return the whole list of events
     return result
