@@ -989,6 +989,109 @@ section#community .fa-globe{
   margin-bottom:15px;
 }
 
+
+.contact {
+    padding: 100px 0;
+}
+
+.contact h2.section-heading {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+.contact h3.section-subheading {
+    margin-bottom: 75px;
+    text-transform: none;
+    font-family: "Droid Serif","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+}
+
+@media(min-width:768px) {
+    .contact {
+        padding: 150px 0;
+    }
+}
+
+section#contact_form {
+    background-color: #222;
+    background-image: url(../img/map-image.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+section#contact_form .section-heading {
+    color: #fff;
+    padding: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+section#contact_form .form-group {
+    margin-bottom: 25px;
+}
+
+section#contact_form .form-group input,
+section#contact_form .form-group textarea {
+    padding: 20px;
+}
+
+section#contact_form .form-group input.form-control {
+    height: auto;
+}
+
+section#contact_form .form-group textarea.form-control {
+    height: 150px;
+}
+
+section#contact_form .form-control:focus {
+    border-color: #fed136;
+    box-shadow: none;
+}
+
+section#contact_form::-webkit-input-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact_form:-moz-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact_form::-moz-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact_form:-ms-input-placeholder {
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #bbb;
+}
+
+section#contact_form .text-danger {
+    color: #e74c3c;
+}
+
+.send-button {
+    border-color: #fed136;
+    text-transform: uppercase;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 700;
+    color: #fff;
+}
+
 /* Footer Start*/
 footer {
     background-color: #D7D3C8 ;

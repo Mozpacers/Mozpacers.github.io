@@ -241,32 +241,41 @@
           </div>
       </section>
       <!-- Contact Form goes here -->
-      <section id="contact_form">
+    <section id="contact_form" class="contact">
         <div class="container">
-          <div class="row form-group">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1 style="color:white;">Contact Us</h1></div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group">
-              <input class="form-control" type="text" name="name" id="name" placeholder="Name" />
-              <span class="error" id="error_name"></span>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 style="color:white" class="section-heading">Contact Us</h2>
+                </div>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group">
-              <input class="form-control" type="email" name="email" id="email" placeholder="Email Address" />
-              <span class="error" id="error_email"></span>
+            <div class="row">
+                <div class="col-lg-12">
+                    <form name="sentMessage" id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8">
+                                <div class="form-group">
+                                  <input class="form-control" type="text" name="name" id="name" placeholder="Name*" />
+                                  <span class="error" id="error_name"></span>
+                                </div>
+                                <div class="form-group">
+                                 <input class="form-control" type="email" name="email" id="email" placeholder="Email Address*" />
+                                 <span class="error" id="error_email"></span>
+                                </div>
+                                <div class="form-group">
+                                  <textarea class="form-control" name="message" placeholder="Message*" id="message"></textarea>
+                                  <span class="error" id="error_message"></span>
+                                </div>
+                                <div class="form_group">
+                                  <span id="success"></span>
+                                  <input type="submit" name="send" id="send" value="Send" class="pull-right btn btn-lg btn-info send-button" >
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-group">
-              <textarea class="form-control" name="message" rows="4" cols="60" id="message" placeholder="Message"></textarea>
-              <span class="error" id="error_message"></span>
-            </div>
-          </div>
-          <span id="success" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group" ></span>
-          <input type="submit" name="send" id="send" value="Send" class="btn btn-info pull-right send-button" >
         </div>
-      </section>
-
+    </section>
 
       <!-- Footer goes here -->
       <footer class="navbar-static-bottom clearfix" >
