@@ -58,7 +58,11 @@ ul {
 #masthead nav li a,
 #masthead nav li a:link,
 #masthead nav li a:visited {
-  color: #484848;
+  color: #FFFFFF;
+}
+#masthead nav li a:hover{
+  text-decoration:none;
+  font-weight:bold;
 }
 #nav-main .toggle {
   display: none;
@@ -108,6 +112,8 @@ ul {
     text-transform: none;
     padding: 12px 35px 12px 10px;
     margin: 0 -10px;
+	color:#C13832;
+	font-weight:bold;
   }
   #nav-main #nav-main-menu a.submenu-item {
     background: 94% 50% no-repeat url(../img/sandstone/arrow-go.png);
