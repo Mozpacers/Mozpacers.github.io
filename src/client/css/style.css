@@ -58,8 +58,9 @@ ul {
 #masthead nav li a,
 #masthead nav li a:link,
 #masthead nav li a:visited {
-  color: #484848;
+  color: #FFF;
 }
+
 #nav-main .toggle {
   display: none;
   /* Hidden in non-mobile views */
@@ -108,6 +109,7 @@ ul {
     text-transform: none;
     padding: 12px 35px 12px 10px;
     margin: 0 -10px;
+    color:#000;
   }
   #nav-main #nav-main-menu a.submenu-item {
     background: 94% 50% no-repeat url(../img/sandstone/arrow-go.png);
@@ -138,12 +140,6 @@ ul {
     background-image: url(../img/sandstone/arrow-go.png), -webkit-linear-gradient(#43a6e2, #247ac1);
     background-image: url(../img/sandstone/arrow-go.png), linear-gradient(#43a6e2, #247ac1);
   }
-  #nav-main #nav-main-menu li.first > a {
-    border-radius: 10px 10px 0 0;
-  }
-  #nav-main #nav-main-menu li.last > a {
-    border-radius: 0 0 10px 10px;
-  }
   #nav-main-menu {
     background: #fff;
     position: absolute;
@@ -153,8 +149,6 @@ ul {
     display: none;
     top: 35px;
     overflow: visible;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
     -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
     -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
