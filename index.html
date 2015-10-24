@@ -78,7 +78,7 @@
       <!-- Sticky Events section goes here -->
       <h3 class="text-center">This is Alpha v0.1 of Mozpacers powered by MozAwesomeness ;)</h3>
       <!-- Hero Image goes here -->
-      <section id="Hero_Image">
+      <section id="Hero_Image" role="presentation">
         <div class ="row">
           <div id ="hero_col" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
             <img id="hero_main" src="src/client/img/hero/back2.jpg" class ="img-responsive animated fadeInDown" />
@@ -89,7 +89,8 @@
       <!-- Hero Image ends Here -->
 
       <!-- Firefox Download section goes here -->
-      <section id="download-section">
+      <section id="download-section" role="banner" aria-labelledby="firefox-download-h">
+        <h1 class="sr-only" id="firefox-download-h">Firefox Download Banner</h1>
         <div class="container">
           <div class="row">
             <div class="col-md-8 col-sm-12">
@@ -112,230 +113,236 @@
           </div><!-- Row End -->
         </div><!-- Container End -->
       </section>
-      <!-- Events section goes here -->
-      <section id="events" class="container-fluid">
-        <div class="row grid">
-          <header>
-            <h1 class="text-center">Upcoming events</h1>
-          </header>
-        </div>
-        <div class="row">
-          <ul class="grid cs-style-3 event future">
-          </ul>
-        </div>
-        <div class="row grid">
-          <button id="future-more" type="button" class="click btn btn-default btn-lg col-xs-offset-4 col-sm-offset-5 col-md-offset-5 col-lg-offset-5">More events</button>
-        </div>
-        <div class="row grid">
-          <header>
-            <h1 class="text-center">Past events</h1>
-          </header>
-        </div>
-        <div class="row">
-          <ul class="grid cs-style-3 event past">
-          </ul>
-        </div>
-        <div class="row grid">
-          <button id="past-more" type="button" class="click btn btn-default btn-lg col-xs-offset-4 col-sm-offset-5 col-md-offset-5 col-lg-offset-5">More events</button>
-        </div>
-      </section>
-      <section id="testcase" class="container-fluid testing">
-        <div class="row grid">
-          <div class="container-back">
-          <a class="back"><i class="fa fa-4x fa-chevron-left"></i></a>
+      <div role="main">
+        <!-- Events section goes here -->
+        <section id="events" class="container-fluid" aria-labelledby="events-h">
+          <h1 id="events-h" class="sr-only">Events</h1>
+          <div class="row grid">
+            <header>
+              <h1 class="text-center" >Upcoming events</h1>
+            </header>
           </div>
-        </div>
-        <div class="row">
-          <ul class="grid cs-style-3 event-view">
-          </ul>
-          <div class="single-event col-xs-12 col-sm-12 col-md-12 col-lg-12">
-          </div>
-        </div>
-      </section>
-      <!-- Slider goes here -->
-      <section class="pillars">
-        <ul class="accordion">
-          <li id="panel-friends" class="panel" tabindex="0">
-            <h2 class="panel-title">Firefox Friends</h2>
-            <div class="panel-inner">
-              <div class="panel-content">
-                <a href="http://friends.mozilla.org" target="_blank">
-                  <h3>Join The Innovators</h3>
-                  <p>
-                    Firefox Friends is our ever-growing team of social-sharers and word-spreaders. By joining, you’ll be helping us bring an open and innovative Web to people everywhere.
-                  </p>
-                  <p class="go">
-                    Visit Firefox Friends
-                  </p>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li id="panel-webmaker" class="panel" tabindex="0">
-            <h2 class="panel-title"><i>The Web</i> You Want</h2>
-            <div class="panel-inner">
-              <div class="panel-content">
-                <a href="https://www.webmaker.org" hreflang="en-US" target="_blank">
-                  <h3>Make The Web You Want</h3>
-                  <p>
-                    Join us at Mozilla Web Maker and help shape the web you want. Web Maker helps you to create your own web.
-                  </p>
-                  <p class="go">
-                    Mozilla Web Maker
-                  </p>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li id="panel-FSA" class="panel" tabindex="0">
-            <h2 class="panel-title"><i>Firefox Student</i> Ambassador</h2>
-            <div class="panel-inner">
-              <div class="panel-content">
-                <a href="https://www.mozilla.org/en-US/contribute/studentambassadors/" target="_blank">
-                  <h3>Help Change the Web</h3>
-                  <p>
-                    Individuals who are passionate about Mozilla and raise awareness about many benefits of firefox
-                    and other Mozilla products.
-                  </p>
-                  <p class="go">
-                    Become a student ambassador
-                  </p>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li id="panel-fxos" class="panel" tabindex="0">
-            <h2 class="panel-title"><i>Discover </i><br> Firefox OS</h2>
-            <div class="panel-inner">
-              <div class="panel-content">
-                <a href="https://www.mozilla.org/en-US/firefox/os/2.0/" target="_blank">
-                  <h3>Discover Firefox OS</h3>
-                  <p>
-                    Designed to give you what you need, just when you need it. Firefox OS is an open source OS based on web
-                    technologies to bring you the best experience.
-                  </p>
-                  <p class="go">
-                    Get Firefox OS
-                  </p>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li id="panel-reps" class="panel" tabindex="0">
-            <h2 class="panel-title"><i>Mozilla</i> Representatives</h2>
-            <div class="panel-inner">
-              <div class="panel-content">
-                <a href="https://www.mozilla.org/fr/mission/" target="_blank">
-                  <h3>Mozilla Representatives</h3>
-                  <p>
-                    The program aims at those enthusiastic volunteers of Mozilla who want to become official representatives of Mozilla in
-                    their locale/region.
-                  </p>
-                  <p class="go">
-                    Join the Mozilla Mission
-                  </p>
-                </a>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <!-- About us goes here -->
-      <section id="About">
-        <div class="container">
           <div class="row">
-            <div id="AboutUs" class="col-md-12">
-              <h1>Who are Mozpacers?</h1>
-              <p>Mozpacers are the active Mozillians of Mozilla Delhi Community. The seed was sowed in January 2014 by Anup Mishra, Ajay Kumar and Bhuvnesh Dogra and now it is blossoming with the Mozpacers as petals. We believe in building up an open and dynamic community and so are trying to indulge people from diverse backgrounds to better contribute the making of better web, as is mission of Mozilla.</p>
-              <h1>Regions Covered:</h1>
-              <p>The fragrance is not just in Delhi and NCR zone but we also conduct various campaigns and workshops in North India states viz. Haryana, Himachal Pradesh, Punjab etc. This way we get to teach a lot of people about web and Mozilla’s mission and in the same time get potential people in the community.</p>
-              <h1>Structure of the Community:</h1>
-              <p>We are mainly divided into Technical and Non-technical teams. We try that all the members get to take various leadership and managerial roles in various projects and events. We are open to the way of contributions and anybody can contribute in whichever positions he/she are comfortable in. </p>
-            </div>
-            <div id="coreContributers" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <ul class="ContributerImages">
-              <h1>Meet the team</h1>
-              <li>
-                <div class="ch-item ch-img-1">
-                  <div class="ch-info">
-                    <h3>Ajay Kumar</h3>
-                    <p>Community Mentor<a href="https://reps.mozilla.org/u/ajaysinghi1188/">View on Reps</a></p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="ch-item ch-img-2">
-                  <div class="ch-info">
-                    <h3>Anup Mishra</h3>
-                    <p>Community Mentor<a href="https://reps.mozilla.org/u/anupkumarmishra29/">View on Reps</a></p>
-                  </div>
-                </div>
-              </li>
-              <li>
-                <div class="ch-item ch-img-3">
-                  <div class="ch-info">
-                    <h3>Bhuvnesh Kumar</h3>
-                    <p>Community Mentor<a href="https://mozillians.org/en-US/u/BhuvneshDogra/">View on Mozillians</a></p>
-                  </div>
-                </div>
-              </li>
+            <ul class="grid cs-style-3 event future">
             </ul>
-            </div>
           </div>
-        </div>
-      </section>
-      <!--  About(Community) goes here  -->
-      <section id="community">
-        <div class="container">
+          <div class="row grid">
+            <button id="future-more" type="button" class="click btn btn-default btn-lg col-xs-offset-4 col-sm-offset-5 col-md-offset-5 col-lg-offset-5">More events</button>
+          </div>
+          <div class="row grid">
+            <header>
+              <h1 class="text-center">Past events</h1>
+            </header>
+          </div>
           <div class="row">
-            <div class="col-sm-4 col-md-4 col-lg-4">
-              <span class="spanContributer">
-                <i class="fa fa-users fa-lg"></i>
-                 10,554
-              </span>
-              <br>
-              <span class='content'>
-                active Mozillians
-                 <br>
-                worldwide
-              </span>
-            </div>
-            <div class="col-sm-4 col-md-4 col-lg-4">
-              <span class="spanOrganiser">
-                <i class="fa fa-heart fa-lg"></i>
-                 121
-              </span>
-              <br>
-              <span class='content'>
-                upcoming events
-                <br>
-                around the globe
-              </span>
-            </div>
-            <div class="col-sm-4 col-md-4 col-lg-4">
-              <span class="statCountries">
-                <i class="fa fa-globe fa-lg"></i>
-                 87
-              </span>
-              <br>
-              <span class='content'>
-                languages and counting,
-                <br>
-                on every continent
-              </span>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <a class="contribute-btn" href="https://www.mozilla.org/en-US/contribute/" data-element-location="button-click" data-link-type="Get Involved with Mozilla today">Get Involved with Mozilla today</a>
+            <ul class="grid cs-style-3 event past">
+            </ul>
+          </div>
+          <div class="row grid">
+            <button id="past-more" type="button" class="click btn btn-default btn-lg col-xs-offset-4 col-sm-offset-5 col-md-offset-5 col-lg-offset-5">More events</button>
+          </div>
+        </section>
+        <section id="testcase" class="container-fluid testing">
+          <div class="row grid">
+            <div class="container-back">
+            <a class="back"><i class="fa fa-4x fa-chevron-left"></i></a>
             </div>
           </div>
-        </div>
-      </section>
+          <div class="row">
+            <ul class="grid cs-style-3 event-view">
+            </ul>
+            <div class="single-event col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            </div>
+          </div>
+        </section>
+        <!-- Slider goes here -->
+        <section class="pillars" role="slider" aria-labelledby="slider-h">
+          <h1 id="slider-h" class="sr-only">Interactive Slider</h1>
+          <ul class="accordion">
+            <li id="panel-friends" class="panel" tabindex="0">
+              <h2 class="panel-title">Firefox Friends</h2>
+              <div class="panel-inner">
+                <div class="panel-content">
+                  <a href="http://friends.mozilla.org" target="_blank">
+                    <h3>Join The Innovators</h3>
+                    <p>
+                      Firefox Friends is our ever-growing team of social-sharers and word-spreaders. By joining, you’ll be helping us bring an open and innovative Web to people everywhere.
+                    </p>
+                    <p class="go">
+                      Visit Firefox Friends
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li id="panel-webmaker" class="panel" tabindex="0">
+              <h2 class="panel-title"><i>The Web</i> You Want</h2>
+              <div class="panel-inner">
+                <div class="panel-content">
+                  <a href="https://www.webmaker.org" hreflang="en-US" target="_blank">
+                    <h3>Make The Web You Want</h3>
+                    <p>
+                      Join us at Mozilla Web Maker and help shape the web you want. Web Maker helps you to create your own web.
+                    </p>
+                    <p class="go">
+                      Mozilla Web Maker
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li id="panel-FSA" class="panel" tabindex="0">
+              <h2 class="panel-title"><i>Firefox Student</i> Ambassador</h2>
+              <div class="panel-inner">
+                <div class="panel-content">
+                  <a href="https://www.mozilla.org/en-US/contribute/studentambassadors/" target="_blank">
+                    <h3>Help Change the Web</h3>
+                    <p>
+                      Individuals who are passionate about Mozilla and raise awareness about many benefits of firefox
+                      and other Mozilla products.
+                    </p>
+                    <p class="go">
+                      Become a student ambassador
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li id="panel-fxos" class="panel" tabindex="0">
+              <h2 class="panel-title"><i>Discover </i><br> Firefox OS</h2>
+              <div class="panel-inner">
+                <div class="panel-content">
+                  <a href="https://www.mozilla.org/en-US/firefox/os/2.0/" target="_blank">
+                    <h3>Discover Firefox OS</h3>
+                    <p>
+                      Designed to give you what you need, just when you need it. Firefox OS is an open source OS based on web
+                      technologies to bring you the best experience.
+                    </p>
+                    <p class="go">
+                      Get Firefox OS
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li id="panel-reps" class="panel" tabindex="0">
+              <h2 class="panel-title"><i>Mozilla</i> Representatives</h2>
+              <div class="panel-inner">
+                <div class="panel-content">
+                  <a href="https://www.mozilla.org/fr/mission/" target="_blank">
+                    <h3>Mozilla Representatives</h3>
+                    <p>
+                      The program aims at those enthusiastic volunteers of Mozilla who want to become official representatives of Mozilla in
+                      their locale/region.
+                    </p>
+                    <p class="go">
+                      Join the Mozilla Mission
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+        <!-- About us goes here -->
+        <section id="About" aria-labelledby="about-us-h">
+          <h1 class="sr-only" id="about-us-h">About Us</h1>
+          <div class="container">
+            <div class="row">
+              <div id="AboutUs" class="col-md-12">
+                <h1>Who are Mozpacers?</h1>
+                <p>Mozpacers are the active Mozillians of Mozilla Delhi Community. The seed was sowed in January 2014 by Anup Mishra, Ajay Kumar and Bhuvnesh Dogra and now it is blossoming with the Mozpacers as petals. We believe in building up an open and dynamic community and so are trying to indulge people from diverse backgrounds to better contribute the making of better web, as is mission of Mozilla.</p>
+                <h1>Regions Covered:</h1>
+                <p>The fragrance is not just in Delhi and NCR zone but we also conduct various campaigns and workshops in North India states viz. Haryana, Himachal Pradesh, Punjab etc. This way we get to teach a lot of people about web and Mozilla’s mission and in the same time get potential people in the community.</p>
+                <h1>Structure of the Community:</h1>
+                <p>We are mainly divided into Technical and Non-technical teams. We try that all the members get to take various leadership and managerial roles in various projects and events. We are open to the way of contributions and anybody can contribute in whichever positions he/she are comfortable in. </p>
+              </div>
+              <div id="coreContributers" class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <ul class="ContributerImages">
+                <h1>Meet the team</h1>
+                <li>
+                  <div class="ch-item ch-img-1">
+                    <div class="ch-info">
+                      <h3>Ajay Kumar</h3>
+                      <p>Community Mentor<a href="https://reps.mozilla.org/u/ajaysinghi1188/">View on Reps</a></p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="ch-item ch-img-2">
+                    <div class="ch-info">
+                      <h3>Anup Mishra</h3>
+                      <p>Community Mentor<a href="https://reps.mozilla.org/u/anupkumarmishra29/">View on Reps</a></p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="ch-item ch-img-3">
+                    <div class="ch-info">
+                      <h3>Bhuvnesh Kumar</h3>
+                      <p>Community Mentor<a href="https://mozillians.org/en-US/u/BhuvneshDogra/">View on Mozillians</a></p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!--  About(Community) goes here  -->
+        <section id="community" role="banner" aria-labelledby="community-h">
+          <h1 class="sr-only" id="community-h">Mozilla Community</h1>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                <span class="spanContributer">
+                  <i class="fa fa-users fa-lg"></i>
+                   10,554
+                </span>
+                <br>
+                <span class='content'>
+                  active Mozillians
+                   <br>
+                  worldwide
+                </span>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                <span class="spanOrganiser">
+                  <i class="fa fa-heart fa-lg"></i>
+                   121
+                </span>
+                <br>
+                <span class='content'>
+                  upcoming events
+                  <br>
+                  around the globe
+                </span>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                <span class="statCountries">
+                  <i class="fa fa-globe fa-lg"></i>
+                   87
+                </span>
+                <br>
+                <span class='content'>
+                  languages and counting,
+                  <br>
+                  on every continent
+                </span>
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <a class="contribute-btn" href="https://www.mozilla.org/en-US/contribute/" data-element-location="button-click" data-link-type="Get Involved with Mozilla today">Get Involved with Mozilla today</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
       <!-- Contact Form goes here -->
-      <section id="contact_form" class="contact">
+      <section id="contact_form" class="contact" role="form" aria-labelledby="contact-h">
         <div class="container">
           <div class="row">
             <div class="col-lg-12 text-center">
-              <h2 style="color:white" class="section-heading">Contact Us</h2>
+              <h2 class="section-heading" id="contact-h">Contact Us</h2>
             </div>
           </div>
             <div class="row">
@@ -368,7 +375,7 @@
       </section>
     </div>
       <!-- Footer goes here -->
-      <footer class="navbar-static-bottom clearfix" >
+      <footer class="navbar-static-bottom clearfix" role="contentinfo" >
         <div class="container">
           <div class="row">
             <div class="text-center col-xs-12 col-sm-12 col-md-3 col-lg-3">
@@ -443,7 +450,7 @@
           </div>
         </div>
       </footer>
-      <section id="copyright">
+      <section id="copyright" role="banner">
         <div class="row">
           <div class="col-xs-12 text-center">
           <p><b>©Mozilla Delhi 2015 </b>| Powered by <b>Mozpacers</b></p>
