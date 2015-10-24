@@ -1247,6 +1247,14 @@ footer a:hover, a:focus{
   transform: scaleX(1);
 }
 
+#social-links {
+  list-style-type:none;
+}
+
+#social-links > li {
+  display:inline;
+}
+
 /*Footer End*/
 
 /* Copyright Text */
