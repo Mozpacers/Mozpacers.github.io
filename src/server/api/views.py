@@ -11,6 +11,10 @@ import requests
 result = []  # Global result list to return result as JSON
 e = Event()  # Global Instance of Event
 
+@app.route('/')
+def api_admin_panel_home():
+    return redirect('/admin')
+
 
 @app.route('/api/events/')
 def get_events():
