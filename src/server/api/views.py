@@ -7,6 +7,7 @@ import json
 from datetime import datetime
 from os import environ
 import requests
+from mongoengine.queryset import DoesNotExist
 
 e = Event()  # Global Instance of Event
 
@@ -50,8 +51,12 @@ def get_events():
 @app.route('/api/events/<int:event_id>')
 @app.route('/api/events/<int:event_id>/')
 def get_single_event(event_id):
-    singleEvent = Event.objects.get(eid=event_id)
-    result = create_single_event_dict(singleEvent)
+    try:
+        singleEvent = Event.objects.get(eid=event_id)
+        result = create_single_event_dict(singleEvent)
+    except DoesNotExist:
+        return Response(json.dumps({"Message": "Event not found"}), status=404,
+                        content_type="application/json")
     return Response(json.dumps(result, cls=PythonJSONEncoder), status=200,
                     content_type="application/json")
 
