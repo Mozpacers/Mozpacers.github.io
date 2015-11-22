@@ -1,3 +1,9 @@
+/*Add some fonts*/
+@font-face
+{
+	font-family: 'fonesia';
+	src: url('Fonesia_Bold.TTF'); 
+}
 /* CSS for all */
 *{
   font-family: 'Open Sans Light', sans-serif;
