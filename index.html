@@ -27,32 +27,32 @@
     <![endif]-->
     <script id="card-template" type="text/html">
       <li class="col-sm-6 col-md-4 col-lg-4">
-        <figure class="cardfigure">
+        <figure class="cardfigure" tabindex="0">
           <img src="" alt="">
           <figcaption>
-            <div class="info-box">
+            <div class="info-box" >
               <h3></h3>
               <h4 class="pull-right"></h4>
               <p></p>
             </div>
             <span></span>
-            <a id="" class="more click" >More info</a>
-            <a class="register" href="">Register</a>
+            <a id="" class="more click" tabindex="0">More info</a>
+            <a class="register" href="" tabindex="0">Register</a>
           </figcaption>
         </figure>
       </li>
     </script>
     <script id="single-template" type=text/html>
       <div>
-        <section class="info col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
+        <section class="info col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8" tabindex="0">
           <h1 class="text-center"></h1>
           <h3 class="pull-left"><br></h3>
           <h3 class="pull-right">Start Time:<br><br>End Time:</h3>
           <!-- <h3 class="pull-right"></h3> -->
           <p></p>
           <div class="buttons">
-            <a class="reg" href=""><button id="registersingle" type="button" class="btn btn-primary btn-lg pull-left">Register Here</button></a>
-            <a class="meetup" href=""><button id="meetupsingle" type="button" class="btn btn-info btn-lg pull-right">Meetup Page</button></a>
+            <a class="reg" href="" role="button"><button id="registersingle" type="button" class="btn btn-primary btn-lg pull-left">Register Here</button></a>
+            <a class="meetup" href=""><button id="meetupsingle" type="button" class="btn btn-info btn-lg pull-right" role="button">Meetup Page</button></a>
           </div>
         </section>
       </div>
