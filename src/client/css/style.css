@@ -316,7 +316,7 @@ section#About{
 	transform: scale(0);
 	backface-visibility: hidden;
 }
-.ch-info h3 {
+.ch-info h2 {
 	color: #fff;
 	text-transform: uppercase;
 	position: relative;
