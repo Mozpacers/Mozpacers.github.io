@@ -7,9 +7,13 @@ import json
 from datetime import datetime
 from os import environ
 import requests
+from mongoengine.queryset import DoesNotExist
 
-result = []  # Global result list to return result as JSON
 e = Event()  # Global Instance of Event
+
+@app.route('/')
+def api_admin_panel_home():
+    return redirect('/admin')
 
 
 @app.route('/api/events/')
@@ -17,7 +21,6 @@ def get_events():
     '''
     returns all the events with GET request
     '''
-    global result
     time = request.args.get('time')
     limit = request.args.get('limit')
     if not limit:
@@ -40,15 +43,20 @@ def get_events():
                                       "Time should be past or future"}), 400)
     else:
         allEvents = Event.objects.all().limit(limit)
-    create_dict(allEvents)
+    result = create_dict(allEvents)
     return Response(json.dumps(result, cls=PythonJSONEncoder), status=200,
                     content_type="application/json")
 
 
 @app.route('/api/events/<int:event_id>')
+@app.route('/api/events/<int:event_id>/')
 def get_single_event(event_id):
-    singleEvent = Event.objects(eid=event_id)
-    result = create_dict(singleEvent)
+    try:
+        singleEvent = Event.objects.get(eid=event_id)
+        result = create_single_event_dict(singleEvent)
+    except DoesNotExist:
+        return Response(json.dumps({"Message": "Event not found"}), status=404,
+                        content_type="application/json")
     return Response(json.dumps(result, cls=PythonJSONEncoder), status=200,
                     content_type="application/json")
 
@@ -106,7 +114,6 @@ def unjsonify(dct):
 
 
 def create_dict(allEvents):
-    global result  # To store the result of all events
     result = []  # Empty for each call
     for item in allEvents:
         d = {}  # To make a dictionary for JSON Response
@@ -120,9 +127,17 @@ def create_dict(allEvents):
         d['registration_form_link'] = item.registration_form_link
         d['event_image_link'] = item.event_image_link
         result.append(d)
-    # For single event
-    if len(result) == 1:
-        for item in result:
-            return item
-    # Else return the whole list of events
     return result
+
+def create_single_event_dict(SingleEvent):
+    d = {}  # To make a dictionary for JSON Response
+    d['eid'] = SingleEvent.eid
+    d['title'] = SingleEvent.title
+    d['event_start_date'] = SingleEvent.event_start_date
+    d['event_end_date'] = SingleEvent.event_end_date
+    d['link'] = SingleEvent.link
+    d['description'] = SingleEvent.description
+    d['venue'] = SingleEvent.venue
+    d['registration_form_link'] = SingleEvent.registration_form_link
+    d['event_image_link'] = SingleEvent.event_image_link
+    return d
