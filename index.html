@@ -11,12 +11,10 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <!--Font Awesome Style sheet for Footer Social Icons -->
-    <link rel="stylesheet" href="fonts_awesome/css/font-awesome.min.css">
-    <!-- Tabzilla stylesheet -->
-    <link rel="stylesheet" href="https://mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" />
-    <!-- Icons in About(Community) section -->
+    <!--Font Awesome Style sheet -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <!-- Tabzilla stylesheet -->
+    <link rel="stylesheet" type="text/css" href="src/client/css/tabzilla.css" media="screen" />
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="src/client/css/style.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -63,7 +61,9 @@
       <!-- Tabzilla and navbar goes here-->
       <header id="masthead" class="col-md-12">
         <div class="container col-md-8 col-md-offset-2">
-          <a href="https://www.mozilla.org/" id="tabzilla">mozilla</a>
+          <div id="tabzilla">
+              <a href="https://www.mozilla.org/">Mozilla</a>
+          </div>
           <nav id="nav-main" role="navigation">
             <span class="toggle" role="button" aria-controls="nav-main-menu" tabindex="0">Menu</span>
             <ul id="nav-main-menu">
@@ -459,8 +459,6 @@
     <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <!-- Tabzilla script-->
-    <script src="https://mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
     <!-- Custom Script -->
     <script src="src/client/js/script.js"></script>
   </body>
