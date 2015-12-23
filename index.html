@@ -24,16 +24,32 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script id="card-template" type="text/html">
-      <li class="col-sm-6 col-md-4 col-lg-4">
+      <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
         <figure class="cardfigure">
           <img src="" alt="">
           <figcaption>
             <div class="info-box">
-              <h3></h3>
-              <h4 class="pull-right"></h4>
-              <p></p>
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <h3></h3>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-offset-6 col-xs-offset-6 col-md-offset-6 col-lg-offset-6 col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                  <h4 class="pull-right"></h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <p></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <span></span>
+                </div>
+              </div>
             </div>
-            <span></span>
             <a id="" class="more click" >More info</a>
             <a class="register" href="">Register</a>
           </figcaption>
@@ -68,7 +84,7 @@
             <span class="toggle" role="button" aria-controls="nav-main-menu" tabindex="0">Menu</span>
             <ul id="nav-main-menu">
               <li><a href="#">Blog</a></li>
-              <li class="first"><a href="#">Events</a></li>
+              <li class="first"><a href="#events">Events</a></li>
               <li><a href="#About">About Us</a></li>
               <li class="last"><a href="#contact_form">Contact Us</a></li>
             </ul>
@@ -76,7 +92,7 @@
         </div>
       </header>
       <!-- Sticky Events section goes here -->
-      <h3 class="text-center">This is Alpha v0.1 of Mozpacers powered by MozAwesomeness ;)</h3>
+      <h3 class="text-center">This is Alpha v0.2.1 of Mozpacers powered by MozAwesomeness ;)</h3>
       <!-- Hero Image goes here -->
       <section id="Hero_Image">
         <div class ="row">
@@ -109,8 +125,8 @@
                 </h1>
               </div>
             </div>
-          </div>
-        </div>
+          </div><!-- Row End -->
+        </div><!-- Container End -->
       </section>
       <!-- Events section goes here -->
       <section id="events" class="container-fluid">
@@ -256,29 +272,29 @@
             <ul class="ContributerImages">
               <h1>Meet the team</h1>
               <li>
-            		<div class="ch-item ch-img-1">
-            			<div class="ch-info">
-            				<h3>Ajay Kumar</h3>
-            				<p>Community Mentor<a href="https://reps.mozilla.org/u/ajaysinghi1188/">View on Reps</a></p>
-            			</div>
-            		</div>
-            	</li>
-            	<li>
-            		<div class="ch-item ch-img-2">
-            			<div class="ch-info">
-            				<h3>Anup Mishra</h3>
-            				<p>Community Mentor<a href="https://reps.mozilla.org/u/anupkumarmishra29/">View on Reps</a></p>
-            			</div>
-            		</div>
-            	</li>
-            	<li>
-            		<div class="ch-item ch-img-3">
-            			<div class="ch-info">
-            				<h3>Bhuvnesh Kumar</h3>
-            				<p>Community Mentor<a href="https://mozillians.org/en-US/u/BhuvneshDogra/">View on Mozillians</a></p>
-            			</div>
-            		</div>
-            	</li>
+                <div class="ch-item ch-img-1">
+                  <div class="ch-info">
+                    <h3>Ajay Kumar</h3>
+                    <p>Community Mentor<a href="https://reps.mozilla.org/u/ajaysinghi1188/">View on Reps</a></p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="ch-item ch-img-2">
+                  <div class="ch-info">
+                    <h3>Anup Mishra</h3>
+                    <p>Community Mentor<a href="https://reps.mozilla.org/u/anupkumarmishra29/">View on Reps</a></p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="ch-item ch-img-3">
+                  <div class="ch-info">
+                    <h3>Bhuvnesh Kumar</h3>
+                    <p>Community Mentor<a href="https://mozillians.org/en-US/u/BhuvneshDogra/">View on Mozillians</a></p>
+                  </div>
+                </div>
+              </li>
             </ul>
             </div>
           </div>
@@ -324,40 +340,49 @@
                 on every continent
               </span>
             </div>
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <a class="contribute-btn" href="https://www.mozilla.org/en-US/contribute/" data-element-location="button-click" data-link-type="Get Involved with Mozilla today">Get Involved with Mozilla today</a>
-              </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+              <a class="contribute-btn" href="https://www.mozilla.org/en-US/contribute/" data-element-location="button-click" data-link-type="Get Involved with Mozilla today">Get Involved with Mozilla today</a>
             </div>
           </div>
+        </div>
       </section>
       <!-- Contact Form goes here -->
-      <section id="contact_form">
+      <section id="contact_form" class="contact">
         <div class="container">
-          <div class="row form-group">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><h1 style="color:white;">Contact Us</h1></div>
-          </div>
           <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group">
-              <input class="form-control" type="text" name="name" id="name" placeholder="Name" />
-              <span class="error" id="error_name"></span>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group">
-              <input class="form-control" type="email" name="email" id="email" placeholder="Email Address" />
-              <span class="error" id="error_email"></span>
+            <div class="col-lg-12 text-center">
+              <h2 style="color:white" class="section-heading">Contact Us</h2>
             </div>
           </div>
-          <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 form-group">
-              <textarea class="form-control" name="message" rows="4" cols="60" id="message" placeholder="Message"></textarea>
-              <span class="error" id="error_message"></span>
-            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="row">
+                  <div class="col-lg-offset-2 col-lg-8 col-md-offset-2 col-md-8">
+                    <div class="form-group">
+                      <input class="form-control" type="text" name="name" id="name" placeholder="Name*" />
+                      <span class="error" id="error_name"></span>
+                    </div>
+                    <div class="form-group">
+                     <input class="form-control" type="email" name="email" id="email" placeholder="Email Address*" />
+                     <span class="error" id="error_email"></span>
+                    </div>
+                    <div class="form-group">
+                      <textarea class="form-control" name="message" placeholder="Message*" id="message"></textarea>
+                      <span class="error" id="error_message"></span>
+                    </div>
+                    <div class="form_group">
+                      <div class="row">
+                        <span id="success" class="col-xs-4"></span>
+                        <input type="submit" name="send" id="send" value="Send" class="col-sm-8 btn btn-lg btn-info send-button" >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
-          <span id="success" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 form-group" ></span>
-          <input type="submit" name="send" id="send" value="Send" class="btn btn-info pull-right send-button" >
         </div>
       </section>
     </div>
-
       <!-- Footer goes here -->
       <footer class="navbar-static-bottom clearfix" >
         <div class="container">
