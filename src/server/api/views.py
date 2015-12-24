@@ -13,6 +13,9 @@ e = Event()  # Global Instance of Event
 
 @app.route('/')
 def api_admin_panel_home():
+    '''
+    Redirect root to admin panel
+    '''
     return redirect('/admin')
 
 
@@ -51,6 +54,9 @@ def get_events():
 @app.route('/api/events/<int:event_id>')
 @app.route('/api/events/<int:event_id>/')
 def get_single_event(event_id):
+    '''
+    Get a single event with given event_id
+    '''
     try:
         singleEvent = Event.objects.get(eid=event_id)
         result = create_single_event_dict(singleEvent)
@@ -63,11 +69,29 @@ def get_single_event(event_id):
 
 @app.route('/api/send-contact-us-form/', methods=['GET', 'POST'])
 def send_simple_message():
+    '''
+    Collects info from contact-us form on mozpacers.org
+    and sends the mail to Mozpacers mail
+    POST Request with JSON body
+    :name : Name of User
+    :email : Email of User
+    :message : Message given by User
+    '''
     if request.method == 'POST':
-        json_response = json.loads(request.data)
-        name = json_response['name']
-        email = json_response['email']
-        message = json_response['message']
+        try:
+            json_response = json.loads(request.data)
+        except:
+            return Response(json.dumps({"Message": "No JSON request found."}), 
+                                            status=400,
+                                            content_type="application/json")
+        try:
+            name = json_response['name']
+            email = json_response['email']
+            message = json_response['message']
+        except KeyError:
+            return Response(json.dumps({"Message": "In-complete information. Cannot send mail."}), 
+                                status=400,
+                                content_type="application/json")
         subject = 'Contact Us | MozPacers : Response from ' + name
         requests.post(
             environ["MAIL_ADDRESS"],
