@@ -46,13 +46,15 @@ function validate_form() {
     $("#send").removeClass("disabled");
     return;
   }
-  var m = {'name':$('#name').val(),'email':$('#email').val(),'message':$('#message').val()};
-  console.log(m);
+  var m = {"name":$('#name').val(), "email":$('#email').val(), "message":$('#message').val()};
+  // console.log(JSON.stringify(m));
+  // console.log(m);
   $.ajax({
     type: "POST",
     dataType :'json',
-    url: "<'Enter URL here to post'>",
-    data: m,
+    url: "http://stormy-gorge-8134.herokuapp.com/api/send-contact-us-form/",
+    data: JSON.stringify(m),
+    contentType: "application/json; charset=utf-8",
     success: function(data) {
       console.log(data.error);
       $("#send").removeClass("disabled");
