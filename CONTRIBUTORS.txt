@@ -7,6 +7,9 @@ Vikram Jaswal (gh: vikramj74)
 Manraj Singh (gh: ManrajGrover)
 Abhijeet Chauhan (gh: supernoobabhi)
 Prateek (gh: askprateek)
+Chirag Batra (gh: chirag08)
+Kanikaa Murarka (gh: kanikaa1234)
+Aditya Chawla (gh: chawlaaditya8)
 
 * Possesses commit rights
 
@@ -18,3 +21,4 @@ The following haven't provided code directly, but have provided guidance and adv
 Anup Kumar Mishra (gh: anupkumarmishra)
 Ajay Kumar (gh: ajaysinghi)
 Bhuvnesh Dogra (gh: bhuvneshdogra)
+Pushpita Piku Dey

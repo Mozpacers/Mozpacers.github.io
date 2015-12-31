@@ -46,13 +46,15 @@ function validate_form() {
     $("#send").removeClass("disabled");
     return;
   }
-  var m = {'name':$('#name').val(),'email':$('#email').val(),'message':$('#message').val()};
-  console.log(m);
+  var m = {"name":$('#name').val(), "email":$('#email').val(), "message":$('#message').val()};
+  // console.log(JSON.stringify(m));
+  // console.log(m);
   $.ajax({
     type: "POST",
     dataType :'json',
-    url: "<'Enter URL here to post'>",
-    data: m,
+    url: "http://stormy-gorge-8134.herokuapp.com/api/send-contact-us-form/",
+    data: JSON.stringify(m),
+    contentType: "application/json; charset=utf-8",
     success: function(data) {
       console.log(data.error);
       $("#send").removeClass("disabled");
@@ -78,7 +80,24 @@ $(document).ready(function() {
     ctr = 0;
     validate_form();
   });
+  // For smooth scrolling -- Added by Sanyam (CuriousLearner)
+  $(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html,body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+  // Smooth scrolling end
 });
+
 /*
 nav-main-resp.js
 */
@@ -872,13 +891,13 @@ $(document).ready(function() {
                     var neweventurl= neweventid.replace('class="more click" href=""','class="more" href="'+eventurl+'"');
                     if(i==2)
                     {
-                      var responsivethirdcard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-0 col-lg-offset-0 col-sm-6 col-md-4 col-lg-4"');
+                      var responsivethirdcard= neweventurl.replace('class="col-xs-12 col-sm-6 col-md-4 col-lg-4"','class="col-xs-12 col-sm-offset-3 col-md-offset-0 col-lg-offset-0 col-sm-6 col-md-4 col-lg-4"');
                       $(responsivethirdcard).appendTo(".event-view");
                     }else if(noFetched==1){
-                      var singlecard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-sm-6 col-md-4 col-lg-4"');
+                      var singlecard= neweventurl.replace('class="col-xs-12 col-sm-6 col-md-4 col-lg-4"','class="col-xs-12 col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-sm-6 col-md-4 col-lg-4"');
                       $(singlecard).appendTo(".event-view");
                     }else if(noFetched==2 && i==0){
-                      var twocard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-md-offset-2 col-lg-offset-2 col-sm-6 col-md-4 col-lg-4"');
+                      var twocard= neweventurl.replace('class="col-xs-12 col-sm-6 col-md-4 col-lg-4"','class="col-xs-12 col-md-offset-2 col-lg-offset-2 col-sm-6 col-md-4 col-lg-4"');
                       $(twocard).appendTo(".event-view");
                     }else{
                       $(neweventurl).appendTo(".event-view");
@@ -1072,13 +1091,13 @@ $(document).ready(function() {
                     var neweventurl= neweventid.replace('class="more click" href=""','class="more" href="'+eventurl+'"');
                     if(i==2)
                     {
-                      var responsivethirdcard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-0 col-lg-offset-0 col-sm-6 col-md-4 col-lg-4"');
                       $(responsivethirdcard).appendTo(".event-view");
+                      var responsivethirdcard= neweventurl.replace('class="col-xs-12 col-sm-6 col-md-4 col-lg-4"','class="col-xs-12 col-sm-offset-3 col-md-offset-0 col-lg-offset-0 col-sm-6 col-md-4 col-lg-4"');
                     }else if(noFetched==1){
-                      var singlecard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-sm-6 col-md-4 col-lg-4"');
+                      var singlecard= neweventurl.replace('class="col-xs-12 col-sm-6 col-md-4 col-lg-4"','class="col-xs-12 col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-sm-6 col-md-4 col-lg-4"');
                       $(singlecard).appendTo(".event-view");
                     }else if(noFetched==2 && i==0){
-                      var twocard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-md-offset-2 col-lg-offset-2 col-sm-6 col-md-4 col-lg-4"');
+                      var twocard= neweventurl.replace('class="col-xs-12 col-sm-6 col-md-4 col-lg-4"','class="col-xs-12 col-md-offset-2 col-lg-offset-2 col-sm-6 col-md-4 col-lg-4"');
                       $(twocard).appendTo(".event-view");
                     }else{
                       $(neweventurl).appendTo(".event-view");
@@ -1361,7 +1380,7 @@ $(document).ready(function() {
     });
   $(document.body).on('mouseleave', '.cardfigure',
       function() {
-        $(this).find("figcaption").css("height","100px");
+        $(this).find("figcaption").css("height","120px");
     });
   /* Keyboard accessability for events card */
   $(document.body).on('focusin', '.cardfigure',
@@ -1554,13 +1573,13 @@ $(document).ready(function() {
                   var neweventurl= neweventid.replace('class="more click" href=""','class="more" href="'+eventurl+'"');
                   if(i==2)
                   {
-                    var responsivethirdcard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-0 col-lg-offset-0 col-sm-6 col-md-4 col-lg-4"');
+                    var responsivethirdcard= neweventurl.replace('class="col-xs-12 col-sm-6 col-md-4 col-lg-4"','class="col-xs-12 col-sm-offset-3 col-md-offset-0 col-lg-offset-0 col-sm-6 col-md-4 col-lg-4"');
                     $(responsivethirdcard).appendTo(".future");
                   }else if(noFetched==1){
-                    var singlecard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-sm-6 col-md-4 col-lg-4"');
+                    var singlecard= neweventurl.replace('class="col-xs-12 col-sm-6 col-md-4 col-lg-4"','class="col-xs-12 col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-sm-6 col-md-4 col-lg-4"');
                     $(singlecard).appendTo(".future");
                   }else if(noFetched==2 && i==0){
-                    var twocard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-md-offset-2 col-lg-offset-2 col-sm-6 col-md-4 col-lg-4"');
+                    var twocard= neweventurl.replace('class="col-xs-12 col-sm-6 col-md-4 col-lg-4"','class="col-xs-12 col-md-offset-2 col-lg-offset-2 col-sm-6 col-md-4 col-lg-4"');
                     $(twocard).appendTo(".future");
                   }else{
                     $(neweventurl).appendTo(".future");
@@ -1751,13 +1770,13 @@ $(document).ready(function() {
                           var neweventurl= neweventid.replace('class="more click" href=""','class="more" href="'+eventurl+'"');
                           if(i==2)
                           {
-                            var responsivethirdcard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-0 col-lg-offset-0 col-sm-6 col-md-4 col-lg-4"');
+                            var responsivethirdcard= neweventurl.replace('class="col-xs-12 col-sm-6 col-md-4 col-lg-4"','class="col-xs-12 col-sm-offset-3 col-md-offset-0 col-lg-offset-0 col-sm-6 col-md-4 col-lg-4"');
                             $(responsivethirdcard).appendTo(".past");
                           }else if(noFetched==1){
-                            var singlecard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-sm-6 col-md-4 col-lg-4"');
+                            var singlecard= neweventurl.replace('class="col-xs-12 col-sm-6 col-md-4 col-lg-4"','class="col-xs-12 col-sm-offset-3 col-md-offset-4 col-lg-offset-4 col-sm-6 col-md-4 col-lg-4"');
                             $(singlecard).appendTo(".past");
                           }else if(noFetched==2 && i==0){
-                            var twocard= neweventurl.replace('class="col-sm-6 col-md-4 col-lg-4"','class="col-md-offset-2 col-lg-offset-2 col-sm-6 col-md-4 col-lg-4"');
+                            var twocard= neweventurl.replace('class="col-xs-12 col-sm-6 col-md-4 col-lg-4"','class="col-xs-12 col-md-offset-2 col-lg-offset-2 col-sm-6 col-md-4 col-lg-4"');
                             $(twocard).appendTo(".past");
                           }else{
                             $(neweventurl).appendTo(".past");
