@@ -1382,6 +1382,17 @@ $(document).ready(function() {
       function() {
         $(this).find("figcaption").css("height","120px");
     });
+  /* Keyboard accessability for events card */
+  $(document.body).on('focusin', '.cardfigure',
+      function() {
+        var height = $(this).css( "height" );
+        $(this).find("figcaption").css("height",height);
+    });
+  $(document.body).on('focusout', '.cardfigure',
+      function() {
+        $(this).find("figcaption").css("height","100px");
+    });
+  /* Keyboard accessabilty for events card */
   var requestupcoming = $.ajax({
               url: "http://stormy-gorge-8134.herokuapp.com/api/events/?time=future",
               method: "GET",

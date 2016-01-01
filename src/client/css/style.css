@@ -317,7 +317,7 @@ section#About{
 	transform: scale(0);
 	backface-visibility: hidden;
 }
-.ch-info h3 {
+.ch-info h2 {
 	color: #fff;
 	text-transform: uppercase;
 	position: relative;
@@ -1088,6 +1088,9 @@ section#community .fa-globe{
 #send{
   margin-bottom:15px;
 }
+#contact-h {
+  color:white;
+}
 
 
 .contact {
@@ -1243,6 +1246,14 @@ footer a:hover, a:focus{
   visibility: visible;
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
+}
+
+#social-links {
+  list-style-type:none;
+}
+
+#social-links > li {
+  display:inline;
 }
 
 /*Footer End*/
@@ -1450,6 +1461,56 @@ section#copyright{
   visibility:visible;
   transition:height 0.4s,opacity 0.4s,visibility 0.4s;
 }
+/* Keyboard accessability for events card */
+.cs-style-3 figcaption .more:focus , .cs-style-3 figcaption .register:focus {
+  opacity:1;
+  visibility:visible;
+  transition:height 0.4s,opacity 0.4s,visibility 0.4s;
+}
+.cardfigure:focus figcaption .more {
+  height:initial;
+  visibility: visible;
+  opacity: 1;
+  transition:height 0.4s,opacity 0.4s,visibility 0.4s   
+}
+.cardfigure:hover figcaption .register {
+  visibility: visible;
+  height: initial;
+  opacity:1;
+  transition:height 0.4s,opacity 0.4s,visibility 0.4s
+}
+.cardfigure:focus figcaption .register {
+  visibility: visible;
+  height: initial;
+  opacity:1;
+  transition:height 0.4s,opacity 0.4s,visibility 0.4s
+}
+.cardfigure figcaption .more:focus + .register {
+  visibility: visible;
+  height: initial;
+  opacity:1;
+  transition:height 0.4s,opacity 0.4s,visibility 0.4s
+}
+.cardfigure figcaption .more:focus {
+  height:initial;
+}
+.cardfigure figcaption .register:focus {
+  height:initial;
+}
+.cs-style-3 figure:focus figcaption 
+{
+  transition: height 0.4s;
+}
+.cs-style-3 figure:focus figcaption p
+{
+  height:60%;
+  opacity:1;
+  visibility:visible;
+  transition:height 0.4s,opacity 0.4s,visibility 0.4s;
+}
+/* Keyboard accessability for events card */
+
+
 .cs-style-3 figure:hover figcaption .more, .cs-style-3 figure:hover figcaption .register
 {
   height:initial;
@@ -1490,7 +1551,7 @@ section#copyright{
   background-color: #363636;
   color: #E0E4CC;
 }
-.cardfigure a:hover{
+.cardfigure a:hover, .cardfigure a:focus{
   color:#363636;
   background-color:#E0E4CC;
   text-decoration: none;
