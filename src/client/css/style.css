@@ -31,6 +31,7 @@ a{
   position: relative;
   zoom: 1;
 }
+
 /*Nav*/
 ul {
   margin: 0;
@@ -54,17 +55,28 @@ ul {
 #masthead nav li a {
   display: inline-block;
   padding: 12px;
+  font-family: 'Roboto Slab', serif;
   font-weight: normal;
+  -webkit-transition: all 600ms ease-in-out;
+  -moz-transition: all 600ms ease-in-out;
+  -o-transition: all 600ms ease-in-out;
+  transition: all 600ms ease-in-out;
 }
 #masthead nav li a,
 #masthead nav li a:link,
 #masthead nav li a:visited {
-  color: #484848;
+  color: #364743;
+}
+
+#masthead nav li a:hover
+{
+    font-weight: 600;
 }
 #nav-main .toggle {
   display: none;
   /* Hidden in non-mobile views */
 }
+
 /* Mobile Layout: 320px */
 @media only screen and (max-width: 760px) {
   #masthead,
@@ -499,6 +511,7 @@ section#community .fa-globe{
 }
 .panel-title {
     color: #fff;
+    font-family: 'Rufina',serif;
     font-size: 18px;
     line-height: 1.5;
     font-weight: bold;
