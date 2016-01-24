@@ -40,8 +40,10 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                  <p></p>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
+                  <div class="ellipsis">
+                      <p></p>
+                  </div>
                 </div>
               </div>
               <div class="row">
@@ -60,8 +62,12 @@
       <div>
         <section class="info col-xs-12 col-sm-12 col-md-offset-2 col-md-8 col-lg-offset-2 col-lg-8">
           <h1 class="text-center"></h1>
+          <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
           <h3 class="pull-left"><br></h3>
-          <h3 class="pull-right">Start Time:<br><br>End Time:</h3>
+          </div>
+          <div class="col-xs-12 col-sm-offset-2 col-sm-5 col-md-offset-2 col-md-5 col-lg-offset-2 col-lg-5">
+          <h3 class="pull-right"><br><br>-</h3>
+          </div>
           <!-- <h3 class="pull-right"></h3> -->
           <p></p>
           <div class="buttons">
@@ -92,7 +98,7 @@
         </div>
       </header>
       <!-- Sticky Events section goes here -->
-      <h3 class="text-center">This is Alpha v0.2.1 of Mozpacers powered by MozAwesomeness ;)</h3>
+      <h3 class="text-center disclaimer">This is Alpha v0.3 of Mozpacers powered by MozAwesomeness ;)</h3>
       <!-- Hero Image goes here -->
       <section id="Hero_Image">
         <div class ="row">
@@ -140,7 +146,7 @@
           </ul>
         </div>
         <div class="row grid">
-          <button id="future-more" type="button" class="click btn btn-default btn-lg col-xs-offset-4 col-sm-offset-5 col-md-offset-5 col-lg-offset-5">More events</button>
+          <button id="future-more" type="button" class="click btn btn-default btn-lg center-block">More events</button>
         </div>
         <div class="row grid">
           <header>
@@ -152,13 +158,14 @@
           </ul>
         </div>
         <div class="row grid">
-          <button id="past-more" type="button" class="click btn btn-default btn-lg col-xs-offset-4 col-sm-offset-5 col-md-offset-5 col-lg-offset-5">More events</button>
+          <button id="past-more" type="button" class="click btn btn-default btn-lg center-block">More events</button>
         </div>
       </section>
       <section id="testcase" class="container-fluid testing">
         <div class="row grid">
           <div class="container-back">
-          <a class="back"><i class="fa fa-4x fa-chevron-left"></i></a>
+          <!-- <a class="back"><i class="fa fa-4x fa-chevron-left"></i></a> -->
+          <div class="back"><img src="src/client/img/back-button.png" height="100" widht="100"></div>
           </div>
         </div>
         <div class="row">
@@ -241,7 +248,7 @@
             <h2 class="panel-title"><i>Mozilla</i> Representatives</h2>
             <div class="panel-inner">
               <div class="panel-content">
-                <a href="https://www.mozilla.org/fr/mission/" target="_blank">
+                <a href="https://www.mozilla.org/mission/" target="_blank">
                   <h3>Mozilla Representatives</h3>
                   <p>
                     The program aims at those enthusiastic volunteers of Mozilla who want to become official representatives of Mozilla in
@@ -411,7 +418,7 @@
                   <a href="#contact_form">Contact Us</a>
                 </li>
                 <li>
-                  <a href="#panel-reps">Mission</a>
+                  <a href="https://www.mozilla.org/mission/" target="_blank">Mission</a>
                 </li>
               </ul>
             </div>
@@ -459,7 +466,7 @@
       <section id="copyright">
         <div class="row">
           <div class="col-xs-12 text-center">
-          <p><b>©Mozilla Delhi 2015 </b>| Powered by <b>Mozpacers</b></p>
+          <p><b>&copy; Mozilla Delhi 2015 - 2016 </b>| Powered by <b>Mozpacers</b></p>
         </div>
       </section>
     </div>
@@ -470,6 +477,7 @@
     -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <script src="src/client/js/jquery.dotdotdot.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <!-- Custom Script -->
