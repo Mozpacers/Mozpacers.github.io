@@ -45,7 +45,7 @@ a
     margin: 0 auto;
     padding: 0 20px;
 
-    background: #c13832 none repeat scroll 0 0;
+    background: #414C59 none repeat scroll 0 0;
 }
 /*CSS for all end*/
 /*Nav*/
@@ -89,7 +89,9 @@ ul
 #masthead nav li a:link,
 #masthead nav li a:visited
 {
-    color: #484848;
+    color: #eee;
+    text-decoration: none;
+    font-weight: 600;
 }
 #nav-main .toggle
 {
@@ -311,7 +313,7 @@ ul
 /*Download Section*/
 #download-section
 {
-    background-color: #565a5c;
+    background-color: #414C59;
 }
 #ff-download-message-h
 {
@@ -408,6 +410,10 @@ ul
 /*Sandstone CSS : Gumdrop Buttons End*/
 /*Download Section End*/
 /*Events Section*/
+section#events
+{
+  background-color: #D7D3C8;
+}
 .grid
 {
     max-width: 1300px;
@@ -442,7 +448,7 @@ ul
     padding: 20px;
 
     color: #e0e4cc;
-    background: #2c3f52;
+    background: #424E5A;
 }
 .grid figcaption h3
 {
@@ -1435,8 +1441,21 @@ section#About
 
     text-align: center;
 
-    color: #fff;
-    background-color: #e3ad40;
+    color: #4B3D3D;
+    background-color: #D7D3C8;
+}
+div#AboutUs p
+{
+  text-align: justify;
+  width: 90%;
+  margin: 0 auto;
+}
+div#AboutUs ul
+{
+  text-align: left;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 40px;
 }
 .ContributerImages
 {
@@ -1818,7 +1837,7 @@ footer
     padding: 20px 0;
 
     border-top: 5px solid #999;
-    background-color: #d7d3c8 ;
+    background-color: #424E5A ;
 }
 .footer-logo img
 {
@@ -1833,9 +1852,14 @@ footer h1
 {
     margin: 0;
 }
+footer h2
+{
+  color: #eee;
+}
 footer .fa
 {
     margin: 3px;
+    color: #eee;
 }
 footer a:hover,
 a:focus
@@ -1851,7 +1875,7 @@ a:focus
 
     text-decoration: none;
 
-    color: #337ab7;
+    color: #eee;
 }
 
 .links a:before
@@ -1888,8 +1912,8 @@ section#copyright
 {
     padding: 10px 0 0 0;
 
-    color: #e4e4e4;
+    color: #373333;
     border-top: 1px solid #afafaf;
-    background: #000;
+    background: #D7D3C8;
 }
 /* Copright Text End*/
