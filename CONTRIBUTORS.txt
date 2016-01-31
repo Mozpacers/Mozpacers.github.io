@@ -10,6 +10,7 @@ Prateek (gh: askprateek)
 Chirag Batra (gh: chirag08)
 Kanikaa Murarka (gh: kanikaa1234)
 Aditya Chawla (gh: chawlaaditya8)
+Vipin Khushu (gh: vipinkhushu)
 
 * Possesses commit rights
 
