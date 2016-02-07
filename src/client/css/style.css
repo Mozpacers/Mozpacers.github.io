@@ -152,10 +152,9 @@ ul
     #nav-main #nav-main-menu a
     {
         display: block;
-
+        color: #000;
         margin: 0 -10px;
         padding: 12px 35px 12px 10px;
-
         cursor: pointer;
         text-transform: none;
     }
@@ -168,7 +167,6 @@ ul
     #nav-main #nav-main-menu a:active
     {
         text-decoration: none;
-
         color: #fff;
         background-color: #247ac1;
         background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #43a6e2), color-stop(100%, #247ac1));
