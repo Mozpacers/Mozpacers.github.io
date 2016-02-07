@@ -1830,8 +1830,8 @@ footer
     position: relative;
 
     clear: both;
-
-    margin-top: -191px; /* negative value of footer height */
+    
+    
     padding: 20px 0;
 
     border-top: 5px solid #999;
@@ -1915,3 +1915,9 @@ section#copyright
     background: #D7D3C8;
 }
 /* Copright Text End*/
+/*For Ajax Loader On Contact Us Form*/
+.loadingGifOnSubmitButton {
+    background:url('../img/ajax-loader.gif') no-repeat 90% 40%;
+    padding-right: 0px;
+}
+/*For Ajax Loader On Contact Us Form ENDS*/
