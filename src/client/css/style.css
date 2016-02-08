@@ -1328,15 +1328,15 @@ section#About {
 
 div#AboutUs p {
   text-align: justify;
-  width: 90%;
   margin: 0 auto;
+  font-size: 1.3em;
 }
 
 div#AboutUs ul {
   text-align: left;
-  width: 90%;
   margin: 0 auto;
   padding: 10px 40px;
+  font-size: 1.3em;
 }
 
 .ContributerImages {
