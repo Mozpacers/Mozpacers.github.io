@@ -1705,6 +1705,14 @@ a:focus {
           transform: scaleX(1);
 }
 
+#file-bugs {
+  color: #fff;
+}
+
+#file-bugs a {
+  font-size: 1em;
+}
+
 /*Footer End*/
 
 /* Copyright Text */
