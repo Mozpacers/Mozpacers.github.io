@@ -321,18 +321,26 @@ $(document).ready(function() {
   $(".testing").hide(); //Hides dynamic view
   $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
-      if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-        var target = $(this.hash);
-        target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-        if (target.length) {
-          $('html,body').animate({
-            scrollTop: target.offset().top
-          }, 1000);
-          return false;
-        }
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+          || location.hostname == this.hostname) {
+
+          var target = $(this.hash);
+          target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
+          var currLoc = $(this.hash);
+             if (target.length) {
+               var weAreHere = $("body").scrollTop();
+               var distance = target.offset().top;
+               var weAreGoing = weAreHere + distance;
+               $('body').animate({
+                   scrollTop: weAreGoing
+              }, 1000);
+              return false;
+          }
       }
-    });
   });
+  });
+
   // Smooth scrolling end
   //Routing
   if (hash.length > 0) {
