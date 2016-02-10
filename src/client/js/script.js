@@ -1,5 +1,6 @@
 //initialize global variables here
 var ctr = 0;
+var FIREFOX = /Firefox/i.test(navigator.userAgent);
 //initialize global functions here
 function addZero(number) {
   switch (number) {
@@ -317,8 +318,8 @@ $(document).ready(function() {
   //Initilize variables here
   var hash = window.location.hash.substring(1);
   //Initialize functions here
-  // For smooth scrolling -- Added by Sanyam (CuriousLearner)
   $(".testing").hide(); //Hides dynamic view
+  // For smooth scrolling -- Added by Sanyam (CuriousLearner)
   $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
@@ -329,12 +330,22 @@ $(document).ready(function() {
 
           var currLoc = $(this.hash);
              if (target.length) {
-               var weAreHere = $("body").scrollTop();
+               if (FIREFOX) {
+                  var weAreHere = $("body").scrollTop();
+                }else{
+               var weAreHere = $("html,body").scrollTop();
+                }
                var distance = target.offset().top;
                var weAreGoing = weAreHere + distance;
-               $('body').animate({
-                   scrollTop: weAreGoing
-              }, 1000);
+               if (FIREFOX) {
+                 $('body').animate({
+                     scrollTop: weAreGoing
+                }, 1000);
+              }else{
+                $('html,body').animate({
+                    scrollTop: weAreGoing
+               }, 1000);
+              }
               return false;
           }
       }
