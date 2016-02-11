@@ -725,6 +725,7 @@ section#events {
   font-weight: bold;
   font-size: 100%;
   color: inherit;
+
   letter-spacing: -.03em;
   width: 90%;
   padding: 50px 0 20px 0;
@@ -799,17 +800,18 @@ section#events {
 
 /*add panel-webmaker style*/
 #panel-webmaker {
-  background: #c13832 url("../img/bg/webmaker.png") 35px 100px no-repeat;
-  background: url("../img/bg/webmaker.png") 35px 100px no-repeat, #c13832 -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
-  background: url("../img/bg/webmaker.png") 35px 100px no-repeat, #c13832 linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+  background: #c13832 url("../img/bg/wm.svg") 15px 90px no-repeat;
+  background-size: 230px 235px;
+  background: url("../img/bg/wm.svg") 15px 90px no-repeat, #c13832 -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+  background: url("../img/bg/wm.svg") 15px 90px no-repeat, #c13832 linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
 }
 
 #panel-webmaker.expanded {
-  background-position: 140px 100px;
+  background-position: 140px 90px;
 }
 
 #panel-webmaker.compressed {
-  background-position: 8px 100px;
+  background-position: 8px 90px;
 }
 
 #panel-webmaker .panel-title i {
@@ -818,9 +820,10 @@ section#events {
 
 /*add panel-friends and panel-FSA style*/
 #panel-friends{
-  background: #333 url("../img/bg/friends.png") 35px 80px no-repeat;
-  background: url("../img/bg/friends.png") 35px 80px no-repeat, #333 -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
-  background: url("../img/bg/friends.png") 35px 80px no-repeat, #333 linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+  background: #333 url("../img/bg/frds.svg") 35px 80px no-repeat;
+  background-size: 220px 264px;
+  background: url("../img/bg/frds.svg") 35px 80px no-repeat, #333 -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+  background: url("../img/bg/frds.svg") 35px 80px no-repeat, #333 linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
 }
 
 #panel-friends.expanded {
@@ -832,17 +835,18 @@ section#events {
 }
 
 #panel-FSA {
-  background: #404c58 url("../img/bg/FSA.png") 20px 75px no-repeat;
-  background: url("../img/bg/FSA.png") 20px 75px no-repeat, #404c58 -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
-  background: url("../img/bg/FSA.png") 20px 75px no-repeat, #404c58 linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+  background: #404c58 url("../img/bg/fsa.svg") 40px 85px no-repeat;
+  background-size: 190px 234px;
+  background: url("../img/bg/fsa.svg") 40px 85px no-repeat, #404c58 -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+  background: url("../img/bg/fsa.svg") 40px 85px no-repeat, #404c58 linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
 }
 
 #panel-FSA.expanded {
-  background-position: 130px 75px;
+  background-position: 130px 85px;
 }
 
 #panel-FSA.compressed {
-  background-position: -10px 75px;
+  background-position: 10px 85px;
 }
 
 #panel-friends .panel-title i,#panel-FSA .panel-title i {
@@ -916,15 +920,16 @@ section#events {
 
   /*add panel-webmaker style*/
   #panel-webmaker {
-    background: #c13832 url("../img/bg/webmaker.png") 35px 100px no-repeat;
-    background: url("../img/bg/webmaker.png") 35px 100px no-repeat, #c13832 -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
-    background: url("../img/bg/webmaker.png") 35px 100px no-repeat, #c13832 linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+    background: #c13832 url("../img/bg/wm.svg") 15px 90px no-repeat;
+    background-size: 200px 205px;
+    background: url("../img/bg/wm.svg") 15px 90px no-repeat, #c13832 -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+    background: url("../img/bg/wm.svg") 15px 90px no-repeat, #c13832 linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.1) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
   }
   #panel-webmaker.expanded {
-    background-position: 45px 100px;
+    background-position: 45px 90px;
   }
   #panel-webmaker.compressed {
-    background-position: 8px 100px;
+    background-position: 8px 90px;
   }
   #panel-webmaker .panel-title i {
     display: block;
@@ -932,27 +937,29 @@ section#events {
 
   /*add panel-friends and panel-FSA style*/
   #panel-friends {
-    background: #404c58 url("../img/bg/friends.png") 35px 80px no-repeat;
-    background: url("../img/bg/friends.png") 35px 80px no-repeat, #333 -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
-    background: url("../img/bg/friends.png") 35px 80px no-repeat, #333 linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+    background: #404c58 url("../img/bg/frds.svg") 10px 65px no-repeat;
+    background-size: 220px 264px;
+    background: url("../img/bg/frds.svg") 10px 65px no-repeat, #333 -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+    background: url("../img/bg/frds.svg") 10px 65px no-repeat, #333 linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
   }
   #panel-friends.expanded {
-    background-position: 50px 80px;
+    background-position: 50px 65px;
   }
   #panel-friends.compressed {
-    background-position: 8px 80px;
+    background-position: 8px 65px;
   }
   #panel-FSA
   {
-    background: #404c58 url("../img/bg/FSA.png") 20px 75px no-repeat;
-    background: url("../img/bg/FSA.png") 20px 75px no-repeat, #404c58 -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
-    background: url("../img/bg/FSA.png") 20px 75px no-repeat, #404c58 linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+    background: #404c58 url("../img/bg/fsa.svg") 20px 85px no-repeat;
+    background-size: 190px 234px;
+    background: url("../img/bg/fsa.svg") 20px 85px no-repeat, #404c58 -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
+    background: url("../img/bg/fsa.svg") 20px 85px no-repeat, #404c58 linear-gradient(top, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0,) 70%, rgba(0, 0, 0, 0.15) 80%, rgba(0, 0, 0, 0.1) 92%, rgba(0, 0, 0, 0) 100%);
   }
   #panel-FSA.expanded {
-    background-position: 50px 75px;
+    background-position: 60px 85px;
   }
   #panel-FSA.compressed {
-    background-position: -10px 75px;
+    background-position: 10px 85px;
   }
   #panel-friends .panel-title i,#panel-FSA .panel-title i {
     display: block;
@@ -1108,7 +1115,8 @@ section#events {
   }
   /*blog*/
   #panel-friends {
-    background-image: url("../img/bg/friends-sm.png");
+    background-image: url("../img/bg/frds.svg");
+    background-size: 100px 122px;
     background-position: 25px -2px;
   }
   #panel-friends.expanded {
@@ -1119,8 +1127,9 @@ section#events {
   }
   /*FSA*/
   #panel-FSA {
-    background-image: url("../img/bg/FSA-sm.png");
-    background-position: 18px -6px;
+    background-image: url("../img/bg/fsa.svg");
+    background-size: 100px 122px;
+    background-position: 18px 7px;
   }
   #panel-FSA.expanded {
     background-position: 18px 70px;
@@ -1130,7 +1139,8 @@ section#events {
   }
   /*community*/
   #panel-webmaker {
-    background-image: url("../img/bg/webmaker-sm.png");
+    background-image: url("../img/bg/wm.svg");
+    background-size: 100px 103px;
     background-position: 25px 2px;
   }
   #panel-webmaker.expanded {
@@ -1252,7 +1262,8 @@ section#events {
   }
   /*blog*/
   #panel-friends {
-    background-image: url("../img/bg/friends-sm.png");
+    background-image: url("../img/bg/frds.svg");
+    background-size: 100px 122px;
     background-position: 2px 0;
   }
   #panel-friends.expanded {
@@ -1263,18 +1274,20 @@ section#events {
   }
   /*FSA*/
   #panel-FSA {
-    background-image: url("../img/bg/FSA-sm.png");
-    background-position: -5px 0 ;
+    background-image: url("../img/bg/fsa.svg");
+    background-size: 100px 122px;
+    background-position: 5px 10px ;
   }
   #panel-FSA.expanded {
-    background-position: -5px 60px;
+    background-position: 5px 60px;
   }
   #panel-FSA.compressed {
-    background-position: -5px 0;
+    background-position: 5px 0;
   }
   /*community*/
   #panel-webmaker {
-    background-image: url("../img/bg/webmaker-sm.png");
+    background-image: url("../img/bg/wm.svg");
+    background-size: 100px 103px;
     background-position: 5px 5px;
   }
   #panel-webmaker.expanded {
