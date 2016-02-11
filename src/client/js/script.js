@@ -287,6 +287,7 @@ function validate_form() {
     $("#send").removeClass("disabled");
     return;
   }
+  $("#send").addClass("loadingGifOnSubmitButton");
   var m = {
     "name": $('#name').val(),
     "email": $('#email').val(),
@@ -303,11 +304,13 @@ function validate_form() {
     success: function(data) {
       console.log(data.error);
       $("#send").removeClass("disabled");
+      $("#send").removeClass("loadingGifOnSubmitButton");
       $('#name,#message,#email').val('');
       $('#success').text('We have received your message. We will contact you as soon as possible.');
     },
     error: function(err) {
       $("#send").removeClass("disabled");
+      $("#send").removeClass("loadingGifOnSubmitButton");
       $('#success').text('We are facing some issues in our backend. Please try later.');
       console.log(err);
     }
