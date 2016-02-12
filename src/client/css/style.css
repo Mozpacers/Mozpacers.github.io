@@ -1448,14 +1448,18 @@ div#AboutUs ul {
 
 .ch-img-1 {
   background-image: url(../img/ajay.jpg);
+  background-size: 100% 100%;
 }
 
 .ch-img-2 {
-  background-image: url(../img/anup.jpg);
+  background-image: url(../img/anup.jpeg);
+  background-size: 100% 100%;
+
 }
 
 .ch-img-3 {
   background-image: url(../img/bhuvnesh.jpg);
+  background-size: 100% 100%;
 }
 
 .ch-info {
