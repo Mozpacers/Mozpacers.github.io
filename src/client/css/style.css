@@ -288,7 +288,7 @@ ul {
 /* Hero Image ends*/
 /*Download Section*/
 #download-section {
-  background-color: #414C59;
+  background-color: #424E5A;
 }
 
 #ff-download-message-h {
@@ -452,7 +452,7 @@ section#events {
           transition: height .1s,opacity .1s,visibility .1s;
   text-align: center;
   opacity: 0;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .grid figcaption .info-box {
@@ -542,16 +542,25 @@ section#events {
 }
 
 .cardfigure a {
-  color: #e0e4cc;
-  background-color: #363636;
+  background-color: #424E5A;
+  border: 2px solid #e0e4cc;
+}
+.more{
+  color: #0095dd !important;
+}
+.register{
+  color: #93ca55 !important;
 }
 
 .cardfigure a:hover {
   text-decoration: none;
-  color: #363636;
-  background-color: #e0e4cc;
 }
-
+.more:hover{
+  border: 2px solid #0095dd;
+}
+.register:hover{
+  border: 2px solid #93ca55;
+}
 .cardfigure span {
   font-weight: bold;
   position: relative;
@@ -579,7 +588,33 @@ section#events {
 #meetupsingle {
   margin-bottom: 2em;
 }
-
+#registersingle{
+  background: #93ca55;
+  color: #fff;
+}
+#meetupsingle{
+  background: #0095dd;
+  color: #fff;
+}
+#registersingle:hover,#meetupsingle:hover{
+  background:#fff
+}
+#registersingle:hover{
+  color: #93ca55;
+}
+#meetupsingle:hover{
+  color: #0095dd;
+}
+.btn-more{
+  background-color: #D7D3C8;
+  color:#0095dd;
+  border: 2px solid #b6b6b6;
+}
+.btn-more:hover{
+  background-color: #D7D3C8;
+  color:#0095dd;
+  border: 2px solid #0095dd;
+}
 @media screen and (max-width: 31.5em) {
   .grid
   {
@@ -1574,8 +1609,13 @@ section#community .fa-globe
 
 #send {
   margin-bottom: 90px;
+  background:#0095dd;
+  color:#fff;
 }
-
+#send:hover{
+  background:#fff;
+  color:#0095dd;
+}
 .contact {
   padding: 80px 0 0 0;
 }
@@ -1676,7 +1716,8 @@ footer {
   margin-top: -200px; /* negative value of footer height */
   padding: 20px 0;
   border-top: 5px solid #999;
-  background-color: #424E5A ;
+  background-color: #414C59 ;
+  height:170px;
 }
 
 .footer-logo img {
@@ -1700,7 +1741,9 @@ footer .fa {
   margin: 3px;
   color: #eee;
 }
-
+footer .fa:hover{
+  color: #0095dd;
+}
 footer a:hover,
 a:focus {
   text-decoration: none;
