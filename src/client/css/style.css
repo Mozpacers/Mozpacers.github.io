@@ -35,10 +35,18 @@ a {
 
   min-width: 320px;
   min-height: 100%;
+  /*margin-bottom: 200px;*/
 
   border-top: 2px solid #fff;
 }
-
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  #outer-wrapper {
+    margin-bottom: 200px;
+  }
+}
+.no-margin-wrapper{
+  margin-bottom:0 !important;
+}
 #masthead {
   position: relative;
 
@@ -1661,7 +1669,7 @@ footer {
   font-family: 'Open Sans', sans-serif;
   position: relative;
   clear: both;
-  margin-top: -191px; /* negative value of footer height */
+  margin-top: -200px; /* negative value of footer height */
   padding: 20px 0;
   border-top: 5px solid #999;
   background-color: #424E5A ;

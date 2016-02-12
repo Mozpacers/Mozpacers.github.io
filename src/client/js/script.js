@@ -57,7 +57,17 @@ function numToMonth(number) {
       return "Dec";
   }
 }
-
+function checkDynamicVScroll(){
+  var testcaseheight = $('#testcase').height()+200;
+  var windowheight = $(window).height()
+  if (testcaseheight < windowheight && !FIREFOX) {
+      $('#outer-wrapper').addClass('no-margin-wrapper');
+  }else if(testcaseheight > windowheight && !FIREFOX){
+    $('#outer-wrapper').removeClass('no-margin-wrapper');
+  }
+  console.log(testcaseheight);
+  console.log(windowheight);
+}
 function cardclose() {
   $("#masthead").show();
   $("#Hero_Image").show();
@@ -69,6 +79,7 @@ function cardclose() {
   $("#contact_form").show();
   $(".pillars").show();
   $(".testing").hide();
+  $('#outer-wrapper').removeClass('no-margin-wrapper');
 }
 $(".back").click(function() {
   $('header').show();
@@ -217,6 +228,9 @@ function request(state, initiate) {
           $(renderthis).appendTo(".event-view");
         }
       });
+      if(!initiate){
+      checkDynamicVScroll();
+      }
     }
   });
 
@@ -246,6 +260,7 @@ function requestS(apiId) {
           result.endhours, result.endminutes, result.eventdescription, result.eventid, result.eventurl,
           result.stateofevent);
       $(renderthis).appendTo(".single-event");
+      checkDynamicVScroll();
     }
   });
 
