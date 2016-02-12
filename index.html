@@ -84,12 +84,12 @@
       <header id="masthead" class="col-md-12">
         <div class="container col-md-8 col-md-offset-2">
           <div id="tabzilla">
-              <a href="https://www.mozilla.org/">Mozilla</a>
+              <a href="https://www.mozilla.org/" target="_blank">Mozilla</a>
           </div>
           <nav id="nav-main" role="navigation">
             <span class="toggle" role="button" aria-controls="nav-main-menu" tabindex="0">Menu</span>
             <ul id="nav-main-menu">
-              <li class="first"><a href="#">Blog</a></li>
+              <li class="first"><a href="http://mozpacers.org/blog" target="_blank">Blog</a></li>
               <li><a href="#events">Events</a></li>
               <li><a href="#About">About Us</a></li>
               <li class="last"><a href="#contact_form">Contact Us</a></li>
@@ -98,7 +98,7 @@
         </div>
       </header>
       <!-- Sticky Events section goes here -->
-      <h3 class="text-center disclaimer">This is Alpha v0.3 of Mozpacers powered by MozAwesomeness ;)</h3>
+      <!-- <h3 class="text-center disclaimer">This is Alpha v0.3 of Mozpacers powered by MozAwesomeness ;)</h3> -->
       <!-- Hero Image goes here -->
       <section id="Hero_Image">
         <div class ="row">
@@ -127,7 +127,7 @@
             <div class="col-md-4 col-sm-12">
               <div class="row">
                 <h1 id="ff-download-btn-h" class="col-sm-12">
-                  <a id="ff-download-btn" class="center-block button" href="#">FREE DOWNLOAD</a>
+                  <a id="ff-download-btn" class="center-block button" href="https://www.mozilla.org/en-US/firefox/new/#download-fx" target="_blank">FREE DOWNLOAD</a>
                 </h1>
               </div>
             </div>
@@ -288,7 +288,7 @@
                 <div class="ch-item ch-img-1">
                   <div class="ch-info">
                     <h3>Ajay Kumar</h3>
-                    <p>Community Mentor<a href="https://reps.mozilla.org/u/ajaysinghi1188/">View on Reps</a></p>
+                    <p>Community Mentor<a href="https://reps.mozilla.org/u/ajaysinghi1188/" target="_blank">View on Reps</a></p>
                   </div>
                 </div>
               </li>
@@ -296,7 +296,7 @@
                 <div class="ch-item ch-img-2">
                   <div class="ch-info">
                     <h3>Anup Mishra</h3>
-                    <p>Community Mentor<a href="https://reps.mozilla.org/u/anupkumarmishra29/">View on Reps</a></p>
+                    <p>Community Mentor<a href="https://reps.mozilla.org/u/anupkumarmishra29/" target="_blank">View on Reps</a></p>
                   </div>
                 </div>
               </li>
@@ -304,7 +304,7 @@
                 <div class="ch-item ch-img-3">
                   <div class="ch-info">
                     <h3>Bhuvnesh Kumar</h3>
-                    <p>Community Mentor<a href="https://mozillians.org/en-US/u/BhuvneshDogra/">View on Mozillians</a></p>
+                    <p>Community Mentor<a href="https://mozillians.org/en-US/u/BhuvneshDogra/" target="_blank">View on Mozillians</a></p>
                   </div>
                 </div>
               </li>
@@ -354,7 +354,7 @@
               </span>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-              <a class="contribute-btn" href="https://www.mozilla.org/en-US/contribute/" data-element-location="button-click" data-link-type="Get Involved with Mozilla today">Get Involved with Mozilla today</a>
+              <a class="contribute-btn" href="https://www.mozilla.org/en-US/contribute/" target="_blank" data-element-location="button-click" data-link-type="Get Involved with Mozilla today">Get Involved with Mozilla today</a>
             </div>
           </div>
         </div>
@@ -396,81 +396,117 @@
         </div>
       </section>
     </div>
-      <!-- Footer goes here -->
-      <footer class="navbar-static-bottom clearfix" >
-        <div class="container">
-          <div class="row">
-            <div class="text-center col-xs-12 col-sm-12 col-md-3 col-lg-3">
-              <div class="footer-logo" >
-                <a href="http://mozilla.org">
-                  <img src="src/client/img/mozilla-logo-footer/mozilla-logo.jpg" alt="Mozilla" width=183 height=72>
-                </a>
-                <p id="file-bugs" class="links">Have feedback? <a href="https://github.com/Mozpacers/Mozpacers.github.io/issues">File a bug</a><p>
-              </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
-              <div class="row">
-                <div class="col-xs-6 text-center thin">
-                <ul class="links">
-                <li>
-                  <a href="#About">About Us</a>
-                </li>
-                <li>
-                  <a href="#contact_form">Contact Us</a>
-                </li>
-                <li>
-                  <a href="https://www.mozilla.org/mission/" target="_blank">Mission</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-xs-6 text-center thin" >
-              <ul class="links">
-                <li>
-                  <a href="#contributors">Contributors</a>
-                </li>
-                <li>
-                  <a href="#">Blog</a>
-                </li>
+    <!-- Footer goes here -->
+    <!-- Developers Modal -->
+    <div class="modal fade" id="developersModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Developers</h4>
+          </div>
+          <div class="modal-body text-center">
+            This site is developed by a collaborative effort of following MozPacers:
+            <div id="developers-list-container">
+              <ul>
+                <li><a href="https://mozillians.org/en-US/u/CuriousLearner/" target="_blank">Sanyam Khurana</a></li>
+                <li><a href="https://mozillians.org/en-US/u/slayslot/" target="_blank">Nikhil Handa</a></li>
+                <li><a href="https://mozillians.org/en-US/u/vikramj74/" target="_blank">Vikram Jaswal</a></li>
+                <li><a href="https://mozillians.org/en-US/u/ManrajSingh/" target="_blank">Manraj Singh</a></li>
+                <li><a href="#" target="_blank">Abhijeet Chauhan</a></li>
+                <li><a href="https://mozillians.org/en-US/u/askprateek/" target="_blank">Prateek</a></li>
+                <li><a href="https://mozillians.org/en-US/u/batrachirag/" target="_blank">Chirag Batra</a></li>
+                <li><a href="https://mozillians.org/en-US/u/kanikaa/" target="_blank">Kanikaa Murarka</a></li>
+                <li><a href="https://mozillians.org/en-US/u/chawlaaditya8/" target="_blank">Aditya Chawla</a></li>
+                <li><a href="https://mozillians.org/en-US/u/vipinkhushu/" target="_blank">Vipin Khushu</a></li>
+                <li><a href="https://mozillians.org/en-US/u/saurabh_badhwar/" target="_blank">Saurabh Badhwar</a></li>
               </ul>
             </div>
           </div>
-          </div>
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-              <div class="row" id="social_icons">
-                <div class="col-xs-12 text-center">
-                  <h2> Connect with us </h2>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xs-12 text-center">
-                  <a target="_blank" href="https://github.com/mozpacers">
-                    <i class="fa fa-github fa-3x"></i>
-                  </a>
-                  <a target="_blank" href="https://www.facebook.com/mozpacers">
-                    <i class="fa fa-facebook fa-3x"></i>
-                  </a>
-                  <a target="_blank" href="https://twitter.com/mozpacers">
-                    <i class="fa fa-twitter fa-3x"></i>
-                  </a>
-                  <a target="_blank" href="https://www.youtube.com/channel/UCeT3xFmGkKhvjUMjNCiBLkg">
-                    <i class="fa fa-youtube fa-3x"></i>
-                  </a>
-                  <a target="_blank" href="https://mozpacers.slack.com/">
-                    <i class="fa fa-slack fa-3x"></i>
-                  </a>
-                </div>
-              </div> <!--Social Icon's END -->
-            </div> <!--Connect with us END -->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
           </div>
         </div>
-      </footer>
-      <section id="copyright">
-        <div class="row">
-          <div class="col-xs-12 text-center">
-          <p><b>&copy; Mozilla Delhi 2015 - 2016 </b>| Powered by <b>Mozpacers</b></p>
-        </div>
-      </section>
+      </div>
     </div>
+    <!--Developers Modal end -->
+    <footer class="navbar-static-bottom clearfix" >
+      <div class="container">
+        <div class="row">
+          <div class="text-center col-xs-12 col-sm-12 col-md-3 col-lg-3">
+            <div class="footer-logo" >
+              <a href="http://mozilla.org" target="_blank">
+                <img src="src/client/img/mozilla-logo-footer/mozilla-logo.jpg" alt="Mozilla" width=183 height=72>
+              </a>
+              <p id="file-bugs" class="links">Have feedback? <a href="https://github.com/Mozpacers/Mozpacers.github.io/issues" target="_blank">File a bug</a><p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+            <div class="row">
+              <div class="col-xs-6 text-center thin">
+              <ul class="links">
+              <li>
+                <a href="#About">About Us</a>
+              </li>
+              <li>
+                <a href="#contact_form">Contact Us</a>
+              </li>
+              <li>
+                <a href="https://www.mozilla.org/mission/" target="_blank">Mission</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xs-6 text-center thin" >
+            <ul class="links">
+              <li>
+                <a href="#contributors">Contributors</a>
+              </li>
+              <li>
+                <a href="http://mozpacers.org/blog" target="_blank">Blog</a>
+              </li>
+              <li>
+                <a href="#" data-toggle="modal" data-target="#developersModal">Developers</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        </div>
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="row" id="social_icons">
+              <div class="col-xs-12 text-center">
+                <h2> Connect with us </h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-12 text-center">
+                <a target="_blank" href="https://github.com/mozpacers">
+                  <i class="fa fa-github fa-3x"></i>
+                </a>
+                <a target="_blank" href="https://www.facebook.com/mozpacers">
+                  <i class="fa fa-facebook fa-3x"></i>
+                </a>
+                <a target="_blank" href="https://twitter.com/mozpacers">
+                  <i class="fa fa-twitter fa-3x"></i>
+                </a>
+                <a target="_blank" href="https://www.youtube.com/channel/UCeT3xFmGkKhvjUMjNCiBLkg">
+                  <i class="fa fa-youtube fa-3x"></i>
+                </a>
+                <a target="_blank" href="https://mozpacers.slack.com/">
+                  <i class="fa fa-slack fa-3x"></i>
+                </a>
+              </div>
+            </div> <!--Social Icon's END -->
+          </div> <!--Connect with us END -->
+        </div>
+      </div>
+    </footer>
+    <section id="copyright">
+      <div class="row">
+        <div class="col-xs-12 text-center">
+        <p><b>&copy; Mozilla Delhi 2015 - 2016 </b>| Powered by <b>Mozpacers</b></p>
+        </div>
+      </div>
+    </section>
     <!--
     ==========================================================================
     All Scripts go here!

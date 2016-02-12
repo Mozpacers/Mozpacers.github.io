@@ -105,6 +105,10 @@ ul {
   font-weight: 600;
 }
 
+#masthead nav li a:hover{
+  background-color: #6e8096;
+}
+
 #nav-main .toggle{
   display: none;
   /* Hidden in non-mobile views */
@@ -1399,7 +1403,7 @@ div#AboutUs ul {
   -webkit-transition: all .4s ease-in-out;
           transition: all .4s ease-in-out;
   border-radius: 50%;
-  box-shadow: inset 0 0 0 0 rgba(200,95,66, .4),
+  box-shadow: inset 0 0 0 0 rgba(65,76,89,.4),
   inset 0 0 0 16px rgba(255,255,255,.6),
   0 1px 2px rgba(0,0,0,.1);
 }
@@ -1464,12 +1468,12 @@ div#AboutUs ul {
 }
 
 .ch-info p a:hover {
-  color: rgba(255,242,34, .8);
+  color: rgba(255,242,34,.8);
 }
 
 .ch-item:hover {
-  box-shadow: inset 0 0 0 110px rgba(200,95,66, .4),
-  inset 0 0 0 16px rgba(255,255,255,.8),
+  box-shadow: inset 0 0 0 110px rgba(65,76,89,.4),
+  inset 0 0 0 16px rgba(65,76,89,.8),
   0 1px 2px rgba(0,0,0,.1);
 }
 
@@ -1737,6 +1741,17 @@ a:focus {
 
 #file-bugs a {
   font-size: 1em;
+}
+
+.modal-body ul {
+  list-style: none;
+}
+
+#developers-list-container {
+  width: 10em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 
 /*Footer End*/
