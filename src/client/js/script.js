@@ -105,6 +105,8 @@ function fetchalldata(venue, imageLink, regFormLink, eventStartDate, eventEndDat
   var eventend = new Date(eventEndDate);
   var endminutes = eventend.getMinutes();
   var endhours = eventend.getHours();
+  endminutes = addZero(endminutes);
+  endhours = addZero(endhours);
   var enddate = eventend.getDate();
   var endmonth = eventend.getMonth();
   endmonth = numToMonth(endmonth);
