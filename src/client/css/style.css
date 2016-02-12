@@ -524,8 +524,11 @@ section#events {
 .back {
   position: absolute;
   left: 0px;
-  border-radius: 50%;
-
+  width: 100px;
+  height: 100px;
+  background-image: url('../img/back-button.png');
+  background-size: contain;
+  border-bottom-right-radius: 100px;
   cursor: pointer;
 }
 
