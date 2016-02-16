@@ -1703,7 +1703,7 @@ section#contact_form .text-danger {
   font-weight: 700;
   width: 200px;
   height: 50px;
-  margin: 0 0 0 22px;
+  /*margin: 0 0 0 20px;*/
   text-transform: uppercase;
   color: #fff;
   border-color: #fed136;
