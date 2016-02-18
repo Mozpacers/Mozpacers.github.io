@@ -1724,7 +1724,7 @@ footer {
   padding: 20px 0;
   border-top: 5px solid #999;
   background-color: #414C59 ;
-  height:170px;
+  height:auto;
 }
 
 .footer-logo img {
