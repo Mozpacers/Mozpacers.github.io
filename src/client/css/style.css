@@ -1611,13 +1611,20 @@ section#community .fa-globe
 }
 
 #success {
+  text-align:center;
   color: white;
-}
-
-#send {
   margin-bottom: 90px;
+}
+#send {
+  margin-bottom: 1em;
   background:#0095dd;
   color:#fff;
+}
+.green{
+  color: #1A8922 !important;
+}
+.red{
+  color: #F02311 !important;
 }
 #send:hover{
   background:#fff;

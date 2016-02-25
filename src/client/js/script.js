@@ -326,11 +326,13 @@ function validate_form() {
       $("#send").removeClass("loadingGifOnSubmitButton");
       $('#name,#message,#email').val('');
       $('#success').text('We have received your message. We will contact you as soon as possible.');
+      $('#success').addClass('green');
     },
     error: function(err) {
       $("#send").removeClass("disabled");
       $("#send").removeClass("loadingGifOnSubmitButton");
       $('#success').text('We are facing some issues in our backend. Please try later.');
+      $('#success').addClass('red');
       console.log(err);
     }
   });
@@ -513,7 +515,9 @@ $(document).ready(function() {
       return;
     }
     $("#send").addClass("disabled");
-    $('#error_name,#error_message,#error_email').text('');
+    $('#error_name,#error_message,#error_email,#success').text('');
+    $('#success').removeClass('green');
+    $('#success').removeClass('red');
     $('#name,#message,#email').css('border-color', '#484848');
     ctr = 0;
     validate_form();
