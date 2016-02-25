@@ -1611,13 +1611,20 @@ section#community .fa-globe
 }
 
 #success {
+  text-align:center;
   color: white;
-}
-
-#send {
   margin-bottom: 90px;
+}
+#send {
+  margin-bottom: 1em;
   background:#0095dd;
   color:#fff;
+}
+.green{
+  color: #1A8922 !important;
+}
+.red{
+  color: #F02311 !important;
 }
 #send:hover{
   background:#fff;
@@ -1703,7 +1710,7 @@ section#contact_form .text-danger {
   font-weight: 700;
   width: 200px;
   height: 50px;
-  margin: 0 0 0 22px;
+  /*margin: 0 0 0 20px;*/
   text-transform: uppercase;
   color: #fff;
   border-color: #fed136;
@@ -1724,7 +1731,7 @@ footer {
   padding: 20px 0;
   border-top: 5px solid #999;
   background-color: #414C59 ;
-  height:170px;
+  height:auto;
 }
 
 .footer-logo img {

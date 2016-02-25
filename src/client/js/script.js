@@ -91,6 +91,7 @@ function fetchalldata(venue, imageLink, regFormLink, eventStartDate, eventEndDat
   var eventvenue = venue;
   var eventimage = imageLink;
   var eventregistration = regFormLink;
+  eventStartDate+="+05:30";
   var eventstart = new Date(eventStartDate);
   var currentTime = new Date();
   var stateofevent = false;
@@ -102,6 +103,7 @@ function fetchalldata(venue, imageLink, regFormLink, eventStartDate, eventEndDat
   starthours = addZero(starthours);
   startmonth = numToMonth(startmonth);
   var startyear = eventstart.getFullYear();
+  eventEndDate+="+05:30";
   var eventend = new Date(eventEndDate);
   var endminutes = eventend.getMinutes();
   var endhours = eventend.getHours();
@@ -324,11 +326,13 @@ function validate_form() {
       $("#send").removeClass("loadingGifOnSubmitButton");
       $('#name,#message,#email').val('');
       $('#success').text('We have received your message. We will contact you as soon as possible.');
+      $('#success').addClass('green');
     },
     error: function(err) {
       $("#send").removeClass("disabled");
       $("#send").removeClass("loadingGifOnSubmitButton");
       $('#success').text('We are facing some issues in our backend. Please try later.');
+      $('#success').addClass('red');
       console.log(err);
     }
   });
@@ -511,7 +515,9 @@ $(document).ready(function() {
       return;
     }
     $("#send").addClass("disabled");
-    $('#error_name,#error_message,#error_email').text('');
+    $('#error_name,#error_message,#error_email,#success').text('');
+    $('#success').removeClass('green');
+    $('#success').removeClass('red');
     $('#name,#message,#email').css('border-color', '#484848');
     ctr = 0;
     validate_form();
