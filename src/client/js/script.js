@@ -91,6 +91,7 @@ function fetchalldata(venue, imageLink, regFormLink, eventStartDate, eventEndDat
   var eventvenue = venue;
   var eventimage = imageLink;
   var eventregistration = regFormLink;
+  eventStartDate+="+05:30";
   var eventstart = new Date(eventStartDate);
   var currentTime = new Date();
   var stateofevent = false;
@@ -102,6 +103,7 @@ function fetchalldata(venue, imageLink, regFormLink, eventStartDate, eventEndDat
   starthours = addZero(starthours);
   startmonth = numToMonth(startmonth);
   var startyear = eventstart.getFullYear();
+  eventEndDate+="+05:30";
   var eventend = new Date(eventEndDate);
   var endminutes = eventend.getMinutes();
   var endhours = eventend.getHours();
