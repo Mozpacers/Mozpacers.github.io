@@ -571,7 +571,7 @@ section#events {
 .cardfigure span {
   font-weight: bold;
   position: relative;
-  bottom: 4.0em;
+  /*bottom: 4.0em;*/
 }
 
 .cardfigure h4 {
