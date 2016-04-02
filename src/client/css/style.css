@@ -32,8 +32,10 @@ a {
 
 #outer-wrapper {
   position: relative;
+  
   min-width: 320px;
   min-height: 100%;
+  
   border-top: 2px solid #fff;
 }
 @media screen and (-webkit-min-device-pixel-ratio:0) {
