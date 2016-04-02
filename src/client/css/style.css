@@ -433,23 +433,16 @@ section#events {
 }
 
 .grid figcaption p {
-  /*visibility: hidden;*/
-  /*height: 140px;*/
   padding: 1em 0 0 0;
-  /*-webkit-transition: height .1s,opacity .1s,visibility .1s;
-          transition: height .1s,opacity .1s,visibility .1s;
-  opacity: 0;*/
 }
 
 .cs-style-3 figure figcaption .more,
 .cs-style-3 figure figcaption .register {
   font-size: 14px;
   display: inline-block;
-  /*visibility: hidden;
-  height: 0;*/
   padding: 10px 20px;
-  -webkit-transition: opacity .1s;/*,visibility .1s;*/
-          transition: opacity .1s;/*,visibility .1s;*/
+  -webkit-transition: opacity .1s;
+          transition: opacity .1s;
   text-align: center;
   opacity: 0;
   border-radius: 5px;
@@ -458,8 +451,8 @@ section#events {
 .grid figcaption .info-box {
   position: relative;
   overflow: hidden;
-  min-height: 100px;
-  max-height: 75%;
+  min-height: 60px;
+  max-height: 65%;
 }
 
 .cs-style-3 figcaption {
@@ -488,20 +481,9 @@ section#events {
           transition: height .4s;
 }
 
-/*.cs-style-3 figure:hover figcaption p {
-  visibility: visible;
-  height: 140px;
-  -webkit-transition: height .4s,opacity .4s,visibility .4s;
-          transition: height .4s,opacity .4s,visibility .4s;
-  opacity: 1;
-}*/
-
 .cs-style-3 figure:hover figcaption .more,
 .cs-style-3 figure:hover figcaption .register {
-  /*visibility: visible;*/
   height: initial;
-  /*-webkit-transition: height .1s,opacity .4s;,visibility .4s;
-          transition: height .1s,opacity .4s;,visibility .4s;*/
   opacity: 1;
 }
 
