@@ -32,11 +32,8 @@ a {
 
 #outer-wrapper {
   position: relative;
-
   min-width: 320px;
   min-height: 100%;
-  /*margin-bottom: 200px;*/
-
   border-top: 2px solid #fff;
 }
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -553,7 +550,6 @@ section#events {
 .cardfigure span {
   font-weight: bold;
   position: relative;
-  /*bottom: 4.0em;*/
 }
 
 .cardfigure h4 {
