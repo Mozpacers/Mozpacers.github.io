@@ -147,7 +147,7 @@ function renderCard(i, noFetched, template, eventtitle, eventimage, eventvenue, 
   startdate, startmonth, startyear, starthours, startminutes, eventdescription, eventid, eventurl, stateofevent){
   var newname = template.replace('alt=""', 'alt="' + eventtitle + '"');
   var newurl = newname.replace('src=""', 'src="' + eventimage + '"');
-  var newvenue = newurl.replace('<span></span>', '<span>' + eventvenue + '</span>');
+  var newvenue = newurl.replace('<span></span>', '<span class="text-check">' + eventvenue + '</span>');
   var newtitle = newvenue.replace('<h3></h3>', '<h3>' + eventtitle + '</h3>');
   var newdate = newtitle.replace('<h4 class="pull-right"></h4>', '<h4 class="pull-right">' + startdate + ' ' + startmonth + ' ' + startyear + ' | ' + starthours + ':' + startminutes + '</h4>');
   var newdescription = newdate.replace('<p></p>', '<p>' + eventdescription + '</p>');
@@ -337,8 +337,10 @@ function validate_form() {
     }
   });
 }
+
 /*Document Ready start*/
 $(document).ready(function() {
+
   //Initilize variables here
   var hash = window.location.hash.substring(1);
   //Initialize functions here
@@ -479,10 +481,7 @@ $(document).ready(function() {
     });
   });
   //Nav End
-  //Events Section start
-  $(".ellipsis").dotdotdot({
-    watch: "window"
-  });
+
   $(document.body).on('click', '.click',
     function() {
       var idused = $(this).attr("id");
@@ -525,6 +524,15 @@ $(document).ready(function() {
   //Contact Section end
 });
 /* Document Ready end*/
+/* Enable dotdotdot
+   ajaxStop start
+*/
+$(document).ajaxStop(function () {
+      $(".text-check").dotdotdot({
+        watch: "window"
+      });
+  });
+/* End ajaxStop */
 /*
 nav-main-resp.js start
 */
