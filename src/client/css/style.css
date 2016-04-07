@@ -427,9 +427,9 @@ section#events {
   color: #fff;
 }
 
-.ellipsis {
+/*.ellipsis {
   overflow: hidden;
-}
+}*/
 
 .grid figcaption p {
   padding: 1em 0 0 0;
