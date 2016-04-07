@@ -615,9 +615,9 @@ section#events {
 }
 
 @media (max-width:363px) {
-  .cs-style-3 figure:hover figcaption p {
+  /*.cs-style-3 figure:hover figcaption p {
       height: 100px;
-  }
+  }*/
   #meetupsingle, #registersingle {
       font-size: unset;
   }
@@ -1200,6 +1200,21 @@ section#events {
 }
 
 @media only screen and (max-width:480px){
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+  .grid figcaption p {
+    font-size: 14px;
+  }
+  .cardfigure span {
+    font-size: 10px;
+  }
+  .cs-style-3 figure figcaption .more, .cs-style-3 figure figcaption .register {
+    padding: 5px 10px;
+  }
   .pillars {
     width: 100%;
   }
