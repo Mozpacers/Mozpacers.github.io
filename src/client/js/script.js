@@ -65,8 +65,8 @@ function checkDynamicVScroll(){
   }else if(testcaseheight > windowheight && !FIREFOX){
     $('#outer-wrapper').removeClass('no-margin-wrapper');
   }
-  console.log(testcaseheight);
-  console.log(windowheight);
+  //console.log(testcaseheight);
+  //console.log(windowheight);
 }
 function cardclose() {
   $("#masthead").show();
@@ -236,13 +236,10 @@ function request(state, initiate) {
       checkDynamicVScroll();
       }
     }
-    var renderedHeight = $('figure.cardfigure').innerHeight();
-    if (renderedHeight != null) {
-      $(".ellipsis").dotdotdot({
-        watch: "window",
-        height: renderedHeight*0.35
-      });
-    }
+    $(".ellipsis").dotdotdot({
+      watch: "window",
+      height: 400*0.35
+    });
   });
 
   request.fail(function(jqXHR, textStatus) {
