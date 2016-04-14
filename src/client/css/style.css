@@ -475,6 +475,12 @@ section#events {
   bottom: unset;
 }
 
+.cs-style-3 figure:hover figcaption span
+{
+  overflow: visible;
+  white-space: normal;
+}
+
 .cs-style-3 figure figcaption {
   -webkit-transition: height .4s;
           transition: height .4s;
@@ -552,6 +558,12 @@ section#events {
 .cardfigure span {
   font-weight: bold;
   position: relative;
+  height: 2.2em;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .cardfigure h4 {

@@ -85,6 +85,10 @@ $(".back").click(function() {
   $('header').show();
   cardclose();
   history.pushState("", document.title, window.location.pathname + window.location.search); //add everywhere
+  $(".ellipsis").dotdotdot({
+    watch: "window",
+    height: 400*0.35
+  });
 });
 function fetchalldata(venue, imageLink, regFormLink, eventStartDate, eventEndDate, eventTitle, eventDescription,
   eventId, eventUrl){
