@@ -65,8 +65,6 @@ function checkDynamicVScroll(){
   }else if(testcaseheight > windowheight && !FIREFOX){
     $('#outer-wrapper').removeClass('no-margin-wrapper');
   }
-  //console.log(testcaseheight);
-  //console.log(windowheight);
 }
 function cardclose() {
   $("#masthead").show();
@@ -488,9 +486,6 @@ $(document).ready(function() {
   });
   //Nav End
   //Events Section start
-  /*$(".ellipsis").dotdotdot({
-    watch: "window"
-  });*/
   $(document.body).on('click', '.click',
     function() {
       var idused = $(this).attr("id");
