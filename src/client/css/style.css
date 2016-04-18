@@ -427,10 +427,6 @@ section#events {
   color: #fff;
 }
 
-.ellipsis {
-  overflow: hidden;
-}
-
 .grid figcaption p {
   padding: 1em 0 0 0;
 }
@@ -473,6 +469,11 @@ section#events {
 .cs-style-3 figure:hover figcaption h4 {
   position: unset;
   bottom: unset;
+}
+
+.cs-style-3 figure:hover figcaption span {
+  overflow: visible;
+  white-space: normal;
 }
 
 .cs-style-3 figure figcaption {
@@ -552,6 +553,12 @@ section#events {
 .cardfigure span {
   font-weight: bold;
   position: relative;
+  height: 2.2em;
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .cardfigure h4 {
@@ -615,9 +622,6 @@ section#events {
 }
 
 @media (max-width:363px) {
-  .cs-style-3 figure:hover figcaption p {
-      height: 100px;
-  }
   #meetupsingle, #registersingle {
       font-size: unset;
   }
@@ -1200,6 +1204,9 @@ section#events {
 }
 
 @media only screen and (max-width:480px){
+  .cs-style-3 figure figcaption .more, .cs-style-3 figure figcaption .register {
+    padding: 5px 10px;
+  }
   .pillars {
     width: 100%;
   }

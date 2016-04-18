@@ -65,8 +65,6 @@ function checkDynamicVScroll(){
   }else if(testcaseheight > windowheight && !FIREFOX){
     $('#outer-wrapper').removeClass('no-margin-wrapper');
   }
-  console.log(testcaseheight);
-  console.log(windowheight);
 }
 function cardclose() {
   $("#masthead").show();
@@ -85,6 +83,10 @@ $(".back").click(function() {
   $('header').show();
   cardclose();
   history.pushState("", document.title, window.location.pathname + window.location.search); //add everywhere
+  $(".ellipsis").dotdotdot({
+    watch: "window",
+    height: 400*0.35
+  });
 });
 function fetchalldata(venue, imageLink, regFormLink, eventStartDate, eventEndDate, eventTitle, eventDescription,
   eventId, eventUrl){
@@ -236,6 +238,10 @@ function request(state, initiate) {
       checkDynamicVScroll();
       }
     }
+    $(".ellipsis").dotdotdot({
+      watch: "window",
+      height: 400*0.35
+    });
   });
 
   request.fail(function(jqXHR, textStatus) {
@@ -480,9 +486,6 @@ $(document).ready(function() {
   });
   //Nav End
   //Events Section start
-  $(".ellipsis").dotdotdot({
-    watch: "window"
-  });
   $(document.body).on('click', '.click',
     function() {
       var idused = $(this).attr("id");
