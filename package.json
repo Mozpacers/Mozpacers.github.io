@@ -1,0 +1,56 @@
+{
+  "name": "mozpacers",
+  "version": "1.0.0",
+  "description": "This is the official website of Mozpacers",
+  "main": "index.js",
+  "homepage": "https://github.com/Mozpacers/Mozpacers.github.io#readme",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mozpacers/Mozpacers.github.io.git"
+  },
+  "keywords": [
+    "mozilla",
+    "mozilla",
+    "delhi",
+    "website",
+    "webdev",
+    "website",
+    "development",
+    "website"
+  ],
+  "author": {
+    "name": "Mozpacers and other contributors",
+    "url": "https://github.com/Mozpacers/Mozpacers.github.io/blob/master/CONTRIBUTORS.txt"
+  },
+  "maintainers": [
+    {
+      "name": "Nikhil Handa",
+      "email": "nikhil@mozpacers.org"
+    },
+    {
+      "name": "Sanyam Khuranna",
+      "email": "sanyam@mozpacers.org"
+    },
+    {
+      "name": "Anup Kumar Mishra",
+      "email": "anup@mozpacers.org"
+    },
+    {
+      "name": "Bhuvnesh Dogra",
+      "email": "bhuvnesh@mozpacers.org"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mozpacers/Mozpacers.github.io/issues"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
